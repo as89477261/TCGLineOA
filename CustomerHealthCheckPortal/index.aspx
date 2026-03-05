@@ -3,6 +3,48 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>TCG OneStopService - Main Menu</title>
+    <style>
+        .sme-floating-btn {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, #4e8cff, #2563eb);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 10px;
+            border-radius: 16px 0 0 16px;
+            box-shadow: -3px 0 12px rgba(37,99,235,0.45);
+            gap: 6px;
+            min-width: 52px;
+            transition: padding 0.2s;
+        }
+        .sme-floating-btn:hover,
+        .sme-floating-btn:active {
+            color: #fff;
+            text-decoration: none;
+            padding-right: 14px;
+        }
+        .sme-floating-btn i {
+            font-size: 26px;
+            display: block;
+        }
+        .sme-floating-btn .sme-label {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -126,24 +168,7 @@
                 </div>
             </div>
 
-            <div class="card card-style gradient-blue shadow-bg shadow-bg-s" >
-                <div class="content">
-                    <a href="page-activity.html" class="d-flex">
-                        <div class="align-self-center">
-                            <h1 class="mb-0 font-40"><i class="bi bi-check-circle color-white pe-3"></i></h1>
-                        </div>
-                        <div class="align-self-center">
-                            <h5 class="color-white font-700 mb-0 mt-0 pt-1">SME มีดวง
-                                <br>
-                               เช็คดวงธุรกิจฟรีวันนี้
-                            </h5>
-                        </div>
-                        <div class="align-self-center ms-auto">
-                            <i class="bi bi-arrow-right-short color-white d-block pt-1 font-20 opacity-50"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <!-- SME มีดวง floating button (moved to fixed position) -->
 
 
 
@@ -550,6 +575,11 @@
         </div>
     </div>
 
+    <!-- SME มีดวง Floating Button -->
+    <a href="page-activity.html" class="sme-floating-btn">
+        <i class="bi bi-check-circle"></i>
+        <span class="sme-label">SME มีดวง เช็คดวงธุรกิจฟรี</span>
+    </a>
 
 </asp:Content>
 
