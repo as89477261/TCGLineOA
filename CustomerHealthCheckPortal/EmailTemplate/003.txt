@@ -1,0 +1,22 @@
+﻿<h1><span style="font-size:16px">เรียน ท่านผู้ประกอบการ</span></h1>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:16px">บสย. ได้รับข้อมูลการลงทะเบียนร่วมกิจกรรมของท่านเรียบร้อยแล้ว</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:16px">กรุณาตรวจสอบข้อมูลการลงทะเบียนดังนี้</span></p>
+
+<p><span style="font-size:16px">ชื่อ : @Name</span></p>
+
+<p><span style="font-size:16px">เบอร์โทร : @Phone</span></p>
+
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:16px">ขอขอบคุณท่านกับความสนใจเข้าร่วมกิจกรรมของ บสย. ในครั้งนี้</span></p>
+
+<p><span style="font-size:16px">หากมีข้อสงสัยสามารถติดต่อ Call Center 02-890-9999 ได้โดยตรง</span></p>
+
+<p>&nbsp;</p>

@@ -1,0 +1,3 @@
+﻿namespace CustomerHealthCheck.Middleware
+{
+}

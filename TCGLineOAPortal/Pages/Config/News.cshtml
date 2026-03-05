@@ -1,0 +1,603 @@
+﻿@page
+@using OPEN_API_MODEL.Model.OIC_Parking
+@model OIC_PAK_INT.Pages.Config.NewsModel
+@{
+}
+
+<!-- Begin page content -->
+<main class="main mainheight">
+    <!-- title bar -->
+    <div class="container-fluid">
+        <div class="row align-items-center page-title">
+            <div class="col-12 col-md mb-2 mb-sm-0">
+                <h5 class="mb-0">ข้อมูลข่าวสาร</h5>
+                <p class="text-secondary">สำหรับจัดการเมนูข่าวสารใน Line</p>
+            </div>
+            <div class="col col-sm-auto">
+                <div class="input-group input-group-md">
+                </div>
+            </div>
+            <div class="col-auto ps-0 position-relative">
+            </div>
+        </div>
+        <nav aria-label="breadcrumb" class="breadcrumb-theme">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">OIC-ISPS</a></li>
+                <li class="breadcrumb-item active" aria-current="page">News Information</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- content -->
+    <div class="container mt-4">
+
+
+        <div class="row">
+            <!-- timesheet -->
+            <div class="col-12 col-md-12 position-relative">
+                <div class="card border-0 mb-4">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-auto">
+                                <i class="bi bi-newspaper h5 avatar avatar-40 bg-light-green rounded"></i>
+                            </div>
+                            <div class="col-auto align-self-centers">
+                                <h6 class="fw-medium mb-0">ตารางข้อมูล</h6>
+
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-theme" onclick="ShowInsertModel()">เพิ่ม</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-border footable" data-show-toggle="true">
+                            <thead style="text-align:center;">
+                                <tr class="text-muted">
+                                    <th class="">หัวข้อข่าว</th>
+                                    <th data-breakpoints="xs md">รายละเอียดข้อมูล</th>
+                                    <th data-breakpoints="xs">ลำดับ</th>
+                                    <th data-breakpoints="xs">สถานะ</th>
+                                    <th data-breakpoints="xs md">วันที่เริ่มใช้งาน</th>
+                                    <th data-breakpoints="xs md">วันที่สิ้นสุดการใช้งาน</th>
+                                    <th data-breakpoints="xs" style="width:200px !important;">เมนู</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ORA_ParkingNewsModel obj in Model.bufferNews)
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                </div>
+                                                <div class="col ps-0">
+                                                    <p class="mb-0">@obj.TITLE</p>
+
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            @if (obj.BODY.Length > 100)
+                                            {
+                                                <p class="mb-0">@obj.BODY.Substring(0, 100)...</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="mb-0">@obj.BODY</p>
+                                            }
+
+                                        </td>
+                                        <td style="text-align:center;padding-right:30px;">
+                                            <p class="mb-0">@obj.SEQ</p>
+
+                                        </td>
+                                        <td style="text-align:center;padding-right:30px;">
+
+                                            @if (obj.STATUS == "1")
+                                            {
+                                                <p class="mb-0">ใช้งาน</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="mb-0">ไม่ใช้งาน</p>
+                                            }
+
+
+                                        </td>
+                                        <td style="text-align:center;padding-right:30px;">
+                                            <p class="mb-0">@obj.START_DATE</p>
+
+                                        </td>
+                                        <td style="text-align:center;padding-right:30px;">
+                                            <p class="mb-0">@obj.END_DATE</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="row ">
+                                                <div class="col text-center">
+                                                    <button class="btn btn-theme" onclick="ShowEditModal(@obj.ID)">แก้ไข</button>
+                                                    <button class="btn btn-theme" onclick="ShowDeleteModal(@obj.ID)">ลบ</button>
+                                                </div>
+
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <div class="row align-items-center mx-0 mb-3">
+                            <div class="col-6 ">
+                                <span class="hide-if-no-paging">
+                                    Showing <span id="footablestot">1st</span> page
+                                </span>
+                            </div>
+                            <div class="col-6" id="footable-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</main>
+
+<!-- Modal -->
+<div class="modal fade" id="InsertModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">แก้ไขข้อมูลติดต่อ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <input id="hddInsertID" type="hidden" />
+                    <div class="col-12 col-lg-12">
+
+                        <div class="mb-2">
+                            <div class="form-group mb-3 position-relative check-valid">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text text-theme border-end-0"><i class="bi bi-file-earmark-text"></i></span>
+                                    <div class="form-floating">
+                                        <input id="txtInsertTitle" type="text" placeholder="ระบุหัวข้อข่าว" required="" class="form-control border-start-0">
+                                        <label>หัวข้อข่าว</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="form-group mb-3 position-relative check-valid">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text text-theme border-end-0"><i class="bi bi-phone"></i></span>
+                                    <div class="form-floating">
+                                         <textarea id="txtInsertBody" placeholder="ระบุรายละเอียดข้อมูล" rows="5" required="" class="form-control border-start-0"
+                                                  style="height:200px;"></textarea>
+                                        
+                                        <label>รายละเอียดข้อมูล</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="form-group mb-3 position-relative check-valid">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text text-theme border-end-0"><i class="bi bi-phone"></i></span>
+                                    <div class="form-floating">
+                                        <input id="txtInsertSeq" type="number" placeholder="ระบุลำดับ" required="" class="form-control border-start-0">
+                                        <label>ลำดับ</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-6 col-lg-6">
+                        <div class="mb-2">
+                            <div class="form-group mb-3 position-relative check-valid">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text text-theme border-end-0"><i class="bi bi-phone"></i></span>
+                                    <div class="form-floating">
+                                        <input id="txtInsertStartDate" type="text" placeholder="ระบุวันที่เริ่มใช้งาน" required="" class="form-control border-start-0 datepickerInsert">
+                                        <label>วันที่เริ่มใช้งาน</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-lg-3">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+
+                                <div class="form-floating">
+                                    <select class="form-select border-0" id="ddlInsertStartDateHour" required="">
+                                        <option value="0">00</option>
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                        <option value="5">05</option>
+                                        <option value="6">06</option>
+                                        <option value="7">07</option>
+                                        <option value="8">08</option>
+                                        <option value="9">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                    </select>
+                                    <label for="country1">ชั่วโมง</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-lg-3">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+
+                                <div class="form-floating">
+                                    <select class="form-select border-0" id="ddlInsertStartDateMin" required="">
+                                        <option value="0">00</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                    <label for="country1">นาที</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-6">
+                        <div class="mb-2">
+                            <div class="form-group mb-3 position-relative check-valid">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text text-theme border-end-0"><i class="bi bi-phone"></i></span>
+                                    <div class="form-floating">
+                                        <input id="txtInsertEndDate" type="text" placeholder="ระบุวันที่สิ้นสุดใช้งาน" required="" class="form-control border-start-0 datepickerInsert">
+                                        <label>วันที่สิ้นสุดใช้งาน</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-lg-3">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+
+                                <div class="form-floating">
+                                    <select class="form-select border-0" id="ddlInsertEndDateHour" required="">
+
+                                        <option value="0">00</option>
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                        <option value="5">05</option>
+                                        <option value="6">06</option>
+                                        <option value="7">07</option>
+                                        <option value="8">08</option>
+                                        <option value="9">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                    </select>
+                                    <label for="country1">ชั่วโมง</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-lg-3">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+
+                                <div class="form-floating">
+                                    <select class="form-select border-0" id="ddlInsertEndDateMin" required="">
+
+                                        <option value="00">00</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                    <label for="country1">นาที</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-12">
+                        <div class="form-check form-switch mb-4">
+                            <input class="form-check-input" type="checkbox" role="switch" id="chkInsertIsActive">
+                            <label class="form-check-label" for="chkIsActive">สถานะการใช้งาน</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="button" class="btn btn-theme" onclick="SaveInsert()">บันทึก</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">แก้ไขข้อมูลติดต่อ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input id="hddUpdateID" type="hidden" />
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+
+                        <div class="mb-2">
+                            <div class="form-group mb-3 position-relative check-valid">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text text-theme border-end-0"><i class="bi bi-file-earmark-text"></i></span>
+                                    <div class="form-floating">
+                                        <input id="txtEditTitle" type="text" placeholder="ระบุหัวข้อข่าว" required="" class="form-control border-start-0">
+                                        <label>หัวข้อข่าว</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="form-group mb-3 position-relative check-valid">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text text-theme border-end-0"><i class="bi bi-phone"></i></span>
+                                    <div class="form-floating">
+                                        <textarea id="txtEditBody" placeholder="ระบุรายละเอียดข้อมูล" rows="5" required="" class="form-control border-start-0"
+                                                  style="height:200px;"></textarea>
+
+                                        <label>รายละเอียดข้อมูล</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                        </div>
+
+                        <div class="mb-2">
+                            <div class="form-group mb-3 position-relative check-valid">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text text-theme border-end-0"><i class="bi bi-phone"></i></span>
+                                    <div class="form-floating">
+                                        <input id="txtEditSeq" type="number" placeholder="ระบุลำดับ" required="" class="form-control border-start-0">
+                                        <label>ลำดับ</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-6">
+                        <div class="mb-2">
+                            <div class="form-group mb-3 position-relative check-valid">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text text-theme border-end-0"><i class="bi bi-phone"></i></span>
+                                    <div class="form-floating">
+                                        <input id="txtEditStartDate" type="text" placeholder="ระบุวันที่เริ่มใช้งาน" required="" class="form-control border-start-0 datepicker">
+                                        <label>วันที่เริ่มใช้งาน</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-lg-3">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+
+                                <div class="form-floating">
+                                    <select class="form-select border-0" id="ddlStartDateHour" required="">
+                                        <option value="0">00</option>
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                        <option value="5">05</option>
+                                        <option value="6">06</option>
+                                        <option value="7">07</option>
+                                        <option value="8">08</option>
+                                        <option value="9">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                    </select>
+                                    <label for="country1">ชั่วโมง</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-lg-3">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+
+                                <div class="form-floating">
+                                    <select class="form-select border-0" id="ddlStartDateMin" required="">
+                                        <option value="0">00</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                    <label for="country1">นาที</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-6">
+                        <div class="mb-2">
+                            <div class="form-group mb-3 position-relative check-valid">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text text-theme border-end-0"><i class="bi bi-phone"></i></span>
+                                    <div class="form-floating">
+                                        <input id="txtEditEndDate" type="text" placeholder="ระบุวันที่สิ้นสุดใช้งาน" required="" class="form-control border-start-0 datepicker">
+                                        <label>วันที่สิ้นสุดใช้งาน</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-lg-3">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+
+                                <div class="form-floating">
+                                    <select class="form-select border-0" id="ddlEndDateHour" required="">
+
+                                        <option value="0">00</option>
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                        <option value="5">05</option>
+                                        <option value="6">06</option>
+                                        <option value="7">07</option>
+                                        <option value="8">08</option>
+                                        <option value="9">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                    </select>
+                                    <label for="country1">ชั่วโมง</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-lg-3">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+
+                                <div class="form-floating">
+                                    <select class="form-select border-0" id="ddlEndDateMin" required="">
+
+                                        <option value="00">00</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                    <label for="country1">นาที</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-12">
+                        <div class="form-check form-switch mb-4">
+                            <input class="form-check-input" type="checkbox" role="switch" id="chkEditIsActive">
+                            <label class="form-check-label" for="chkIsActive">สถานะการใช้งาน</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                    <button type="button" class="btn btn-theme" onclick="SaveEdit()">บันทึก</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="DeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ลบข้อมูล</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input id="hddDeleteID" type="hidden" />
+                <div class="col-12 col-lg-12">
+                    <p>ท่านยืนยันการลบข้อมูลหรือไม่</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="button" class="btn btn-theme" onclick="SaveDelete()">บันทึก</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/assets/js/pages/News.js"></script>
+}

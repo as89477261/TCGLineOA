@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FD5C801-6260-4640-8206-6FBA1555DA75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseRepository.cs" />
+    <Compile Include="Connector\Database.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\EnrollmentPersonalRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\PreNDIDRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\BankRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\ProductConditionRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\ApprochRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\DashboardPersonalTypeRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\EventRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\RegisterInfoRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\RewardHeaderRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\RewardRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\SetThaiLandRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\TCCProjectRepo.cs" />
+    <Compile Include="Repos\Cyber\CyberRequestRepo.cs" />
+    <Compile Include="Repos\Dashboard\DashboardRegisterInfoStatusPGS10Repo.cs" />
+    <Compile Include="Repos\Dashboard\DashboardUIDMapRegisterRepo.cs" />
+    <Compile Include="Repos\Dashboard\DashboardEventRepo.cs" />
+    <Compile Include="Repos\FACenter\CutomerProfileFARepo.cs" />
+    <Compile Include="Repos\DCS\EmployeeDCSRepo.cs" />
+    <Compile Include="Repos\FACenter\DashboardFARegisterRepo.cs" />
+    <Compile Include="Repos\FACenter\DebtCompromiseRegisterFARepo.cs" />
+    <Compile Include="Repos\FACenter\TransactionFARepo .cs" />
+    <Compile Include="Repos\FACenter\UidMapDIPROMRepo.cs" />
+    <Compile Include="Repos\FACenter\UidMapFADeptRepo.cs" />
+    <Compile Include="Repos\FACenter\UIDMapFAEventRepo.cs" />
+    <Compile Include="Repos\FACenter\UIDMapFATransactionRepo.cs" />
+    <Compile Include="Repos\FACenter\FormRegisterFARepo.cs" />
+    <Compile Include="Repos\ID\ConfirmRepo.cs" />
+    <Compile Include="Repos\ID\ConsentRepo.cs" />
+    <Compile Include="Repos\ID\EnrollmentRepo.cs" />
+    <Compile Include="Repos\ID\EnrollmentReportRepo.cs" />
+    <Compile Include="Repos\ID\ProfileRepo.cs" />
+    <Compile Include="Repos\ID\VerifyRepo.cs" />
+    <Compile Include="Repos\Line\UIDReportRepo.cs" />
+    <Compile Include="Repos\Log\LogActivityRepo.cs" />
+    <Compile Include="Repos\MasterData\IndustryRepo.cs" />
+    <Compile Include="Repos\MasterData\ProvinceRepo.cs" />
+    <Compile Include="Repos\MasterData\BankRepo.cs" />
+    <Compile Include="Repos\MasterData\ProductRepo.cs" />
+    <Compile Include="Repos\NCB\NCBPreRequestRepo.cs" />
+    <Compile Include="Repos\NCB\NCBTransactionLogRepo.cs" />
+    <Compile Include="Repos\NCB\NCBConsumerSonsentSlipRepo.cs" />
+    <Compile Include="Repos\NDIDInfo\NDIDEFormRepo.cs" />
+    <Compile Include="Repos\NDIDInfo\NDIDStepRepo.cs" />
+    <Compile Include="Repos\NDIDInfo\NDIDPersonalRepo.cs" />
+    <Compile Include="Repos\CustomerHealthCheck\UIDMapEnrollmentRepo.cs" />
+    <Compile Include="Repos\SMEClinic\ConsentRepo.cs" />
+    <Compile Include="Repos\SMEClinic\UIDMapCustomerProfileRepo.cs" />
+    <Compile Include="Repos\SMEClinic\CustomerProfileRepo.cs" />
+    <Compile Include="Repos\RegisterDB.cs" />
+    <Compile Include="Repos\RequestRepo.cs" />
+    <Compile Include="Repos\SMEClinic\DashboardUIDRepo.cs" />
+    <Compile Include="Repos\SMEClinic\IdentifiedProfileRepo.cs" />
+    <Compile Include="Repos\SMEClinic\UIDRepo.cs" />
+    <Compile Include="Repos\SQL\CommandRepo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{6247623e-16b8-4c9b-b9c8-0d9a417b525f}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{9f3e3ece-c742-431f-860c-7aa07a76eaa2}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repos\SignUp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,170 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    Layout = "_Layout_Login";
+}
+
+     <!-- page loader -->
+    <div class="container-fluid h-100 position-fixed loader-wrap bg-blur">
+        <div class="row justify-content-center h-100">
+            <div class="col-auto align-self-center text-center px-5 leaf">
+              <h2 class="mb-1">OIC <b class="fw-bold">Internal Service Of Parking System</b></h2>
+                <h6 class="mb-4 text-secondary">Admin Portal</h6>
+                <div class="logo-square animated mb-4">
+                    <div class="">
+                        <img src="~/assets/img/logo-icon.png" alt="" />
+                    </div>
+                </div>
+               @* <p class="text-secondary small">Petal of flower being ready to <span class="text-gradient">blossom</span></p>
+*@
+                <div class="dotslaoder">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+<!-- page loader ends -->
+<!-- background -->
+<div class="coverimg h-100 w-100 top-0 start-0 position-absolute" id="image-daytime">
+    <div class="overlay"></div>
+    <img src="~/assets/img/bg-1.jpg" alt="" class="w-100" />
+</div>
+<!-- background ends  -->
+<!-- header -->
+<header class="header">
+    <!-- Fixed navbar -->
+    <nav class="navbar fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <div class="row">
+                    <div class="col-auto"><span class=""><img src="~/assets/img/logo-icon.png" class="mx-100" alt="" /></span></div>
+                    <div class="col ps-0 align-self-center">
+                        <h5 class="fw-normal text-dark">OIC-ISPS</h5>
+                        <p class="small text-secondary">Admin Portal</p>
+                    </div>
+                </div>
+            </a>
+           
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="main mainheight container-fluid">
+    <!-- time and temperature -->
+    <div class="row text-white my-2">
+        <div class="col">
+            <p class="display-3 mb-0"><span id="time"></span><small><span class="h4 text-uppercase" id="ampm"></span></small></p>
+            <p class="lead fw-normal" id="date"></p>
+        </div>
+        <div class="col-auto text-end">
+            <p class="display-3 mb-0">
+                <img src="assets/img/cloud-sun.png" alt="" class="vm me-0 tempimage" id="tempimage" />
+                <span id="temperature">46</span><span class="h4 text-uppercase"> <sup>0</sup>C</span>
+            </p>
+
+           
+           
+        </div>
+    </div>
+    <!-- time and temperature ends -->
+    <div class="row align-items-center justify-content-center">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4 col-xxl-3 text-center text-white py-3">
+            <p class="h4 fw-light mb-4">Sign in</p>
+
+            <form class="mb-4 text-start ">
+                <!-- alert messages -->
+                <div class="alert alert-danger fade show d-none mb-2 global-alert" role="alert">
+                    <div class="row">
+                        <div class="col"><strong>Requierd!</strong> Please enter valid data.</div>
+                    </div>
+                </div>
+                <div class="alert alert-success fade show d-none mb-2 global-success" role="alert">
+                    <div class="row">
+                        <div class="col-auto align-self-center">
+                            <div class="spinner-border spinner-border-sm text-success me-2" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="col ps-0 align-self-center">
+                            <strong>Awesome!</strong> Taking you to the next page.
+                        </div>
+                    </div>
+                </div>
+                <!-- Form elements -->
+              
+
+
+                <div class="mb-2 text-dark">
+                    <div class="form-group mb-2 position-relative check-valid is-valid">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text text-theme border-end-0"><i class="bi bi-envelope"></i></span>
+                            <div class="form-floating">
+                                <input type="email" placeholder="Email Address" value="guest@maxartkiller.com" required class="form-control border-start-0" id="txtUsername">
+                                <label>Email Address</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback mb-3">Add .com at last to insert valid data </div>
+                </div>
+
+
+                <div class="text-dark">
+                    <div class="form-group mb-2 position-relative check-valid">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text text-theme border-end-0"><i class="bi bi-key"></i></span>
+                            <div class="form-floating">
+                                <input type="password" placeholder="Enter Password" value="" required class="form-control border-start-0" id="txtPassword1">
+                                <label for="password1">Password</label>
+                            </div>
+                            <span class="input-group-text text-secondary  border-end-0" id="viewpassword"><i class="bi bi-eye"></i></span>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback mb-3">Please enter valid input</div>
+                    <div class="feedback mb-3">
+                        <div class="row">
+                            <div class="col">
+                                <div class="check-strength" id="checksterngthdisplay">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <span class="small" id="textpassword"></span>
+                                <i class="bi bi-info-circle text-white ms-1" data-bs-trigger="hover" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Password should contain atleast 1 capital, 1 alphanumeric & min. 8 characters"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- submit button -->
+                <button class="btn btn-lg btn-theme top-0 end-0 z-index-5 w-100 mt-4" type="button" id="submitsignup">Submit <i class="bi bi-arrow-right"></i></button>
+            </form>
+
+          
+        </div>
+    </div>
+
+</main>
+
+
+@section Scripts {
+
+}

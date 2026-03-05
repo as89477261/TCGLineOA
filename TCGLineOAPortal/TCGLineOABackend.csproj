@@ -1,0 +1,2429 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+    <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\img\404-1.png" />
+    <Content Remove="wwwroot\assets\img\404-2.jpg" />
+    <Content Remove="wwwroot\assets\img\404.png" />
+    <Content Remove="wwwroot\assets\img\angular-logo.png" />
+    <Content Remove="wwwroot\assets\img\banner.png" />
+    <Content Remove="wwwroot\assets\img\barcode.gif" />
+    <Content Remove="wwwroot\assets\img\bg-1.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-10.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-11.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-12.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-13.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-14.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-15.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-16.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-17.png" />
+    <Content Remove="wwwroot\assets\img\bg-18.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-19.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-2.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-20.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-21.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-22.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-24.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-25.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-26.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-3.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-4.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-5.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-6.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-7.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-8.jpg" />
+    <Content Remove="wwwroot\assets\img\bg-9.jpg" />
+    <Content Remove="wwwroot\assets\img\Bootstrap_logo.png" />
+    <Content Remove="wwwroot\assets\img\business-1.jpg" />
+    <Content Remove="wwwroot\assets\img\business-2.jpg" />
+    <Content Remove="wwwroot\assets\img\business-3.jpg" />
+    <Content Remove="wwwroot\assets\img\business-4.jpg" />
+    <Content Remove="wwwroot\assets\img\business-5.jpg" />
+    <Content Remove="wwwroot\assets\img\cactus-1.png" />
+    <Content Remove="wwwroot\assets\img\cactus-2.png" />
+    <Content Remove="wwwroot\assets\img\cactus-3.png" />
+    <Content Remove="wwwroot\assets\img\cloud-sun.png" />
+    <Content Remove="wwwroot\assets\img\cloud.png" />
+    <Content Remove="wwwroot\assets\img\company10.png" />
+    <Content Remove="wwwroot\assets\img\company2.png" />
+    <Content Remove="wwwroot\assets\img\company3.jpg" />
+    <Content Remove="wwwroot\assets\img\company4.jpg" />
+    <Content Remove="wwwroot\assets\img\company5.png" />
+    <Content Remove="wwwroot\assets\img\company6.png" />
+    <Content Remove="wwwroot\assets\img\company7.jpg" />
+    <Content Remove="wwwroot\assets\img\company8.jpg" />
+    <Content Remove="wwwroot\assets\img\company9.jpg" />
+    <Content Remove="wwwroot\assets\img\CSS_logo.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dark-dashboard-1.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dark-dashboard-2.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dark-dashboard-3.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dark-dashboard-4.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-1-min.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-10-min.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-11-min.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-2-min.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-3-min.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-4-min.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-5-min.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-6-min.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-7-min.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-8-min.png" />
+    <Content Remove="wwwroot\assets\img\dashboards\dashboard-9-min.png" />
+    <Content Remove="wwwroot\assets\img\delivery.jpg" />
+    <Content Remove="wwwroot\assets\img\facebook.png" />
+    <Content Remove="wwwroot\assets\img\favicon.png" />
+    <Content Remove="wwwroot\assets\img\favicon144.png" />
+    <Content Remove="wwwroot\assets\img\favicon152.png" />
+    <Content Remove="wwwroot\assets\img\favicon16.png" />
+    <Content Remove="wwwroot\assets\img\favicon180.png" />
+    <Content Remove="wwwroot\assets\img\favicon192.png" />
+    <Content Remove="wwwroot\assets\img\favicon32.png" />
+    <Content Remove="wwwroot\assets\img\favicon48.png" />
+    <Content Remove="wwwroot\assets\img\favicon512.png" />
+    <Content Remove="wwwroot\assets\img\favicon72.png" />
+    <Content Remove="wwwroot\assets\img\favicon76.png" />
+    <Content Remove="wwwroot\assets\img\favicon96.png" />
+    <Content Remove="wwwroot\assets\img\flower-support.png" />
+    <Content Remove="wwwroot\assets\img\getAdminUX-qr.png" />
+    <Content Remove="wwwroot\assets\img\Google-Pay-logo-1024x512.png" />
+    <Content Remove="wwwroot\assets\img\google.png" />
+    <Content Remove="wwwroot\assets\img\help-bg.png" />
+    <Content Remove="wwwroot\assets\img\HTML_logo.png" />
+    <Content Remove="wwwroot\assets\img\JS_logo.png" />
+    <Content Remove="wwwroot\assets\img\laoderfixed-white.png" />
+    <Content Remove="wwwroot\assets\img\laoderfixed.png" />
+    <Content Remove="wwwroot\assets\img\laravel_logo.png" />
+    <Content Remove="wwwroot\assets\img\leaf.png" />
+    <Content Remove="wwwroot\assets\img\logo-icon.png" />
+    <Content Remove="wwwroot\assets\img\logo-square.jpg" />
+    <Content Remove="wwwroot\assets\img\logo-square.png" />
+    <Content Remove="wwwroot\assets\img\logo.png" />
+    <Content Remove="wwwroot\assets\img\maintenance.jpg" />
+    <Content Remove="wwwroot\assets\img\maxartkiller.png" />
+    <Content Remove="wwwroot\assets\img\movie1.jpg" />
+    <Content Remove="wwwroot\assets\img\movie2.jpg" />
+    <Content Remove="wwwroot\assets\img\movie3.jpg" />
+    <Content Remove="wwwroot\assets\img\multidevice-responsive.png" />
+    <Content Remove="wwwroot\assets\img\news-3.jpg" />
+    <Content Remove="wwwroot\assets\img\news-4.jpg" />
+    <Content Remove="wwwroot\assets\img\news-5.jpg" />
+    <Content Remove="wwwroot\assets\img\news-6.jpg" />
+    <Content Remove="wwwroot\assets\img\newsicon.png" />
+    <Content Remove="wwwroot\assets\img\offer-1.jpg" />
+    <Content Remove="wwwroot\assets\img\offer-1.png" />
+    <Content Remove="wwwroot\assets\img\onboarding-2.png" />
+    <Content Remove="wwwroot\assets\img\onboarding-3.png" />
+    <Content Remove="wwwroot\assets\img\onboarding1.png" />
+    <Content Remove="wwwroot\assets\img\onboardingsummary.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\01d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\01n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\02d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\02n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\03d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\03n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\04d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\04n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\09d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\09n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\10d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\10n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\11d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\11n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\13d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\13n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\50d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\dark\50n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\01d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\01n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\02d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\02n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\03d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\03n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\04d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\04n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\09d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\09n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\10d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\10n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\11d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\11n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\13d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\13n@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\50d@2x.png" />
+    <Content Remove="wwwroot\assets\img\openweather-icon\light\50n@2x.png" />
+    <Content Remove="wwwroot\assets\img\payment.png" />
+    <Content Remove="wwwroot\assets\img\product-1.jpg" />
+    <Content Remove="wwwroot\assets\img\product-2.jpg" />
+    <Content Remove="wwwroot\assets\img\product-3.jpg" />
+    <Content Remove="wwwroot\assets\img\product-4.jpg" />
+    <Content Remove="wwwroot\assets\img\product-5.jpg" />
+    <Content Remove="wwwroot\assets\img\product-6.jpg" />
+    <Content Remove="wwwroot\assets\img\product-8.jpg" />
+    <Content Remove="wwwroot\assets\img\product-9.jpg" />
+    <Content Remove="wwwroot\assets\img\reactjs_logo.png" />
+    <Content Remove="wwwroot\assets\img\rewards.jpg" />
+    <Content Remove="wwwroot\assets\img\SCSS_logo.png" />
+    <Content Remove="wwwroot\assets\img\services-amazon_Prime.png" />
+    <Content Remove="wwwroot\assets\img\services-netflixlogo.png" />
+    <Content Remove="wwwroot\assets\img\services-paypal.png" />
+    <Content Remove="wwwroot\assets\img\services-swiggy.png" />
+    <Content Remove="wwwroot\assets\img\services-youtubelogo.png" />
+    <Content Remove="wwwroot\assets\img\sun.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\changepassword-1-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\comingsoon-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\contact-us-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\contact-us-2.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\error404-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\error404-2.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\intro-1-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\intro-1-2.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\lightDark.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\maintenance-2.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\maintenance.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\oboarding-1-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\password-1-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\resetpassword-1-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\search-1-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\search-1-2.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\search-1-3.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\sidebar-fullscreen.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\sidebar-overlay.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\sidebar-pushcontent.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\signin-1-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\signup-1-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\thankyousingup-1-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\timeline-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\timeline-2.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\verify-1-1.png" />
+    <Content Remove="wwwroot\assets\img\supportive-pages\wizards-1.png" />
+    <Content Remove="wwwroot\assets\img\tour-guide-1.png" />
+    <Content Remove="wwwroot\assets\img\tour-guide-2.png" />
+    <Content Remove="wwwroot\assets\img\tour-guide-3.png" />
+    <Content Remove="wwwroot\assets\img\tour-guide-4.png" />
+    <Content Remove="wwwroot\assets\img\tour-guide-5.png" />
+    <Content Remove="wwwroot\assets\img\twitter.png" />
+    <Content Remove="wwwroot\assets\img\under-construction.jpg" />
+    <Content Remove="wwwroot\assets\img\under-construction1.png" />
+    <Content Remove="wwwroot\assets\img\user-1.jpg" />
+    <Content Remove="wwwroot\assets\img\user-2.jpg" />
+    <Content Remove="wwwroot\assets\img\user-3.jpg" />
+    <Content Remove="wwwroot\assets\img\user-4.jpg" />
+    <Content Remove="wwwroot\assets\img\visa.png" />
+    <Content Remove="wwwroot\assets\img\wallet-1.jpg" />
+    <Content Remove="wwwroot\assets\img\windows.png" />
+    <Content Remove="wwwroot\assets\js\app-explorer.js" />
+    <Content Remove="wwwroot\assets\js\color-scheme.js" />
+    <Content Remove="wwwroot\assets\js\company-resources.js" />
+    <Content Remove="wwwroot\assets\js\component-summary.js" />
+    <Content Remove="wwwroot\assets\js\components-chart.js" />
+    <Content Remove="wwwroot\assets\js\dashboard.js" />
+    <Content Remove="wwwroot\assets\js\finance-banks.js" />
+    <Content Remove="wwwroot\assets\js\finance-crypto.js" />
+    <Content Remove="wwwroot\assets\js\finance-dashboard.js" />
+    <Content Remove="wwwroot\assets\js\finance-wallet.js" />
+    <Content Remove="wwwroot\assets\js\header-title.js" />
+    <Content Remove="wwwroot\assets\js\inventory-dashboard.js" />
+    <Content Remove="wwwroot\assets\js\inventory-orders.js" />
+    <Content Remove="wwwroot\assets\js\inventory-stock.js" />
+    <Content Remove="wwwroot\assets\js\jquery-3.3.1.min.js" />
+    <Content Remove="wwwroot\assets\js\learning-courses.js" />
+    <Content Remove="wwwroot\assets\js\learning-dashboard.js" />
+    <Content Remove="wwwroot\assets\js\learning-institutes.js" />
+    <Content Remove="wwwroot\assets\js\login.js" />
+    <Content Remove="wwwroot\assets\js\main.js" />
+    <Content Remove="wwwroot\assets\js\network-dashboard.js" />
+    <Content Remove="wwwroot\assets\js\network-devices.js" />
+    <Content Remove="wwwroot\assets\js\network-performance.js" />
+    <Content Remove="wwwroot\assets\js\onboarding.js" />
+    <Content Remove="wwwroot\assets\js\Pages\Dashboard_Peak.js" />
+    <Content Remove="wwwroot\assets\js\Pages\D_Peak.js" />
+    <Content Remove="wwwroot\assets\js\Pages\Home.js" />
+    <Content Remove="wwwroot\assets\js\Pages\login.js" />
+    <Content Remove="wwwroot\assets\js\Pages\News.js" />
+    <Content Remove="wwwroot\assets\js\popper.min.js" />
+    <Content Remove="wwwroot\assets\js\profile-analytic.js" />
+    <Content Remove="wwwroot\assets\js\profile-social.js" />
+    <Content Remove="wwwroot\assets\js\project-dashboard.js" />
+    <Content Remove="wwwroot\assets\js\project-projects.js" />
+    <Content Remove="wwwroot\assets\js\pwa-services.js" />
+    <Content Remove="wwwroot\assets\js\rewards.js" />
+    <Content Remove="wwwroot\assets\js\social-analytics.js" />
+    <Content Remove="wwwroot\assets\js\social-dashboard.js" />
+    <Content Remove="wwwroot\assets\js\social-schedule.js" />
+    <Content Remove="wwwroot\assets\js\your-earning.js" />
+    <Content Remove="wwwroot\assets\scss\style.css" />
+    <Content Remove="wwwroot\assets\scss\style.css.map" />
+    <Content Remove="wwwroot\assets\scss\style.scss" />
+    <Content Remove="wwwroot\assets\scss\_apptour.scss" />
+    <Content Remove="wwwroot\assets\scss\_avatar.scss" />
+    <Content Remove="wwwroot\assets\scss\_body.scss" />
+    <Content Remove="wwwroot\assets\scss\_button.scss" />
+    <Content Remove="wwwroot\assets\scss\_card_toast_modal.scss" />
+    <Content Remove="wwwroot\assets\scss\_colors.scss" />
+    <Content Remove="wwwroot\assets\scss\_filter.scss" />
+    <Content Remove="wwwroot\assets\scss\_footer.scss" />
+    <Content Remove="wwwroot\assets\scss\_form.scss" />
+    <Content Remove="wwwroot\assets\scss\_fullcalendar.scss" />
+    <Content Remove="wwwroot\assets\scss\_gallery.scss" />
+    <Content Remove="wwwroot\assets\scss\_header.scss" />
+    <Content Remove="wwwroot\assets\scss\_list_chats.scss" />
+    <Content Remove="wwwroot\assets\scss\_loader.scss" />
+    <Content Remove="wwwroot\assets\scss\_logo.scss" />
+    <Content Remove="wwwroot\assets\scss\_personalize.scss" />
+    <Content Remove="wwwroot\assets\scss\_rightbar.scss" />
+    <Content Remove="wwwroot\assets\scss\_rtl.scss" />
+    <Content Remove="wwwroot\assets\scss\_sidebar.scss" />
+    <Content Remove="wwwroot\assets\scss\_swiperslides.scss" />
+    <Content Remove="wwwroot\assets\scss\_tables.scss" />
+    <Content Remove="wwwroot\assets\scss\_tabs.scss" />
+    <Content Remove="wwwroot\assets\scss\_tags.scss" />
+    <Content Remove="wwwroot\assets\scss\_text.scss" />
+    <Content Remove="wwwroot\assets\scss\_thankyou.scss" />
+    <Content Remove="wwwroot\assets\scss\_utility.scss" />
+    <Content Remove="wwwroot\assets\scss\_variables-darkmode.scss" />
+    <Content Remove="wwwroot\assets\scss\_variables.scss" />
+    <Content Remove="wwwroot\assets\vendor\atropos\atropos.css" />
+    <Content Remove="wwwroot\assets\vendor\atropos\atropos.js" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.min.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.min.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.min.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.min.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.min.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.min.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.min.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.min.css" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.min.css.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.js" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.js.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.min.js" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.js" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.js.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.min.js" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.min.js.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.js" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.js.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.min.js" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.min.js.map" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_floating-labels.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-check.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-control.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-range.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-select.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-text.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_input-group.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_labels.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_validation.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_clearfix.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_color-bg.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_colored-links.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_position.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_ratio.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_stacks.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_stretched-link.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_text-truncation.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_visually-hidden.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_vr.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_alert.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_backdrop.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_border-radius.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_box-shadow.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_breakpoints.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_buttons.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_caret.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_clearfix.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_color-scheme.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_container.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_deprecate.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_forms.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_gradients.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_grid.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_image.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_list-group.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_lists.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_pagination.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_reset-text.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_resize.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_table-variants.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_text-truncate.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_transition.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_utilities.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_visually-hidden.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\utilities\_api.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\vendor\_rfs.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_accordion.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_alert.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_badge.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_breadcrumb.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_button-group.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_buttons.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_card.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_carousel.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_close.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_containers.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_dropdown.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_forms.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_functions.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_grid.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_helpers.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_images.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_list-group.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_maps.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_mixins.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_modal.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_nav.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_navbar.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_offcanvas.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_pagination.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_placeholders.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_popover.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_progress.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_reboot.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_root.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_spinners.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_tables.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_toasts.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_tooltip.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_transitions.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_type.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_utilities.scss" />
+    <Content Remove="wwwroot\assets\vendor\bootstrap-5\scss\_variables.scss" />
+    <Content Remove="wwwroot\assets\vendor\chart-js-3.3.1\chart.esm.js" />
+    <Content Remove="wwwroot\assets\vendor\chart-js-3.3.1\chart.js" />
+    <Content Remove="wwwroot\assets\vendor\chart-js-3.3.1\chart.min.js" />
+    <Content Remove="wwwroot\assets\vendor\chart-js-3.3.1\chunks\helpers.segment.js" />
+    <Content Remove="wwwroot\assets\vendor\chart-js-3.3.1\helpers.esm.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen-sprite.png" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen-sprite@2x.png" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.css" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.jquery.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.jquery.min.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.min.css" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.proto.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.proto.min.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\chosen.png" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\init.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\init.proto.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\jquery-1.12.4.min.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\jquery-3.2.1.min.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\oss-credit.png" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\prism.css" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\prism.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\prototype-1.7.0.0.js" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\style.css" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\index.html" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\index.proto.html" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\LICENSE.md" />
+    <Content Remove="wwwroot\assets\vendor\chosen_v1.8.7\options.html" />
+    <Content Remove="wwwroot\assets\vendor\circle-pack\LICENSE" />
+    <Content Remove="wwwroot\assets\vendor\circle-pack\README.md" />
+    <Content Remove="wwwroot\assets\vendor\circle-pack\src\circlepack.css" />
+    <Content Remove="wwwroot\assets\vendor\circle-pack\src\circlepack.js" />
+    <Content Remove="wwwroot\assets\vendor\circle-pack\src\index.d.ts" />
+    <Content Remove="wwwroot\assets\vendor\circle-pack\src\index.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\ckeditor.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\ckeditor.js.map" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\index.html" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\LICENSE.md" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\README.md" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\sample\css\sample.css" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\bg.png" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\github.svg" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\logo.svg" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\umbrellas.jpg" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\af.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ar.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ast.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\az.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\bg.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\bs.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ca.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\cs.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\da.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\de-ch.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\de.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\el.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\en-au.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\en-gb.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\eo.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\es.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\et.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\eu.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\fa.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\fi.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\fr.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\gl.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\gu.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\he.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\hi.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\hr.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\hu.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\id.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\it.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ja.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\km.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\kn.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ko.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ku.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\lt.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\lv.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ms.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\nb.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ne.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\nl.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\no.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\oc.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\pl.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\pt-br.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\pt.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ro.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ru.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\si.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sk.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sl.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sq.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sr-latn.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sr.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sv.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\th.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\tk.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\tr.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\tt.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ug.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\uk.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\uz.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\vi.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\zh-cn.js" />
+    <Content Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\zh.js" />
+    <Content Remove="wwwroot\assets\vendor\daterangepicker\daterangepicker.css" />
+    <Content Remove="wwwroot\assets\vendor\daterangepicker\daterangepicker.js" />
+    <Content Remove="wwwroot\assets\vendor\daterangepicker\README.md" />
+    <Content Remove="wwwroot\assets\vendor\dragula\dragula.css" />
+    <Content Remove="wwwroot\assets\vendor\dragula\dragula.js" />
+    <Content Remove="wwwroot\assets\vendor\dragula\dragula.min.css" />
+    <Content Remove="wwwroot\assets\vendor\dragula\dragula.min.js" />
+    <Content Remove="wwwroot\assets\vendor\dragula\example.js" />
+    <Content Remove="wwwroot\assets\vendor\dropzone5-9-3\dropzone.min.css" />
+    <Content Remove="wwwroot\assets\vendor\dropzone5-9-3\dropzone.min.js" />
+    <Content Remove="wwwroot\assets\vendor\fooTable\css\footable.bootstrap.css" />
+    <Content Remove="wwwroot\assets\vendor\fooTable\css\footable.bootstrap.min.css" />
+    <Content Remove="wwwroot\assets\vendor\fooTable\js\footable.js" />
+    <Content Remove="wwwroot\assets\vendor\fooTable\js\footable.min.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales-all.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales-all.min.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\af.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-dz.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-kw.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-ly.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-ma.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-sa.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-tn.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\az.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\bg.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\bn.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\bs.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ca.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\cs.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\cy.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\da.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\de-at.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\de.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\el.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\en-au.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\en-gb.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\en-nz.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\eo.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\es-us.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\es.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\et.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\eu.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\fa.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\fi.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\fr-ca.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\fr-ch.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\fr.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\gl.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\he.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\hi.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\hr.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\hu.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\hy-am.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\id.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\is.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\it.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ja.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ka.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\kk.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\km.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ko.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ku.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\lb.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\lt.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\lv.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\mk.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ms.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\nb.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ne.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\nl.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\nn.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\pl.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\pt-br.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\pt.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ro.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ru.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\si-lk.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sk.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sl.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sm.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sq.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sr-cyrl.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sr.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sv.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ta-in.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\th.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\tr.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ug.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\uk.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\uz.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\vi.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\zh-cn.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\zh-tw.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\main.css" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\main.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\main.min.css" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\lib\main.min.js" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\LICENSE.txt" />
+    <Content Remove="wwwroot\assets\vendor\fullCalendar\README.md" />
+    <Content Remove="wwwroot\assets\vendor\highlight\DIGESTS.md" />
+    <Content Remove="wwwroot\assets\vendor\highlight\highlight.js" />
+    <Content Remove="wwwroot\assets\vendor\highlight\highlight.min.js" />
+    <Content Remove="wwwroot\assets\vendor\highlight\LICENSE" />
+    <Content Remove="wwwroot\assets\vendor\highlight\monokai-sublime.min.css" />
+    <Content Remove="wwwroot\assets\vendor\highlight\README.md" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\jquery.vmap.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\jquery.vmap.min.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\jqvmap.css" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\jqvmap.min.css" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.africa.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.asia.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.australia.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.europe.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.north-america.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.south-america.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.algeria.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.argentina.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.brazil.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.canada.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.croatia.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.europe.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.france.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.germany.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.greece.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.indonesia.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.iran.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.iraq.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.new_regions_france.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.russia.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.serbia.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.tunisia.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.turkey.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.ukraine.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.usa.counties.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.usa.districts.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.usa.js" />
+    <Content Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.world.js" />
+    <Content Remove="wwwroot\assets\vendor\nouislider\nouislider.css" />
+    <Content Remove="wwwroot\assets\vendor\nouislider\nouislider.js" />
+    <Content Remove="wwwroot\assets\vendor\nouislider\nouislider.min.css" />
+    <Content Remove="wwwroot\assets\vendor\nouislider\nouislider.min.js" />
+    <Content Remove="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\index.html" />
+    <Content Remove="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\lib.css" />
+    <Content Remove="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\lib.js" />
+    <Content Remove="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\readme.md" />
+    <Content Remove="wwwroot\assets\vendor\progressbar-js\progressbar.min.js" />
+    <Content Remove="wwwroot\assets\vendor\simplelightbox\simple-lightbox.jquery.min.js" />
+    <Content Remove="wwwroot\assets\vendor\simplelightbox\simple-lightbox.min.css" />
+    <Content Remove="wwwroot\assets\vendor\smartWizard\jquery.smartWizard.min.js" />
+    <Content Remove="wwwroot\assets\vendor\smartWizard\readme.txt" />
+    <Content Remove="wwwroot\assets\vendor\smartWizard\smart_wizard_all.min.css" />
+    <Content Remove="wwwroot\assets\vendor\swiper-7.3.1\LICENSE.txt" />
+    <Content Remove="wwwroot\assets\vendor\swiper-7.3.1\README.md" />
+    <Content Remove="wwwroot\assets\vendor\swiper-7.3.1\swiper-bundle.min.css" />
+    <Content Remove="wwwroot\assets\vendor\swiper-7.3.1\swiper-bundle.min.js" />
+    <Content Remove="wwwroot\assets\vendor\swiper-7.3.1\swiper.min.css" />
+    <Content Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput-angular.js" />
+    <Content Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput-angular.min.js" />
+    <Content Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput-angular.min.js.map" />
+    <Content Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.css" />
+    <Content Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.js" />
+    <Content Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.less" />
+    <Content Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.min.js" />
+    <Content Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.min.js.map" />
+    <Content Remove="wwwroot\assets\vendor\typeahead.bundle.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\404-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\404-2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\404.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\angular-logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\banner.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\barcode.gif" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-1.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-10.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-11.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-12.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-13.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-14.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-15.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-16.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-17.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-18.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-19.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-20.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-21.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-22.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-24.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-25.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-26.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-3.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-4.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-5.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-6.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-7.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-8.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\bg-9.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\Bootstrap_logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\business-1.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\business-11.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\business-12.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\business-13.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\business-2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\business-3.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\business-4.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\business-5.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\cactus-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\cactus-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\cactus-3.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\cloud-sun.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\cloud.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\company10.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\company2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\company3.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\company4.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\company5.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\company6.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\company7.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\company8.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\company9.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\CSS_logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dark-dashboard-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dark-dashboard-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dark-dashboard-3.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dark-dashboard-4.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-1-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-10-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-11-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-2-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-3-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-4-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-5-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-6-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-7-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-8-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\dashboards\dashboard-9-min.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\delivery.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\facebook.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon144.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon152.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon16.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon180.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon192.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon32.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon48.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon512.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon72.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon76.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\favicon96.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\flower-support.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\getAdminUX-qr.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\Google-Pay-logo-1024x512.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\google.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\help-bg.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\HTML_logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\JS_logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\laoderfixed-white.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\laoderfixed.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\laravel_logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\leaf.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\logo-icon - Copy.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\logo-icon.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\logo-square.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\logo-square.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\logo\utcc.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\maintenance.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\maxartkiller.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\movie1.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\movie2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\movie3.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\multidevice-responsive.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\news-3.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\news-4.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\news-5.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\news-6.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\newsicon.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\offer-1.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\offer-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\onboarding-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\onboarding-3.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\onboarding1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\onboardingsummary.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\01d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\01n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\02d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\02n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\03d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\03n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\04d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\04n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\09d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\09n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\10d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\10n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\11d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\11n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\13d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\13n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\50d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\dark\50n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\01d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\01n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\02d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\02n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\03d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\03n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\04d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\04n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\09d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\09n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\10d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\10n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\11d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\11n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\13d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\13n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\50d@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\openweather-icon\light\50n@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\payment.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\product-1.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\product-2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\product-3.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\product-4.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\product-5.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\product-6.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\product-8.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\product-9.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\reactjs_logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\rewards.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\SCSS_logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\services-amazon_Prime.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\services-netflixlogo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\services-paypal.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\services-swiggy.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\services-youtubelogo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\sun.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\changepassword-1-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\comingsoon-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\contact-us-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\contact-us-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\error404-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\error404-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\intro-1-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\intro-1-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\lightDark.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\maintenance-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\maintenance.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\oboarding-1-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\password-1-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\resetpassword-1-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\search-1-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\search-1-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\search-1-3.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\sidebar-fullscreen.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\sidebar-overlay.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\sidebar-pushcontent.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\signin-1-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\signup-1-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\thankyousingup-1-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\timeline-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\timeline-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\verify-1-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\supportive-pages\wizards-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\tour-guide-1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\tour-guide-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\tour-guide-3.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\tour-guide-4.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\tour-guide-5.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\twitter.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\under-construction.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\under-construction1.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\user-1.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\user-2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\user-3.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\user-4.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\visa.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\wallet-1.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\img\windows.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\app-explorer.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\color-scheme.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\company-resources.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\component-summary.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\components-chart.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\dashboard.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\finance-banks.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\finance-crypto.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\finance-dashboard.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\finance-wallet.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\header-title.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\inventory-dashboard.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\inventory-orders.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\inventory-stock.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\jquery-3.3.1.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\learning-courses.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\learning-dashboard.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\learning-institutes.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\login.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\main.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\network-dashboard.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\network-devices.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\network-performance.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\onboarding.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\popper.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\profile-analytic.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\profile-social.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\project-dashboard.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\project-projects.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\pwa-services.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\rewards.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\social-analytics.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\social-dashboard.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\social-schedule.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\js\your-earning.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\manifest.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\style.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\style.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\style.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_apptour.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_avatar.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_body.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_button.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_card_toast_modal.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_colors.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_filter.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_footer.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_form.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_fullcalendar.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_gallery.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_header.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_list_chats.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_loader.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_logo.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_personalize.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_rightbar.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_rtl.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_sidebar.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_swiperslides.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_tables.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_tabs.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_tags.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_text.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_thankyou.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_utility.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_variables-darkmode.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\scss\_variables.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\atropos\atropos.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\atropos\atropos.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.min.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.min.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.min.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.min.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_floating-labels.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-check.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-control.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-range.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-select.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-text.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_input-group.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_labels.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\forms\_validation.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_clearfix.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_color-bg.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_colored-links.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_position.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_ratio.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_stacks.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_stretched-link.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_text-truncation.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_visually-hidden.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_vr.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_alert.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_backdrop.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_border-radius.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_box-shadow.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_breakpoints.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_buttons.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_caret.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_clearfix.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_color-scheme.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_container.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_deprecate.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_forms.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_gradients.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_grid.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_image.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_list-group.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_lists.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_pagination.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_reset-text.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_resize.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_table-variants.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_text-truncate.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_transition.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_utilities.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_visually-hidden.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\utilities\_api.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\vendor\_rfs.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_accordion.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_alert.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_badge.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_breadcrumb.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_button-group.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_buttons.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_card.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_carousel.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_close.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_containers.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_dropdown.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_forms.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_functions.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_grid.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_helpers.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_images.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_list-group.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_maps.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_mixins.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_modal.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_nav.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_navbar.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_offcanvas.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_pagination.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_placeholders.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_popover.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_progress.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_reboot.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_root.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_spinners.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_tables.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_toasts.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_tooltip.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_transitions.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_type.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_utilities.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\bootstrap-5\scss\_variables.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chart-js-3.3.1\chart.esm.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chart-js-3.3.1\chart.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chart-js-3.3.1\chart.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chart-js-3.3.1\chunks\helpers.segment.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chart-js-3.3.1\helpers.esm.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen-sprite.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen-sprite@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.jquery.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.jquery.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.proto.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\chosen.proto.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\composer.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\chosen.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\init.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\init.proto.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\jquery-1.12.4.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\jquery-3.2.1.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\oss-credit.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\prism.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\prism.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\prototype-1.7.0.0.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\style.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\index.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\index.proto.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\LICENSE.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\chosen_v1.8.7\options.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\circle-pack\LICENSE" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\circle-pack\README.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\circle-pack\src\circlepack.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\circle-pack\src\circlepack.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\circle-pack\src\index.d.ts" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\circle-pack\src\index.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\ckeditor.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\ckeditor.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\index.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\LICENSE.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\README.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\sample\css\sample.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\bg.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\github.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\logo.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\umbrellas.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\af.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ar.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ast.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\az.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\bg.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\bs.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ca.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\cs.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\da.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\de-ch.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\de.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\el.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\en-au.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\en-gb.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\eo.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\es.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\et.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\eu.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\fa.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\fi.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\fr.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\gl.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\gu.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\he.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\hi.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\hr.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\hu.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\id.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\it.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ja.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\km.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\kn.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ko.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ku.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\lt.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\lv.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ms.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\nb.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ne.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\nl.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\no.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\oc.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\pl.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\pt-br.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\pt.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ro.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ru.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\si.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sk.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sl.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sq.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sr-latn.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sr.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sv.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\th.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\tk.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\tr.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\tt.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ug.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\uk.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\uz.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\vi.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\zh-cn.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\ckeditor5-build-classic\translations\zh.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\daterangepicker\daterangepicker.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\daterangepicker\daterangepicker.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\daterangepicker\README.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\dragula\dragula.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\dragula\dragula.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\dragula\dragula.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\dragula\dragula.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\dragula\example.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\dropzone5-9-3\dropzone.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\dropzone5-9-3\dropzone.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fooTable\css\footable.bootstrap.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fooTable\css\footable.bootstrap.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fooTable\js\footable.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fooTable\js\footable.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales-all.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales-all.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\af.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-dz.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-kw.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-ly.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-ma.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-sa.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-tn.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ar.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\az.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\bg.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\bn.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\bs.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ca.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\cs.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\cy.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\da.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\de-at.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\de.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\el.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\en-au.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\en-gb.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\en-nz.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\eo.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\es-us.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\es.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\et.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\eu.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\fa.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\fi.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\fr-ca.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\fr-ch.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\fr.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\gl.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\he.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\hi.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\hr.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\hu.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\hy-am.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\id.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\is.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\it.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ja.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ka.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\kk.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\km.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ko.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ku.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\lb.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\lt.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\lv.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\mk.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ms.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\nb.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ne.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\nl.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\nn.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\pl.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\pt-br.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\pt.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ro.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ru.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\si-lk.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sk.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sl.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sm.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sq.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sr-cyrl.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sr.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\sv.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ta-in.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\th.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\tr.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\ug.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\uk.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\uz.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\vi.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\zh-cn.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\locales\zh-tw.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\main.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\main.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\main.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\lib\main.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\LICENSE.txt" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\fullCalendar\README.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\highlight\DIGESTS.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\highlight\highlight.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\highlight\highlight.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\highlight\LICENSE" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\highlight\monokai-sublime.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\highlight\package.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\highlight\README.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\jquery.vmap.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\jquery.vmap.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\jqvmap.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\jqvmap.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.africa.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.asia.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.australia.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.europe.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.north-america.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.south-america.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.algeria.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.argentina.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.brazil.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.canada.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.croatia.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.europe.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.france.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.germany.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.greece.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.indonesia.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.iran.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.iraq.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.new_regions_france.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.russia.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.serbia.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.tunisia.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.turkey.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.ukraine.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.usa.counties.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.usa.districts.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.usa.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.world.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\nouislider\nouislider.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\nouislider\nouislider.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\nouislider\nouislider.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\nouislider\nouislider.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\index.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\lib.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\lib.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\readme.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\progressbar-js\progressbar.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\simplelightbox\simple-lightbox.jquery.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\simplelightbox\simple-lightbox.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\smartWizard\jquery.smartWizard.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\smartWizard\readme.txt" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\smartWizard\smart_wizard_all.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\swiper-7.3.1\LICENSE.txt" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\swiper-7.3.1\README.md" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\swiper-7.3.1\swiper-bundle.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\swiper-7.3.1\swiper-bundle.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\swiper-7.3.1\swiper.min.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput-angular.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput-angular.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput-angular.min.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.less" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.min.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\typeahead.bundle.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj" />   
+    <ProjectReference Include="..\DAL\DAL.csproj" />
+    <ProjectReference Include="..\DataModel\DataModel.csproj" />  
+    <ProjectReference Include="..\Utility\Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\css\" />
+    <Folder Include="wwwroot\assets\js\Utility\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\img\404-1.png" />
+    <None Include="wwwroot\assets\img\404-2.jpg" />
+    <None Include="wwwroot\assets\img\404.png" />
+    <None Include="wwwroot\assets\img\angular-logo.png" />
+    <None Include="wwwroot\assets\img\banner.png" />
+    <None Include="wwwroot\assets\img\barcode.gif" />
+    <None Include="wwwroot\assets\img\bg-1.jpg" />
+    <None Include="wwwroot\assets\img\bg-10.jpg" />
+    <None Include="wwwroot\assets\img\bg-11.jpg" />
+    <None Include="wwwroot\assets\img\bg-12.jpg" />
+    <None Include="wwwroot\assets\img\bg-13.jpg" />
+    <None Include="wwwroot\assets\img\bg-14.jpg" />
+    <None Include="wwwroot\assets\img\bg-15.jpg" />
+    <None Include="wwwroot\assets\img\bg-16.jpg" />
+    <None Include="wwwroot\assets\img\bg-17.png" />
+    <None Include="wwwroot\assets\img\bg-18.jpg" />
+    <None Include="wwwroot\assets\img\bg-19.jpg" />
+    <None Include="wwwroot\assets\img\bg-2.jpg" />
+    <None Include="wwwroot\assets\img\bg-20.jpg" />
+    <None Include="wwwroot\assets\img\bg-21.jpg" />
+    <None Include="wwwroot\assets\img\bg-22.jpg" />
+    <None Include="wwwroot\assets\img\bg-24.jpg" />
+    <None Include="wwwroot\assets\img\bg-25.jpg" />
+    <None Include="wwwroot\assets\img\bg-26.jpg" />
+    <None Include="wwwroot\assets\img\bg-3.jpg" />
+    <None Include="wwwroot\assets\img\bg-4.jpg" />
+    <None Include="wwwroot\assets\img\bg-5.jpg" />
+    <None Include="wwwroot\assets\img\bg-6.jpg" />
+    <None Include="wwwroot\assets\img\bg-7.jpg" />
+    <None Include="wwwroot\assets\img\bg-8.jpg" />
+    <None Include="wwwroot\assets\img\bg-9.jpg" />
+    <None Include="wwwroot\assets\img\Bootstrap_logo.png" />
+    <None Include="wwwroot\assets\img\business-1.jpg" />
+    <None Include="wwwroot\assets\img\business-2.jpg" />
+    <None Include="wwwroot\assets\img\business-3.jpg" />
+    <None Include="wwwroot\assets\img\business-4.jpg" />
+    <None Include="wwwroot\assets\img\business-5.jpg" />
+    <None Include="wwwroot\assets\img\cactus-1.png" />
+    <None Include="wwwroot\assets\img\cactus-2.png" />
+    <None Include="wwwroot\assets\img\cactus-3.png" />
+    <None Include="wwwroot\assets\img\cloud-sun.png" />
+    <None Include="wwwroot\assets\img\cloud.png" />
+    <None Include="wwwroot\assets\img\company10.png" />
+    <None Include="wwwroot\assets\img\company2.png" />
+    <None Include="wwwroot\assets\img\company3.jpg" />
+    <None Include="wwwroot\assets\img\company4.jpg" />
+    <None Include="wwwroot\assets\img\company5.png" />
+    <None Include="wwwroot\assets\img\company6.png" />
+    <None Include="wwwroot\assets\img\company7.jpg" />
+    <None Include="wwwroot\assets\img\company8.jpg" />
+    <None Include="wwwroot\assets\img\company9.jpg" />
+    <None Include="wwwroot\assets\img\CSS_logo.png" />
+    <None Include="wwwroot\assets\img\dashboards\dark-dashboard-1.png" />
+    <None Include="wwwroot\assets\img\dashboards\dark-dashboard-2.png" />
+    <None Include="wwwroot\assets\img\dashboards\dark-dashboard-3.png" />
+    <None Include="wwwroot\assets\img\dashboards\dark-dashboard-4.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-1-min.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-10-min.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-11-min.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-2-min.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-3-min.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-4-min.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-5-min.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-6-min.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-7-min.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-8-min.png" />
+    <None Include="wwwroot\assets\img\dashboards\dashboard-9-min.png" />
+    <None Include="wwwroot\assets\img\delivery.jpg" />
+    <None Include="wwwroot\assets\img\facebook.png" />
+    <None Include="wwwroot\assets\img\favicon.png" />
+    <None Include="wwwroot\assets\img\favicon144.png" />
+    <None Include="wwwroot\assets\img\favicon152.png" />
+    <None Include="wwwroot\assets\img\favicon16.png" />
+    <None Include="wwwroot\assets\img\favicon180.png" />
+    <None Include="wwwroot\assets\img\favicon192.png" />
+    <None Include="wwwroot\assets\img\favicon32.png" />
+    <None Include="wwwroot\assets\img\favicon48.png" />
+    <None Include="wwwroot\assets\img\favicon512.png" />
+    <None Include="wwwroot\assets\img\favicon72.png" />
+    <None Include="wwwroot\assets\img\favicon76.png" />
+    <None Include="wwwroot\assets\img\favicon96.png" />
+    <None Include="wwwroot\assets\img\flower-support.png" />
+    <None Include="wwwroot\assets\img\getAdminUX-qr.png" />
+    <None Include="wwwroot\assets\img\Google-Pay-logo-1024x512.png" />
+    <None Include="wwwroot\assets\img\google.png" />
+    <None Include="wwwroot\assets\img\help-bg.png" />
+    <None Include="wwwroot\assets\img\HTML_logo.png" />
+    <None Include="wwwroot\assets\img\JS_logo.png" />
+    <None Include="wwwroot\assets\img\laoderfixed-white.png" />
+    <None Include="wwwroot\assets\img\laoderfixed.png" />
+    <None Include="wwwroot\assets\img\laravel_logo.png" />
+    <None Include="wwwroot\assets\img\leaf.png" />
+    <None Include="wwwroot\assets\img\logo-icon.png" />
+    <None Include="wwwroot\assets\img\logo-square.jpg" />
+    <None Include="wwwroot\assets\img\logo-square.png" />
+    <None Include="wwwroot\assets\img\logo.png" />
+    <None Include="wwwroot\assets\img\maintenance.jpg" />
+    <None Include="wwwroot\assets\img\maxartkiller.png" />
+    <None Include="wwwroot\assets\img\movie1.jpg" />
+    <None Include="wwwroot\assets\img\movie2.jpg" />
+    <None Include="wwwroot\assets\img\movie3.jpg" />
+    <None Include="wwwroot\assets\img\multidevice-responsive.png" />
+    <None Include="wwwroot\assets\img\news-3.jpg" />
+    <None Include="wwwroot\assets\img\news-4.jpg" />
+    <None Include="wwwroot\assets\img\news-5.jpg" />
+    <None Include="wwwroot\assets\img\news-6.jpg" />
+    <None Include="wwwroot\assets\img\newsicon.png" />
+    <None Include="wwwroot\assets\img\offer-1.jpg" />
+    <None Include="wwwroot\assets\img\offer-1.png" />
+    <None Include="wwwroot\assets\img\onboarding-2.png" />
+    <None Include="wwwroot\assets\img\onboarding-3.png" />
+    <None Include="wwwroot\assets\img\onboarding1.png" />
+    <None Include="wwwroot\assets\img\onboardingsummary.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\01d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\01n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\02d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\02n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\03d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\03n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\04d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\04n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\09d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\09n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\10d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\10n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\11d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\11n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\13d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\13n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\50d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\dark\50n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\01d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\01n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\02d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\02n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\03d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\03n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\04d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\04n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\09d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\09n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\10d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\10n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\11d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\11n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\13d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\13n@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\50d@2x.png" />
+    <None Include="wwwroot\assets\img\openweather-icon\light\50n@2x.png" />
+    <None Include="wwwroot\assets\img\payment.png" />
+    <None Include="wwwroot\assets\img\product-1.jpg" />
+    <None Include="wwwroot\assets\img\product-2.jpg" />
+    <None Include="wwwroot\assets\img\product-3.jpg" />
+    <None Include="wwwroot\assets\img\product-4.jpg" />
+    <None Include="wwwroot\assets\img\product-5.jpg" />
+    <None Include="wwwroot\assets\img\product-6.jpg" />
+    <None Include="wwwroot\assets\img\product-8.jpg" />
+    <None Include="wwwroot\assets\img\product-9.jpg" />
+    <None Include="wwwroot\assets\img\reactjs_logo.png" />
+    <None Include="wwwroot\assets\img\rewards.jpg" />
+    <None Include="wwwroot\assets\img\SCSS_logo.png" />
+    <None Include="wwwroot\assets\img\services-amazon_Prime.png" />
+    <None Include="wwwroot\assets\img\services-netflixlogo.png" />
+    <None Include="wwwroot\assets\img\services-paypal.png" />
+    <None Include="wwwroot\assets\img\services-swiggy.png" />
+    <None Include="wwwroot\assets\img\services-youtubelogo.png" />
+    <None Include="wwwroot\assets\img\sun.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\changepassword-1-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\comingsoon-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\contact-us-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\contact-us-2.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\error404-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\error404-2.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\intro-1-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\intro-1-2.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\lightDark.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\maintenance-2.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\maintenance.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\oboarding-1-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\password-1-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\resetpassword-1-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\search-1-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\search-1-2.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\search-1-3.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\sidebar-fullscreen.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\sidebar-overlay.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\sidebar-pushcontent.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\signin-1-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\signup-1-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\thankyousingup-1-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\timeline-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\timeline-2.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\verify-1-1.png" />
+    <None Include="wwwroot\assets\img\supportive-pages\wizards-1.png" />
+    <None Include="wwwroot\assets\img\tour-guide-1.png" />
+    <None Include="wwwroot\assets\img\tour-guide-2.png" />
+    <None Include="wwwroot\assets\img\tour-guide-3.png" />
+    <None Include="wwwroot\assets\img\tour-guide-4.png" />
+    <None Include="wwwroot\assets\img\tour-guide-5.png" />
+    <None Include="wwwroot\assets\img\twitter.png" />
+    <None Include="wwwroot\assets\img\under-construction.jpg" />
+    <None Include="wwwroot\assets\img\under-construction1.png" />
+    <None Include="wwwroot\assets\img\user-1.jpg" />
+    <None Include="wwwroot\assets\img\user-2.jpg" />
+    <None Include="wwwroot\assets\img\user-3.jpg" />
+    <None Include="wwwroot\assets\img\user-4.jpg" />
+    <None Include="wwwroot\assets\img\visa.png" />
+    <None Include="wwwroot\assets\img\wallet-1.jpg" />
+    <None Include="wwwroot\assets\img\windows.png" />
+    <None Include="wwwroot\assets\js\app-explorer.js" />
+    <None Include="wwwroot\assets\js\color-scheme.js" />
+    <None Include="wwwroot\assets\js\company-resources.js" />
+    <None Include="wwwroot\assets\js\component-summary.js" />
+    <None Include="wwwroot\assets\js\components-chart.js" />
+    <None Include="wwwroot\assets\js\dashboard.js" />
+    <None Include="wwwroot\assets\js\finance-banks.js" />
+    <None Include="wwwroot\assets\js\finance-crypto.js" />
+    <None Include="wwwroot\assets\js\finance-dashboard.js" />
+    <None Include="wwwroot\assets\js\finance-wallet.js" />
+    <None Include="wwwroot\assets\js\header-title.js" />
+    <None Include="wwwroot\assets\js\inventory-dashboard.js" />
+    <None Include="wwwroot\assets\js\inventory-orders.js" />
+    <None Include="wwwroot\assets\js\inventory-stock.js" />
+    <None Include="wwwroot\assets\js\jquery-3.3.1.min.js" />
+    <None Include="wwwroot\assets\js\learning-courses.js" />
+    <None Include="wwwroot\assets\js\learning-dashboard.js" />
+    <None Include="wwwroot\assets\js\learning-institutes.js" />
+    <None Include="wwwroot\assets\js\login.js" />
+    <None Include="wwwroot\assets\js\main.js" />
+    <None Include="wwwroot\assets\js\network-dashboard.js" />
+    <None Include="wwwroot\assets\js\network-devices.js" />
+    <None Include="wwwroot\assets\js\network-performance.js" />
+    <None Include="wwwroot\assets\js\onboarding.js" />
+    <None Include="wwwroot\assets\js\Pages\Home.js" />
+    <None Include="wwwroot\assets\js\Pages\Dashboard_Peak.js" />
+    <None Include="wwwroot\assets\js\Pages\login.js" />
+    <None Include="wwwroot\assets\js\Pages\News.js" />
+    <None Include="wwwroot\assets\js\Pages\D_Peak.js" />
+    <None Include="wwwroot\assets\js\popper.min.js" />
+    <None Include="wwwroot\assets\js\profile-analytic.js" />
+    <None Include="wwwroot\assets\js\profile-social.js" />
+    <None Include="wwwroot\assets\js\project-dashboard.js" />
+    <None Include="wwwroot\assets\js\project-projects.js" />
+    <None Include="wwwroot\assets\js\pwa-services.js" />
+    <None Include="wwwroot\assets\js\rewards.js" />
+    <None Include="wwwroot\assets\js\social-analytics.js" />
+    <None Include="wwwroot\assets\js\social-dashboard.js" />
+    <None Include="wwwroot\assets\js\social-schedule.js" />
+    <None Include="wwwroot\assets\js\your-earning.js" />
+    <None Include="wwwroot\assets\scss\style.css" />
+    <None Include="wwwroot\assets\scss\style.css.map" />
+    <None Include="wwwroot\assets\scss\style.scss" />
+    <None Include="wwwroot\assets\scss\_apptour.scss" />
+    <None Include="wwwroot\assets\scss\_avatar.scss" />
+    <None Include="wwwroot\assets\scss\_body.scss" />
+    <None Include="wwwroot\assets\scss\_button.scss" />
+    <None Include="wwwroot\assets\scss\_card_toast_modal.scss" />
+    <None Include="wwwroot\assets\scss\_colors.scss" />
+    <None Include="wwwroot\assets\scss\_filter.scss" />
+    <None Include="wwwroot\assets\scss\_footer.scss" />
+    <None Include="wwwroot\assets\scss\_form.scss" />
+    <None Include="wwwroot\assets\scss\_fullcalendar.scss" />
+    <None Include="wwwroot\assets\scss\_gallery.scss" />
+    <None Include="wwwroot\assets\scss\_header.scss" />
+    <None Include="wwwroot\assets\scss\_list_chats.scss" />
+    <None Include="wwwroot\assets\scss\_loader.scss" />
+    <None Include="wwwroot\assets\scss\_logo.scss" />
+    <None Include="wwwroot\assets\scss\_personalize.scss" />
+    <None Include="wwwroot\assets\scss\_rightbar.scss" />
+    <None Include="wwwroot\assets\scss\_rtl.scss" />
+    <None Include="wwwroot\assets\scss\_sidebar.scss" />
+    <None Include="wwwroot\assets\scss\_swiperslides.scss" />
+    <None Include="wwwroot\assets\scss\_tables.scss" />
+    <None Include="wwwroot\assets\scss\_tabs.scss" />
+    <None Include="wwwroot\assets\scss\_tags.scss" />
+    <None Include="wwwroot\assets\scss\_text.scss" />
+    <None Include="wwwroot\assets\scss\_thankyou.scss" />
+    <None Include="wwwroot\assets\scss\_utility.scss" />
+    <None Include="wwwroot\assets\scss\_variables-darkmode.scss" />
+    <None Include="wwwroot\assets\scss\_variables.scss" />
+    <None Include="wwwroot\assets\vendor\atropos\atropos.css" />
+    <None Include="wwwroot\assets\vendor\atropos\atropos.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.min.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.min.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.min.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.min.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.min.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.min.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.min.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.min.css" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\css\bootstrap.rtl.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.min.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.esm.min.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\forms\_floating-labels.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-check.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-control.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-range.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-select.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\forms\_form-text.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\forms\_input-group.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\forms\_labels.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\forms\_validation.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_clearfix.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_color-bg.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_colored-links.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_position.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_ratio.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_stacks.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_stretched-link.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_text-truncation.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_visually-hidden.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\helpers\_vr.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_alert.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_backdrop.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_border-radius.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_box-shadow.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_breakpoints.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_buttons.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_caret.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_clearfix.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_color-scheme.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_container.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_deprecate.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_forms.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_gradients.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_grid.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_image.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_list-group.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_lists.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_pagination.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_reset-text.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_resize.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_table-variants.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_text-truncate.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_transition.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_utilities.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\mixins\_visually-hidden.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\utilities\_api.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\vendor\_rfs.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_accordion.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_alert.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_badge.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_breadcrumb.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_button-group.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_buttons.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_card.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_carousel.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_close.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_containers.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_dropdown.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_forms.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_functions.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_grid.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_helpers.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_images.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_list-group.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_maps.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_mixins.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_modal.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_nav.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_navbar.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_offcanvas.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_pagination.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_placeholders.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_popover.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_progress.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_reboot.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_root.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_spinners.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_tables.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_toasts.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_tooltip.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_transitions.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_type.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_utilities.scss" />
+    <None Include="wwwroot\assets\vendor\bootstrap-5\scss\_variables.scss" />
+    <None Include="wwwroot\assets\vendor\chart-js-3.3.1\chart.esm.js" />
+    <None Include="wwwroot\assets\vendor\chart-js-3.3.1\chart.js" />
+    <None Include="wwwroot\assets\vendor\chart-js-3.3.1\chart.min.js" />
+    <None Include="wwwroot\assets\vendor\chart-js-3.3.1\chunks\helpers.segment.js" />
+    <None Include="wwwroot\assets\vendor\chart-js-3.3.1\helpers.esm.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\chosen-sprite.png" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\chosen-sprite@2x.png" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\chosen.css" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\chosen.jquery.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\chosen.jquery.min.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\chosen.min.css" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\chosen.proto.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\chosen.proto.min.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\chosen.png" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\init.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\init.proto.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\jquery-1.12.4.min.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\oss-credit.png" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\prism.css" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\prism.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\prototype-1.7.0.0.js" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\docsupport\style.css" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\index.html" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\index.proto.html" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\LICENSE.md" />
+    <None Include="wwwroot\assets\vendor\chosen_v1.8.7\options.html" />
+    <None Include="wwwroot\assets\vendor\circle-pack\LICENSE" />
+    <None Include="wwwroot\assets\vendor\circle-pack\README.md" />
+    <None Include="wwwroot\assets\vendor\circle-pack\src\circlepack.css" />
+    <None Include="wwwroot\assets\vendor\circle-pack\src\circlepack.js" />
+    <None Include="wwwroot\assets\vendor\circle-pack\src\index.d.ts" />
+    <None Include="wwwroot\assets\vendor\circle-pack\src\index.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\ckeditor.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\ckeditor.js.map" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\index.html" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\LICENSE.md" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\README.md" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\sample\css\sample.css" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\bg.png" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\github.svg" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\logo.svg" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\sample\img\umbrellas.jpg" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\af.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ar.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ast.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\az.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\bg.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\bs.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ca.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\cs.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\da.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\de-ch.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\de.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\el.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\en-au.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\en-gb.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\eo.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\es.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\et.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\eu.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\fa.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\fi.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\fr.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\gl.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\gu.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\he.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\hi.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\hr.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\hu.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\id.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\it.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ja.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\km.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\kn.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ko.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ku.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\lt.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\lv.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ms.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\nb.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ne.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\nl.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\no.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\oc.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\pl.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\pt-br.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\pt.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ro.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ru.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\si.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sk.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sl.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sq.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sr-latn.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sr.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\sv.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\th.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\tk.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\tr.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\tt.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\ug.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\uk.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\uz.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\vi.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\zh-cn.js" />
+    <None Include="wwwroot\assets\vendor\ckeditor5-build-classic\translations\zh.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\bootstrap-datepicker-thai.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\bootstrap-datepicker.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.ar.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.bg.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.ca.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.cs.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.da.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.de.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.el.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.es.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.et.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.fi.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.fr.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.he.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.hr.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.hu.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.id.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.is.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.it.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.ja.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.kr.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.lt.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.lv.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.mk.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.ms.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.nb.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.nl.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.pl.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.pt-BR.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.pt.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.ro.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.rs-latin.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.rs.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.ru.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.sk.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.sl.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.sq.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.sv.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.sw.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.th.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.tr.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.uk.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.zh-CN.js" />
+    <None Include="wwwroot\assets\vendor\datepicker\js\locales\bootstrap-datepicker.zh-TW.js" />
+    <None Include="wwwroot\assets\vendor\daterangepicker\daterangepicker.css" />
+    <None Include="wwwroot\assets\vendor\daterangepicker\daterangepicker.js" />
+    <None Include="wwwroot\assets\vendor\daterangepicker\README.md" />
+    <None Include="wwwroot\assets\vendor\dragula\dragula.css" />
+    <None Include="wwwroot\assets\vendor\dragula\dragula.js" />
+    <None Include="wwwroot\assets\vendor\dragula\dragula.min.css" />
+    <None Include="wwwroot\assets\vendor\dragula\dragula.min.js" />
+    <None Include="wwwroot\assets\vendor\dragula\example.js" />
+    <None Include="wwwroot\assets\vendor\dropzone5-9-3\dropzone.min.css" />
+    <None Include="wwwroot\assets\vendor\dropzone5-9-3\dropzone.min.js" />
+    <None Include="wwwroot\assets\vendor\fooTable\css\footable.bootstrap.css" />
+    <None Include="wwwroot\assets\vendor\fooTable\css\footable.bootstrap.min.css" />
+    <None Include="wwwroot\assets\vendor\fooTable\js\footable.js" />
+    <None Include="wwwroot\assets\vendor\fooTable\js\footable.min.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales-all.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales-all.min.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\af.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-dz.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-kw.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-ly.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-ma.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-sa.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ar-tn.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ar.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\az.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\bg.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\bn.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\bs.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ca.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\cs.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\cy.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\da.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\de-at.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\de.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\el.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\en-au.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\en-gb.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\en-nz.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\eo.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\es-us.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\es.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\et.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\eu.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\fa.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\fi.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\fr-ca.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\fr-ch.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\fr.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\gl.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\he.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\hi.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\hr.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\hu.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\hy-am.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\id.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\is.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\it.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ja.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ka.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\kk.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\km.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ko.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ku.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\lb.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\lt.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\lv.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\mk.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ms.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\nb.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ne.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\nl.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\nn.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\pl.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\pt-br.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\pt.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ro.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ru.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\si-lk.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\sk.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\sl.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\sm.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\sq.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\sr-cyrl.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\sr.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\sv.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ta-in.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\th.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\tr.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\ug.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\uk.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\uz.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\vi.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\zh-cn.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\locales\zh-tw.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\main.css" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\main.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\main.min.css" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\lib\main.min.js" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\LICENSE.txt" />
+    <None Include="wwwroot\assets\vendor\fullCalendar\README.md" />
+    <None Include="wwwroot\assets\vendor\highlight\DIGESTS.md" />
+    <None Include="wwwroot\assets\vendor\highlight\highlight.js" />
+    <None Include="wwwroot\assets\vendor\highlight\highlight.min.js" />
+    <None Include="wwwroot\assets\vendor\highlight\LICENSE" />
+    <None Include="wwwroot\assets\vendor\highlight\monokai-sublime.min.css" />
+    <None Include="wwwroot\assets\vendor\highlight\README.md" />
+    <None Include="wwwroot\assets\vendor\jqvMap\jquery.vmap.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\jquery.vmap.min.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\jqvmap.css" />
+    <None Include="wwwroot\assets\vendor\jqvMap\jqvmap.min.css" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.africa.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.asia.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.australia.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.europe.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.north-america.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\continents\jquery.vmap.south-america.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.algeria.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.argentina.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.brazil.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.canada.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.croatia.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.europe.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.france.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.germany.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.greece.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.indonesia.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.iran.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.iraq.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.new_regions_france.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.russia.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.serbia.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.tunisia.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.turkey.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.ukraine.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.usa.counties.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.usa.districts.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.usa.js" />
+    <None Include="wwwroot\assets\vendor\jqvMap\maps\jquery.vmap.world.js" />
+    <None Include="wwwroot\assets\vendor\nouislider\nouislider.css" />
+    <None Include="wwwroot\assets\vendor\nouislider\nouislider.js" />
+    <None Include="wwwroot\assets\vendor\nouislider\nouislider.min.css" />
+    <None Include="wwwroot\assets\vendor\nouislider\nouislider.min.js" />
+    <None Include="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\index.html" />
+    <None Include="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\lib.css" />
+    <None Include="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\lib.js" />
+    <None Include="wwwroot\assets\vendor\Product-Tour-Plugin-jQuery\readme.md" />
+    <None Include="wwwroot\assets\vendor\progressbar-js\progressbar.min.js" />
+    <None Include="wwwroot\assets\vendor\simplelightbox\simple-lightbox.jquery.min.js" />
+    <None Include="wwwroot\assets\vendor\simplelightbox\simple-lightbox.min.css" />
+    <None Include="wwwroot\assets\vendor\smartWizard\jquery.smartWizard.min.js" />
+    <None Include="wwwroot\assets\vendor\smartWizard\readme.txt" />
+    <None Include="wwwroot\assets\vendor\smartWizard\smart_wizard_all.min.css" />
+    <None Include="wwwroot\assets\vendor\swiper-7.3.1\LICENSE.txt" />
+    <None Include="wwwroot\assets\vendor\swiper-7.3.1\README.md" />
+    <None Include="wwwroot\assets\vendor\swiper-7.3.1\swiper-bundle.min.css" />
+    <None Include="wwwroot\assets\vendor\swiper-7.3.1\swiper-bundle.min.js" />
+    <None Include="wwwroot\assets\vendor\swiper-7.3.1\swiper.min.css" />
+    <None Include="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput-angular.js" />
+    <None Include="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput-angular.min.js" />
+    <None Include="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput-angular.min.js.map" />
+    <None Include="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.css" />
+    <None Include="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.js" />
+    <None Include="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.less" />
+    <None Include="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.min.js" />
+    <None Include="wwwroot\assets\vendor\tagsinput\bootstrap-tagsinput.min.js.map" />
+    <None Include="wwwroot\assets\vendor\typeahead.bundle.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="html\manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Dashboard\Cars.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Dashboard\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Dashboard\IndividualCar.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Dashboard\IndividualCarMobile.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Dashboard\IndividualPlace.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Error.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Home\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Privacy.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Shared\_Layout.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Shared\_Layout_Login.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\Shared\_ValidationScriptsPartial.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\_ViewImports.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Pages\_ViewStart.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\css\site.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\favicon.ico">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\js\site.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\LICENSE">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\additional-methods.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\additional-methods.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\jquery.validate.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\LICENSE.md">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\dist\jquery.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\dist\jquery.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\dist\jquery.min.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\LICENSE.txt">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

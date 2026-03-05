@@ -1,0 +1,37 @@
+﻿document.addEventListener('DOMContentLoaded', () => {
+    CheckIsRegisterProduct();
+});
+
+function CheckIsRegisterProduct() {
+    var cid = "653817"; //document.getElementById("hddCustomerID");
+    var result = GetIsRegister(cid);
+    if (result != "" && parseInt(result) > 0) {
+        var btnRegisProduct = document.getElementById("btnShowProduct");
+        btnRegisProduct.style.display = "block";
+    } else {
+        btnRegisProduct.style.display = "none";
+    }
+}
+function ShowProductRegisterPage() {
+    var cid = "653817";
+    var externalURL = "https://chatclinic.tcg.or.th/tcghealthcheck_dev/views/extend/productregister?cid=" + cid;
+    window.open(externalURL);
+}
+
+function GetIsRegister(cid) {
+    //let result = HttpRequest(host + "/api/customerprofile/" + cid + "/approch/count", "GET")
+
+    var data = "";
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('GET', host + "/api/customerprofile/" + cid + "/approch/count", false);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer 123456789');
+    xhr.send();
+
+    data = xhr.responseText;
+    console.log(data);
+
+    return data;
+
+}

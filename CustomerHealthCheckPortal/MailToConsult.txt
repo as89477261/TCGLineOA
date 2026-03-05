@@ -1,0 +1,15 @@
+﻿เรียนคุณ	{0}
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ระบบ F.A.Center บสย. ขอนำส่งเคลสคำขอ ชื่อ-สกุลลูกค้า : {1} เบอร์โทรศัพท์ : {2} 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ขอให้ติดตามและดำเนินการประสานงานกับลูกค้าต่อไป ซึ่งมีรายละเอียดคำขอของลูกค้าตามลิงค์ด้านล่าง
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><h3> ลิงค์แสดงรายละเอียดคำขอและข้อมูลลูกค้า <a href="https://fs.tcg.or.th/tcg_ui_facenter/eform/{3}/{4}/{6}">คลิกที่นี่ </a> </h3></b>
+<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><h3> คำขอทั้งหมดของท่าน ที่ท่านได้ให้คำปรึกษา <a href="https://fs.tcg.or.th/tcg_ui_facenter/eApplicationform_search/{5}/{4}/-1/{6}">คลิกที่นี่ </a> </h3></b>
+
+
+
+<center>
+ขอแสดงความนับถือ
+ทีมงานศูนย์ที่ปรึกษาทางการเงิน SMEs (บสย. F.A. Center)
+</center>

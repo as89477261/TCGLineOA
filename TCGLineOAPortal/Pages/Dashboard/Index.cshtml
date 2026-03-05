@@ -1,0 +1,560 @@
+﻿@page
+@using OPEN_API_MODEL.Model.OIC_Parking
+@model CC_CustomerPortal.Pages.Dashboard.IndexModel
+@{
+}
+
+<!-- Begin page content -->
+<div class="main mainheight">
+    <!-- title bar -->
+    <div class="container-fluid">
+        <div class="row align-items-center page-title">
+            <div class="col-12 col-md mb-2 mb-sm-0">
+                <h5 class="mb-0">Overall Dashboard</h5>
+                <p class="text-secondary">หน้าหลักแสดงข้อมูลภาพรวม</p>
+            </div>
+
+        </div>
+        <nav aria-label="breadcrumb" class="breadcrumb-theme">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">OIC-ISPS </a></li>
+                <li class="breadcrumb-item"><a href="network-dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Overall</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- content -->
+    <div class="container mt-4">
+        <div class="row align-items-center mb-3">
+            <div class="col-auto">
+                <i class="bi bi-pc-display h5 avatar avatar-40 bg-light-red text-red rounded"></i>
+            </div>
+            <div class="col">
+                <h6 class="fw-medium mb-0">ข้อมูลภาพรวม</h6>
+                <p class="text-secondary small">แสดงสถานะภาพรวมทั้งหมดแบบ Real-Time</p>
+            </div>
+        </div>
+        <!-- summary blocks -->
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6 col-xxl-3">
+                <div class="card border-0 mb-4">
+                    <div class="card-body text-center">
+                        <div class="circle-medium mx-auto mb-3">
+                            <div id="circleprogressblue"></div>
+                            <div class="avatar h4 bg-light-blue rounded-circle">
+                                <i class="bi bi-pc-display-horizontal"></i>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mb-1">จำนวนรถเข้าออกต่อวัน</p>
+                        <h5 class="fw-medium">@Model.p1.COUNT_TOTAL</h5>
+                    </div>
+                    <div class="card-footer border-top">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="text-secondary small mb-1">ขาเข้า </p>
+                                <p> @Model.p1.COUNT_IN <small class="fs-12 fw-light text-secondary"></small></p>
+                            </div>
+                            <div class="col-6 border-left-dashed">
+                                <p class="text-secondary small mb-1">ขาออก</p>
+                                <p>@Model.p1.COUNT_OUT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 col-xxl-3">
+                <div class="card border-0 mb-4">
+                    <div class="card-body text-center">
+                        <div class="circle-medium mx-auto mb-3">
+                            <div id="circleprogressgreen"></div>
+                            <div class="avatar h4 bg-light-green rounded-circle">
+                                <i class="bi bi-people"></i>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mb-1">จำนวนที่ว่างคงเหลือ</p>
+                        <h5 class="fw-medium">@Model.p2.CURRENT_LIMIT คัน</h5>
+                    </div>
+                    <div class="card-footer border-top">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="text-secondary small mb-1">ที่จอดทั้งหมด</p>
+                                <p>@Model.p2.MAX_LIMIT <small class="fs-12 fw-light text-secondary"></small></p>
+                            </div>
+                            <div class="col-6 border-left-dashed">
+                                <p class="text-secondary small mb-1">รถจอดเต็มแล้ว</p>
+                                <p>@Model.p2.CURRENT_CAR </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 col-xxl-3">
+                <div class="card border-0 mb-4">
+                    <div class="card-body text-center">
+                        <div class="circle-medium mx-auto mb-3">
+                            <div id="circleprogressyellow"></div>
+                            <div class="avatar h4 bg-light-yellow rounded-circle">
+                                <i class="bi bi-speedometer"></i>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mb-1">ช่วงเวลาที่รถเข้า/ออกสูงสุดวันนี้</p>
+                        <h5 class="fw-medium">@Model.p3.PEAK_ALL <small> น. <span class="fs-12 fw-light text-secondary"> </span></small></h5>
+                    </div>
+                    <div class="card-footer border-top">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="text-secondary small mb-1">ขาเข้า</p>
+                                <p>@Model.p3.PEAK_IN</p>
+                            </div>
+                            <div class="col-6 border-left-dashed">
+                                <p class="text-secondary small mb-1">ขาออก</p>
+                                <p>@Model.p3.PEAK_OUT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 col-xxl-3">
+                <div class="card border-0 mb-4">
+                    <div class="card-body text-center">
+                        <div class="circle-medium mx-auto mb-3">
+                            <div id="circleprogressredbug"></div>
+                            <div class="avatar h4 bg-light-red rounded-circle">
+                                <i class="bi bi-bug"></i>
+                            </div>
+                        </div>
+                        <p class="text-secondary small mb-1">จำนวนเจ้าหน้าที่ คปภ.เข้า/ออก</p>
+                        <h5 class="fw-medium">@Model.p4.COUNT_TOTAL ครั้ง</h5>
+                    </div>
+                    <div class="card-footer border-top">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="text-secondary small mb-1">ขาเข้า</p>
+                                <p class="text-green">@Model.p4.COUNT_IN ครั้ง</p>
+                            </div>
+                            <div class="col-6 border-left-dashed">
+                                <p class="text-secondary small mb-1">ขาออก</p>
+                                <p class="text-yellow">@Model.p4.COUNT_OUT ครั้ง</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- devices chart connection-->
+        <div class="row">
+
+            @*  <div class="col-12 col-md-12 col-xl-8">
+            <div class="card border-0 mb-4">
+            <div class="card-header">
+            <div class="row align-items-center">
+            <div class="col-auto">
+            <i class="bi bi-building h5 me-1 avatar avatar-40 bg-light-theme rounded"></i>
+            </div>
+            <div class="col-auto">
+            <h6 class="fw-medium mb-0">Office Space</h6>
+            <p class="text-secondary small">6 <span class="text-green">Active</span>, 1 <span class="text-red">Inactive</span> Device</p>
+            </div>
+            <div class="col">
+            <div class="input-group rounded border">
+            <select class="simplechosen" multiple>
+            <option selected>Office Space</option>
+            <option>Office two</option>
+            <option>Meeting Room 1</option>
+            <option selected>Kitchen 1</option>
+            <option selected>Gate 2</option>
+            </select>
+            </div>
+            </div>
+            <div class="col-auto">
+            <div class="dropdown d-inline-block">
+            <a class="btn btn-link btn-square text-secondary dd-arrow-none dropdown-toggle" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+            <i class="bi bi-columns"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+            <div class="dropdown-item text-center p-0">
+            <div class="row gx-3 mb-3">
+            <div class="col-6">
+            <div class="row select-column-size gx-1">
+            <div class="col-8" data-title="8"><span></span></div>
+            <div class="col-4" data-title="4"><span></span></div>
+            </div>
+            </div>
+            <div class="col-6">
+            <div class="row select-column-size gx-1">
+            <div class="col-9" data-title="9"><span></span></div>
+            <div class="col-3" data-title="3"><span></span></div>
+            </div>
+            </div>
+            </div>
+            <div class="row gx-3">
+            <div class="col-6">
+            <div class="row select-column-size gx-1">
+            <div class="col-6" data-title="6"><span></span></div>
+            <div class="col-6" data-title="6"><span></span></div>
+            </div>
+            </div>
+            <div class="col-6">
+            <div class="row select-column-size gx-1">
+            <div class="col-12" data-title="12"><span></span></div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+            <div class="card-body">
+            <div class="row">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-6 col-xxl-7 mb-3 mb-xl-0">
+            <div class="position-relative">
+            <div class="position-absolute start-0 top-0 w-100 p-3">
+            <div class="row">
+            <div class="col">
+            <span class="btn btn-light btn-sm btn-rounded shadow-sm">
+            <span class="avatar avatar-20 rounded-circle bg-red me-1"></span> Live
+            </span>
+            </div>
+            <div class="col-auto">
+            <span class="btn btn-light btn-sm btn-rounded shadow-sm">
+            <i class="bi bi-fullscreen vm"></i>
+            </span>
+            </div>
+            </div>
+            </div>
+            <figure class="h-250 w-100 rounded border coverimg mb-3">
+            <img src="assets/img/business-5.jpg" class="w-100" alt="" />
+            </figure>
+            </div>
+            <div class="row gx-3">
+            <div class="col-6">
+            <div class="position-relative">
+            <div class="position-absolute start-0 top-0 w-100 p-3">
+            <div class="row">
+            <div class="col">
+            <span class="btn btn-light btn-sm btn-rounded shadow-sm">
+            <span class="avatar avatar-10 rounded-circle bg-red me-1"></span> Live
+            </span>
+            </div>
+            <div class="col-auto">
+            <span class="btn btn-light btn-sm btn-rounded shadow-sm">
+            <i class="bi bi-fullscreen vm"></i>
+            </span>
+            </div>
+            </div>
+            </div>
+            <figure class="h-150 w-100 rounded border coverimg mb-0">
+            <img src="assets/img/business-4.jpg" class="w-100" alt="" />
+            </figure>
+            </div>
+            </div>
+            <div class="col-6">
+            <div class="position-relative">
+            <div class="position-absolute start-0 top-0 w-100 p-3">
+            <div class="row">
+            <div class="col">
+            <span class="btn btn-light btn-sm btn-rounded shadow-sm">
+            <span class="avatar avatar-10 rounded-circle bg-red me-1"></span> Live
+            </span>
+            </div>
+            <div class="col-auto">
+            <span class="btn btn-light btn-sm btn-rounded shadow-sm">
+            <i class="bi bi-fullscreen vm"></i>
+            </span>
+            </div>
+            </div>
+            </div>
+            <figure class="h-150 w-100 rounded border coverimg mb-0">
+            <img src="assets/img/news-3.jpg" class="w-100" alt="" />
+            </figure>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 col-xl-6 col-xxl-5">
+            <div class="row align-items-center mb-4">
+            <div class="col-auto">
+            <div class="avatar avatar-50 h5 bg-green text-white rounded-circle">
+            <i class="bi bi-thermometer-sun"></i>
+            </div>
+            </div>
+            <div class="col ps-0">
+            <p class="text-secondary small mb-1">Temperature</p>
+            <h5 class="fw-medium">45 <small><sup>0</sup>C, Office R-32</small></h5>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-auto mb-3">
+            <div class="card border-0">
+            <div class="card-body position-relative">
+            <span class="avatar avatar-6 rounded-circle bg-yellow position-absolute top-0 end-0 m-1"></span>
+            <i class="bi bi-fan avatar avatar-40 h4 text-theme"></i>
+            </div>
+            </div>
+            </div>
+            <div class="col-auto mb-3">
+            <div class="card border-0">
+            <div class="card-body position-relative">
+            <span class="avatar avatar-6 rounded-circle bg-red position-absolute top-0 end-0 m-1"></span>
+            <i class="bi bi-snow2 avatar avatar-40 h4 text-theme"></i>
+            </div>
+            </div>
+            </div>
+            <div class="col-auto mb-3">
+            <div class="card border-0">
+            <div class="card-body position-relative">
+            <span class="avatar avatar-6 rounded-circle bg-green position-absolute top-0 end-0 m-1"></span>
+            <i class="bi bi-laptop avatar avatar-40 h4 text-theme"></i>
+            </div>
+            </div>
+            </div>
+            <div class="col-auto mb-3">
+            <div class="card border-0">
+            <div class="card-body position-relative">
+            <span class="avatar avatar-6 rounded-circle bg-green position-absolute top-0 end-0 m-1"></span>
+            <i class="bi bi-pc-display-horizontal avatar avatar-40 h4 text-theme"></i>
+            </div>
+            </div>
+            </div>
+            <div class="col-auto mb-3">
+            <div class="card border-0 opacity-5">
+            <div class=" card-body position-relative">
+            <span class="avatar avatar-6 rounded-circle bg-blue position-absolute top-0 end-0 m-1"></span>
+            <i class="bi bi-printer avatar avatar-40 h4 text-theme"></i>
+            </div>
+            </div>
+            </div>
+            <div class="col-auto mb-3">
+            <div class="card border-0">
+            <div class="card-body position-relative">
+            <span class="avatar avatar-6 rounded-circle bg-green position-absolute top-0 end-0 m-1"></span>
+            <i class="bi bi-cast avatar avatar-40 h4 text-theme"></i>
+            </div>
+            </div>
+            </div>
+            <div class="col-auto mb-3">
+            <div class="card border-0">
+            <div class="card-body position-relative">
+            <span class="avatar avatar-6 rounded-circle bg-green position-absolute top-0 end-0 m-1"></span>
+            <i class="bi bi-music-player avatar avatar-40 h4 text-theme"></i>
+            </div>
+            </div>
+            </div>
+            <div class="col-auto mb-3">
+            <div class="card shadow-none border-0 bg-light-theme">
+            <div class="card-body position-relative bg-none">
+            <i class="bi bi-plus avatar avatar-40 h4 text-theme"></i>
+            </div>
+            </div>
+            </div>
+            </div>
+            <h6 class="fw-medium mb-3">Lights</h6>
+            <div class="row">
+            <div class="col-auto text-center mb-3">
+            <div class="card border-0 mb-2">
+            <div class="card-body position-relative">
+            <span class="avatar avatar-6 rounded-circle bg-yellow position-absolute top-0 end-0 m-1"></span>
+            <i class="bi bi-lightbulb avatar avatar-60 h4 text-theme b-2"></i>
+            <div class="row gx-0 align-items-center">
+            <div class="col">
+            <div class="form-check form-switch d-inline-block mx-auto">
+            <input class="form-check-input" type="checkbox" role="switch" id="bulb1">
+            <label class="form-check-label mx-0" for="bulb1"></label>
+            </div>
+            </div>
+            <div class="col-auto">
+            <p class="small text-trucate text-secondary">9w</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            <p class="small text-trucate text-secondary">1-Main Room</p>
+            </div>
+            <div class="col-auto text-center mb-3">
+            <div class="card border-0 mb-2">
+            <div class="card-body position-relative">
+            <span class="avatar avatar-6 rounded-circle bg-red position-absolute top-0 end-0 m-1"></span>
+            <i class="bi bi-lamp avatar avatar-60 h4 text-theme b-2"></i>
+            <div class="row gx-0 align-items-center">
+            <div class="col">
+            <div class="form-check form-switch d-inline-block mx-auto">
+            <input class="form-check-input" type="checkbox" role="switch" id="bulb2">
+            <label class="form-check-label mx-0" for="bulb2"></label>
+            </div>
+            </div>
+            <div class="col-auto">
+            <p class="small text-trucate text-secondary">18w</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            <p class="small text-trucate text-secondary">2-MyRoom</p>
+            </div>
+            <div class="col-auto text-center mb-3">
+            <div class="card border-0 mb-2">
+            <div class="card-body position-relative">
+            <span class="avatar avatar-6 rounded-circle bg-green position-absolute top-0 end-0 m-1"></span>
+            <i class="bi bi-lightbulb avatar avatar-60 h4 text-theme b-2"></i>
+            <div class="row gx-0 align-items-center">
+            <div class="col">
+            <div class="form-check form-switch d-inline-block mx-auto">
+            <input class="form-check-input" type="checkbox" role="switch" id="bulb3" checked>
+            <label class="form-check-label mx-0" for="bulb3"></label>
+            </div>
+            </div>
+            <div class="col-auto">
+            <p class="small text-trucate text-secondary">9w</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            <p class="small text-trucate text-secondary">1-Outdoor</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="card-footer">
+            <div class="row">
+            <div class="col-auto">
+            <div class="avatar avatar-50 h5 bg-light-yellow rounded">
+            <i class="bi bi-lightning"></i>
+            </div>
+            </div>
+            <div class="col-auto">
+            <p class="text-secondary small mb-1">Power Consumptions</p>
+            <h5>30 Wph</h5>
+            </div>
+            <div class="col-auto">
+            <div class="avatar avatar-50 h5 bg-light-green rounded">
+            <i class="bi bi-sun"></i>
+            </div>
+            </div>
+            <div class="col-auto">
+            <p class="text-secondary small mb-1">PV Generation</p>
+            <h5>45 Wph</h5>
+            </div>
+            <div class="col-auto">
+            <div class="avatar avatar-50 h5 bg-light-red rounded">
+            <i class="bi bi-wind"></i>
+            </div>
+            </div>
+            <div class="col-auto">
+            <p class="text-secondary small mb-1">Wind</p>
+            <h5>60 kmph</h5>
+            </div>
+            <div class="col-auto">
+            <div class="avatar avatar-50 h5 bg-light-blue rounded">
+            <i class="bi bi-moisture"></i>
+            </div>
+            </div>
+            <div class="col-auto">
+            <p class="text-secondary small mb-1">Moisture</p>
+            <h5>30% </h5>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>*@
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 position-relative column-set">
+                <!-- Grid table-->
+                <div class="card border-0 mb-4">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-auto">
+                                <i class="bi bi-file-person h5 avatar avatar-40 bg-light-theme rounded"></i>
+                            </div>
+                            <div class="col-auto align-self-center">
+                                <h6 class="d-inline-block mb-0">รายชื่อคนจอดรถภายในอาคารชั้น B1-B3 </h6>
+                                <p class="text-secondary small">แสดงข้อมูลล่าสุด 10 รายการจากทั้งหมด</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table footable1" data-show-toggle="true">
+                            <thead>
+                                <tr class="text-muted">
+                                    <th class="w-12"></th>
+                                    <th class="">ID</th>
+                                    <th>ชื่อเจ้าของรถ</th>
+                                    <th data-breakpoints="xs sm">ช่องทาง</th>
+                                    <th data-breakpoints="xs sm">ทะเบียนรถ</th>
+                                    <th data-breakpoints="xs">เวลา</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i <  Model.p5.Count; i++)
+                                {
+                                    <tr>
+                                        <td></td>
+                                        <td>@(i+1)</td>
+                                        <td>
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <figure class="avatar avatar-50 mb-0 coverimg rounded-circle">
+                                                        <img src="assets/img/user-1.jpg" alt="" />
+                                                    </figure>
+                                                </div>
+                                                <div class="col ps-0">
+                                                    <p class="mb-0">@(Model.p5[i].FIRST_NAME  +" " +Model.p5[i].LAST_NAME)</p>
+                                                    <p class="text-secondary small">@Model.p5[i].PERSONAL_ID</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="mb-0">@Model.p5[i].EVENT_TYPE</p>
+                                            @*<p class="text-secondary small">082-999-5156</p>*@
+                                        </td>
+                                        <td>
+                                            <p class="mb-0">@Model.p5[i].CAR_NUMBER </p>
+                                           @* <p class="text-secondary small">กรุงเทพ</p>*@
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-sm bg-green">@Model.p5[i].CREATE_DATE</span>
+                                        </td>
+                                       
+                                    </tr>
+
+                                }
+
+
+                            </tbody>
+                        </table>
+
+                        <div class="row align-items-center mx-0 mb-3">
+                            <div class="col-6 ">
+                                <span class="hide-if-no-paging">
+                                    Showing <span id="footablestot1"></span> page
+                                </span>
+                            </div>
+                            <div class="col-6" id="footable-pagination1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+@section Scripts {
+    <script src="~/assets/js/Pages/Home.js"></script>
+
+}

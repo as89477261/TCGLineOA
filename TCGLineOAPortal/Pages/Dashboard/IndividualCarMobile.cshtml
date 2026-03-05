@@ -1,0 +1,236 @@
+﻿@page
+@model CC_CustomerPortal.Pages.Dashboard.IndividualCarMobileModel
+@{
+}
+
+<!-- Begin page content -->
+<main class="main mainheight">
+    <!-- title bar -->
+    <div class="container-fluid">
+        <div class="row align-items-center page-title">
+            <div class="col-12 col-md mb-2 mb-sm-0">
+                <h5 class="mb-0">Individual Monitoring</h5>
+                <p class="text-secondary">ภาพรวมการขนส่งรายบุคคล/รายคัน</p>
+            </div>
+
+        </div>
+        <nav aria-label="breadcrumb" class="breadcrumb-theme">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">OIC-ISPS </a></li>
+                <li class="breadcrumb-item"><a href="network-dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Car In/Out</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- add column-set class to parent when customize column width dropdown added -->
+            <div class="col-12 mb-4 column-set mt-3">
+                <input type="hidden" id="hddPeakValue" value="@Model.p1.Value1" />
+                <input type="hidden" id="hddPeakLabel" value="@Model.p1.Value2" />
+                <div class="card border-0 ">
+                    <div class="card-header">
+                        <form method="post">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <i class="bi bi-people h5 avatar avatar-40 bg-light-theme rounded"></i>
+                                </div>
+                                <div class="col-auto">
+                                    <h6 class="fw-medium mb-0">Server</h6>
+                                    <p class="small text-secondary">Uptime 100%</p>
+                                </div>
+                                <div class="col-3 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                                    <div class="rounded border">
+                                        <input id="txtEditEndDate" name="startDate" asp-for="startDate" type="text" placeholder="ระบุวันที่เริ่มต้น" required="" class="form-control border-start-0 datepicker">
+
+
+
+                                    </div>
+                                </div>
+                                <div class="col-3 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+                                    <div class="rounded border">
+                                        <input id="txtEditEndDate" asp-for="endDate" type="text" placeholder="ระบุวันที่สิ้นสุด" required="" class="form-control border-start-0 datepicker">
+
+
+
+
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+
+                                    <button type="submit" asp-page-handler="Search" class="btn btn-primary btn-sm">ค้นหา</button>
+
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <div class="card-body">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="trafic1" role="tabpanel" aria-labelledby="trafic1-tab">
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-12 col-xl-12 mb-3">
+                                        <div class="chartserver">
+                                            <canvas id="socialtraffic" width="539" height="290" style="display: block; box-sizing: border-box; height: 290px; width: 539px;"></canvas>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-12 col-xl-12 col-xxl-12 mb-12 position-relative column-set">
+                <div class="card border-0">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-auto">
+                                <i class="bi bi-shop h5 avatar avatar-40 bg-light-theme rounded"></i>
+                            </div>
+                            <div class="col-auto align-self-center">
+                                <h6 class="fw-medium mb-0">Expense</h6>
+                                <p class="text-secondary small">All Transactions</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-body p-0" style="overflow:auto;">
+                        <table class="table table-borderless footable footable-1 footable-paging footable-paging-right breakpoint breakpoint-md" data-show-toggle="true" style="">
+                            <thead>
+                                <tr class="text-muted footable-header">
+
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">วันที่ <span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">00.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">01.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">02.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">03.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">04.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">05.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">06.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">07.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">08.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">09.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">10.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">11.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">12.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">13.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">14.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">15.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">16.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">17.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">18.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">19.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">20.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">21.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">22.00<span class="fooicon fooicon-sort"></span></th>
+                                    <th data-breakpoints="xs" class="footable-sortable" style="display: table-cell;">23.00<span class="fooicon fooicon-sort"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < @Model.p2.Count; i++)
+                                {
+                                    <tr>
+
+                                        <td style="display: table-cell;">
+                                            <p class="">@(Model.p2[i].DAY.ToString() + "/" +Model.p2[i].MONTH.ToString() +"/"+Model.p2[i].YEAR.ToString())</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H0</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H1</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H2</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H3</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H4</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H5</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H6</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H7</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H8</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H9</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H10</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H11</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H12</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H13</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H14</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H15</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H16</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H17</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H18</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H19</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H20</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H21</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H22</p>
+                                        </td>
+                                        <td style="display: table-cell;">
+                                            <p class="mb-0">@Model.p2[i].H23</p>
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</main>
+
+@section Scripts {
+
+    <script src="~/assets/js/pages/D_Peak.js"></script>
+}

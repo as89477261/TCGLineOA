@@ -1,0 +1,18 @@
+﻿using System;
+using System.Configuration;
+using System.Text;
+using System.Web.UI;
+
+public class BasePage : Page
+{
+    protected string GetAppsetting(string configName)
+    {
+        return ConfigurationManager.AppSettings[configName];
+    }
+
+    public string DecodeBase64(string value)
+    {
+        var valueBytes = Convert.FromBase64String(value);
+        return Encoding.UTF8.GetString(valueBytes);
+    }
+}

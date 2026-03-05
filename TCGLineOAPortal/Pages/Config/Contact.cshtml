@@ -1,0 +1,738 @@
+﻿@page
+@using OPEN_API_MODEL.Model.OIC_Parking
+@model OIC_PAK_INT.Pages.Config.ContactModel
+@{
+}
+
+
+<!-- Begin page content -->
+<main class="main mainheight">
+    <!-- title bar -->
+    <div class="container-fluid">
+        <div class="row align-items-center page-title">
+            <div class="col-12 col-md mb-2 mb-sm-0">
+                <h5 class="mb-0">ข้อมูลติดต่อ</h5>
+                <p class="text-secondary">สำหรับเมนูติดต่อฝ่ายอาคารใน Line</p>
+            </div>
+            <div class="col col-sm-auto">
+                <div class="input-group input-group-md">
+                </div>
+            </div>
+            <div class="col-auto ps-0 position-relative">
+            </div>
+        </div>
+        <nav aria-label="breadcrumb" class="breadcrumb-theme">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">OIC-ISPS</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact Information</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- content -->
+    <div class="container mt-4">
+
+
+        <div class="row">
+            <!-- timesheet -->
+            <div class="col-12 col-md-12 position-relative">
+                <div class="card border-0 mb-4">
+                    <div class="card-header">
+                        <div class="row">
+
+                            <div class="col-auto align-self-center">
+                                <h6 class="fw-medium mb-0">ตารางข้อมูล</h6>
+
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-theme" onclick="ShowInsertModel()" >เพิ่ม</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-border footable" data-show-toggle="true">
+                            <thead style="text-align:center;">
+                                <tr class="text-muted">
+
+                                    <th class="" style="width:200px !important;">ข้อความหลัก</th>
+                                    <th data-breakpoints="xs md">เบอร์โทรติดต่อ</th>
+                                    <th data-breakpoints="xs">สถานะ</th>
+                                    <th data-breakpoints="xs md">วันที่สร้าง</th>
+                                    <th data-breakpoints="xs md">วันที่แก้ไขล่าสุด</th>
+                                    <th data-breakpoints="xs" style="width:200px !important;">เมนู</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ORA_ParkingContactModel obj in Model.bufferContact)
+                                {
+                                    <tr>
+
+
+                                        <td>
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                </div>
+                                                <div class="col ps-0">
+                                                    <p class="mb-0">@obj.TITLE</p>
+
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="text-align:center;padding-right:30px;">
+                                            <p class="mb-0">@obj.PHONE1</p>
+
+                                        </td>
+                                        <td style="text-align:center;padding-right:30px;">
+
+                                            @if (obj.STATUS == "1")
+                                            {
+                                                <p class="mb-0">ใช้งาน</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="mb-0">ไม่ใช้งาน</p>
+                                            }
+
+
+                                        </td>
+                                        <td style="text-align:center;padding-right:30px;">
+                                            <p class="mb-0">@obj.CREATE_DATE</p>
+
+                                        </td>
+                                        <td style="text-align:center;padding-right:30px;">
+                                            <p class="mb-0">@obj.UPDATE_DATE</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="row ">
+                                                <div class="col text-center">
+                                                    <button class="btn btn-theme" onclick="ShowEditModal(@obj.ID)">แก้ไข</button>
+                                                    <button class="btn btn-theme" onclick="ShowDeleteModal(@obj.ID)">ลบ</button>
+                                                </div>
+
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                                @* <tr>
+                                <td>
+                                <div class="row align-items-center">
+                                <div class="col-auto">
+                                <figure class="avatar avatar-50 border mb-0 coverimg rounded">
+                                <img src="assets/img/news-4.jpg" alt="" class="w-100" />
+                                </figure>
+                                </div>
+                                <div class="col ps-0">
+                                <p class="mb-0">Divine soul apps</p>
+                                <p class="text-secondary small mb-1">Requirement Understanding</p>
+                                <p class="text-secondary small">By <a href="">Avnit Preet</a></p>
+                                </div>
+                                </div>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">5.00</p>
+                                <p class="text-secondary small">hours</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">John Johnson</p>
+                                <p class="text-secondary small">john@gmailtestid.com</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <span class="badge badge-sm bg-green">Completed</span>
+                                </td>
+                                <td>
+                                <div class="dropdown d-inline-block">
+                                <a class="text-secondary dd-arrow-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" role="button">
+                                <i class="bi bi-three-dots"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Move</a></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                                </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <div class="row align-items-center">
+                                <div class="col-auto">
+                                <figure class="avatar avatar-50 border mb-0 coverimg rounded">
+                                <img src="assets/img/business-4.jpg" alt="" />
+                                </figure>
+                                </div>
+                                <div class="col ps-0">
+                                <p class="mb-0">Kitchen World app</p>
+                                <p class="text-secondary small mb-1">UI Design for Home page</p>
+                                <p class="text-secondary small">By <a href="">Maria Carlos</a></p>
+                                </div>
+                                </div>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">7.30</p>
+                                <p class="text-secondary small">hours</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">Mirae Jackson</p>
+                                <p class="text-secondary small">mirae@gmailtestid.com</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">10:05 am</p>
+                                </td>
+                                <td>
+                                <span class="badge badge-sm bg-green">Completed</span>
+                                </td>
+                                <td>
+                                <div class="dropdown d-inline-block">
+                                <a class="text-secondary dd-arrow-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" role="button">
+                                <i class="bi bi-three-dots"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Move</a></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                                </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <div class="row align-items-center">
+                                <div class="col-auto">
+                                <figure class="avatar avatar-50 border mb-0 coverimg rounded">
+                                <img src="assets/img/news-5.jpg" alt="" />
+                                </figure>
+                                </div>
+                                <div class="col ps-0">
+                                <p class="mb-0">AutoD-vine App</p>
+                                <p class="text-secondary small mb-1">Data updates for release</p>
+                                <p class="text-secondary small">By <a href="">Steve Brandan</a></p>
+                                </div>
+                                </div>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">9.30</p>
+                                <p class="text-secondary small">hours</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">Millie Danial</p>
+                                <p class="text-secondary small">millie@gmailtestid.com</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <span class="badge badge-sm bg-blue">In Progress</span>
+                                </td>
+                                <td>
+                                <div class="dropdown d-inline-block">
+                                <a class="text-secondary dd-arrow-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" role="button">
+                                <i class="bi bi-three-dots"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Move</a></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                                </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <div class="row align-items-center">
+                                <div class="col-auto">
+                                <figure class="avatar avatar-50 border mb-0 coverimg rounded">
+                                <img src="assets/img/bg-10.jpg" alt="" />
+                                </figure>
+                                </div>
+                                <div class="col ps-0">
+                                <p class="mb-0">Hotel Atlantisia</p>
+                                <p class="text-secondary small mb-1">Requirement gathering</p>
+                                <p class="text-secondary small">By <a href="">Shelvey Doe</a></p>
+                                </div>
+                                </div>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">7.15</p>
+                                <p class="text-secondary small">hours</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">Nick Vedhaa</p>
+                                <p class="text-secondary small">vedhaa@gmailtestid.com</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <span class="badge badge-sm bg-red">Bug</span>
+                                </td>
+                                <td>
+                                <div class="dropdown d-inline-block">
+                                <a class="text-secondary dd-arrow-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" role="button">
+                                <i class="bi bi-three-dots"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Move</a></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                                </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <div class="row align-items-center">
+                                <div class="col-auto">
+                                <figure class="avatar avatar-50 border mb-0 coverimg rounded">
+                                <img src="assets/img/news-5.jpg" alt="" />
+                                </figure>
+                                </div>
+                                <div class="col ps-0">
+                                <p class="mb-0">AutoD-vine App</p>
+                                <p class="text-secondary small mb-1">Data updates for release</p>
+                                <p class="text-secondary small">By <a href="">Jacob Jackson</a></p>
+                                </div>
+                                </div>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">7.45</p>
+                                <p class="text-secondary small">hours</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">Mirae Jackson</p>
+                                <p class="text-secondary small">mirae@gmailtestid.com</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">10:05 am</p>
+                                </td>
+                                <td>
+                                <span class="badge badge-sm bg-green">Completed</span>
+                                </td>
+                                <td>
+                                <div class="dropdown d-inline-block">
+                                <a class="text-secondary dd-arrow-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" role="button">
+                                <i class="bi bi-three-dots"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Move</a></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                                </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <div class="row align-items-center">
+                                <div class="col-auto">
+                                <figure class="avatar avatar-50 border mb-0 coverimg rounded">
+                                <img src="assets/img/bg-10.jpg" alt="" />
+                                </figure>
+                                </div>
+                                <div class="col ps-0">
+                                <p class="mb-0">Hotel Atlantisia</p>
+                                <p class="text-secondary small mb-1">Requirement gathering</p>
+                                <p class="text-secondary small">By <a href="">Max Wildson</a></p>
+                                </div>
+                                </div>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">8.30</p>
+                                <p class="text-secondary small">hours</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">Millie Danial</p>
+                                <p class="text-secondary small">millie@gmailtestid.com</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <span class="badge badge-sm bg-blue">New Task</span>
+                                </td>
+                                <td>
+                                <div class="dropdown d-inline-block">
+                                <a class="text-secondary dd-arrow-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" role="button">
+                                <i class="bi bi-three-dots"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Move</a></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                                </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <div class="row align-items-center">
+                                <div class="col-auto">
+                                <figure class="avatar avatar-50 border mb-0 coverimg rounded">
+                                <img src="assets/img/news-3.jpg" alt="" />
+                                </figure>
+                                </div>
+                                <div class="col ps-0">
+                                <p class="mb-0">Web payment extensions</p>
+                                <p class="text-secondary small mb-1">Development of services</p>
+                                <p class="text-secondary small">By <a href="">Jack Dan</a></p>
+                                </div>
+                                </div>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">7.30</p>
+                                <p class="text-secondary small">hours</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">Nick Vedhaa</p>
+                                <p class="text-secondary small">vedhaa@gmailtestid.com</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <span class="badge badge-sm bg-red">Bug Assigned</span>
+                                </td>
+                                <td>
+                                <div class="dropdown d-inline-block">
+                                <a class="text-secondary dd-arrow-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" role="button">
+                                <i class="bi bi-three-dots"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Move</a></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                                </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <div class="row align-items-center">
+                                <div class="col-auto">
+                                <figure class="avatar avatar-50 border mb-0 coverimg rounded">
+                                <img src="assets/img/news-3.jpg" alt="" />
+                                </figure>
+                                </div>
+                                <div class="col ps-0">
+                                <p class="mb-0">Web payment extensions</p>
+                                <p class="text-secondary small mb-1">Development of services</p>
+                                <p class="text-secondary small">By <a href="">Shrivalli Johnson</a></p>
+                                </div>
+                                </div>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">8.00</p>
+                                <p class="text-secondary small">hours</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">John Johnson</p>
+                                <p class="text-secondary small">john@gmailtestid.com</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <span class="badge badge-sm bg-yellow">In Progress</span>
+                                </td>
+                                <td>
+                                <div class="dropdown d-inline-block">
+                                <a class="text-secondary dd-arrow-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" role="button">
+                                <i class="bi bi-three-dots"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Move</a></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                                </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <div class="row align-items-center">
+                                <div class="col-auto">
+                                <figure class="avatar avatar-50 border mb-0 coverimg rounded">
+                                <img src="assets/img/news-4.jpg" alt="" class="w-100" />
+                                </figure>
+                                </div>
+                                <div class="col ps-0">
+                                <p class="mb-0">Divine soul apps</p>
+                                <p class="text-secondary small mb-1">Requirement Understanding</p>
+                                <p class="text-secondary small">By <a href="">Maria Smith</a></p>
+                                </div>
+                                </div>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">7.30</p>
+                                <p class="text-secondary small">hours</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">John Johnson</p>
+                                <p class="text-secondary small">john@gmailtestid.com</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <span class="badge badge-sm bg-yellow">In Progress</span>
+                                </td>
+                                <td>
+                                <div class="dropdown d-inline-block">
+                                <a class="text-secondary dd-arrow-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" role="button">
+                                <i class="bi bi-three-dots"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Move</a></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                                </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <div class="row align-items-center">
+                                <div class="col-auto">
+                                <figure class="avatar avatar-50 border mb-0 coverimg rounded">
+                                <img src="assets/img/business-4.jpg" alt="" />
+                                </figure>
+                                </div>
+                                <div class="col ps-0">
+                                <p class="mb-0">Kitchen World app</p>
+                                <p class="text-secondary small mb-1">UI Design for Home page</p>
+                                <p class="text-secondary small">By <a href="">Shelvey Doe</a></p>
+                                </div>
+                                </div>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">6.30</p>
+                                <p class="text-secondary small">hours</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">John Johnson</p>
+                                <p class="text-secondary small">john@gmailtestid.com</p>
+                                </td>
+                                <td>
+                                <p class="mb-0">20-1-2022</p>
+                                <p class="text-secondary small">9:00 am</p>
+                                </td>
+                                <td>
+                                <span class="badge badge-sm bg-green">Completed</span>
+                                </td>
+                                <td>
+                                <div class="dropdown d-inline-block">
+                                <a class="text-secondary dd-arrow-none" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" role="button">
+                                <i class="bi bi-three-dots"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0)">Edit</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)">Move</a></li>
+                                <li><a class="dropdown-item text-danger" href="javascript:void(0)">Delete</a></li>
+                                </ul>
+                                </div>
+                                </td>
+                                </tr>*@
+                            </tbody>
+                        </table>
+                        <div class="row align-items-center mx-0 mb-3">
+                            <div class="col-6 ">
+                                <span class="hide-if-no-paging">
+                                    Showing <span id="footablestot">1st</span> page
+                                </span>
+                            </div>
+                            <div class="col-6" id="footable-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</main>
+
+<!-- Modal -->
+<div class="modal fade" id="InsertModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">แก้ไขข้อมูลติดต่อ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input id="hddInsertID" type="hidden" />
+                <div class="col-12 col-lg-12">                  
+                  
+                    <div class="mb-2">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text text-theme border-end-0"><i class="bi bi-file-earmark-text"></i></span>
+                                <div class="form-floating">
+                                    <input id="txtInsertTitle" type="text" placeholder="ระบุข้อความหลัก"  required="" class="form-control border-start-0">
+                                    <label>ข้อความหลัก</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text text-theme border-end-0"><i class="bi bi-phone"></i></span>
+                                <div class="form-floating">
+                                    <input id="txtInsertPhone" type="text" placeholder="ระบุเบอร์โทรติดต่อ" required="" class="form-control border-start-0">
+                                    <label>เบอร์โทรติดต่อ</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                    </div>
+                    <div class="form-check form-switch mb-4">
+                        <input class="form-check-input" type="checkbox" role="switch" id="chkInsertIsActive">
+                        <label class="form-check-label" for="chkIsActive">สถานะการใช้งาน</label>
+                    </div>
+                 
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="button" class="btn btn-theme" onclick="SaveInsert()">บันทึก</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">แก้ไขข้อมูลติดต่อ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input id="hddID" type="hidden" />
+                <div class="col-12 col-lg-12">                  
+                  
+                    <div class="mb-2">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text text-theme border-end-0"><i class="bi bi-file-earmark-text"></i></span>
+                                <div class="form-floating">
+                                    <input id="txtTitle" type="text" placeholder="ระบุข้อความหลัก"  required="" class="form-control border-start-0">
+                                    <label>ข้อความหลัก</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="form-group mb-3 position-relative check-valid">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text text-theme border-end-0"><i class="bi bi-phone"></i></span>
+                                <div class="form-floating">
+                                    <input id="txtPhone" type="text" placeholder="ระบุเบอร์โทรติดต่อ" required="" class="form-control border-start-0">
+                                    <label>เบอร์โทรติดต่อ</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invalid-feedback mb-3">โปรดระบุข้อมูลที่ถูกต้อง</div>
+                    </div>
+                    <div class="form-check form-switch mb-4">
+                        <input class="form-check-input" type="checkbox" role="switch" id="chkIsActive">
+                        <label class="form-check-label" for="chkIsActive">สถานะการใช้งาน</label>
+                    </div>
+                 
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="button" class="btn btn-theme" onclick="SaveEdit()">บันทึก</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="DeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ลบข้อมูล</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input id="hddDeleteID" type="hidden" />
+                <div class="col-12 col-lg-12">                  
+                    <p>ท่านยืนยันการลบข้อมูลหรือไม่</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="button" class="btn btn-theme" onclick="SaveDelete()">บันทึก</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/assets/js/pages/Contact.js"></script>
+}

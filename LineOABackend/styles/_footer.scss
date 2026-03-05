@@ -1,0 +1,39 @@
+.footer {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75em;
+    z-index: 1;
+    flex-shrink: 0;
+    color: var(--adminux-theme-color) !important;
+    background-color: var(--adminux-theme);
+    border-radius: 20px 20px 0 0;
+
+    .nav {
+        .nav-item {
+            padding: 0 5px;
+
+            .nav-link {
+                padding: 0px;
+            }
+        }
+    }
+
+
+    &.text-white {
+        color: #ffffff;
+
+        .nav-link,
+        .text-dark,
+        a {
+            color: var(--adminux-theme-color) !important;
+        }
+
+        .text-secondary {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+    }
+}
+
+.footer-page {
+    background-color: rgba(var(--adminux-theme-rgb), 0.025);
+    border-radius: 20px;
+}

@@ -1,0 +1,50 @@
+﻿@model List<Dictionary<string, object>>
+@using System.Reflection
+
+@{
+    ViewData["Title"] = "Report Page";
+}
+
+@* <h2>Report: @ViewBag.ReportConfigTitle</h2> *@
+
+<div class="text-lg-start">
+<h2>Report : @ViewBag.ReportConfigTitleName </h2>
+</div>
+
+<div class ="text-lg-start">
+    @if (ViewBag.ReportConfigTitleName != null)
+    {
+        @foreach (var configReport in ViewBag.ReportConfigList)
+        {
+            <a asp-action="Index" asp-route-reportType="@configReport.ReportType" class="btn btn-primary">
+                @configReport.ReportName
+            </a>
+        }
+    }
+
+@*     <a asp-action="Index" asp-route-reportType="Report1" class="btn btn-primary">รายงาน พร้อมช่วย</a>
+    <a asp-action="Index" asp-route-reportType="Report2" class="btn btn-success">รายงาน พร้อมค้ำ</a> *@
+
+</div>
+
+<table class="table table-bordered mt-3 text-lg-start">
+    <thead>
+        <tr>
+            @foreach (var key in Model.SelectMany(dict => dict.Keys).Distinct())
+            {
+                <th>@key</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in Model)
+        {
+            <tr>
+                @foreach (var key in Model.SelectMany(dict => dict.Keys).Distinct())
+                {
+                    <td>@(row.ContainsKey(key) ? row[key] : "-")</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

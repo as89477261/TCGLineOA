@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6247623E-16B8-4C9B-B9C8-0D9A417B525F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataModel</RootNamespace>
+    <AssemblyName>DataModel</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="BaseObject.cs" />
+    <Compile Include="Models\Bill\BillModel.cs" />
+    <Compile Include="Models\CampaignConfig\Customer.cs" />
+    <Compile Include="Models\CampaignConfig\Campaign.cs" />
+    <Compile Include="Models\CampaignConfig\CampaignRegister.cs" />
+    <Compile Include="Models\CustomerHealthModel\ENCBConsent\BaseNCBConsentModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\ENCBConsent\ENCBConsentDocumentModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\Enrollment\EnrollmentPersonalModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\EventsModel\EventBannerModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\PreRequest\UIDMapPreRequestAndUpdateCyber.cs" />
+    <Compile Include="Models\CustomerHealthModel\Reward\RewardProgramModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\Reward\RewardConditionModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\Reward\RewardMapUIDModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\UIDMapEnrollmentWithCustomerProfileModel.cs" />
+    <Compile Include="Models\Cyber\CyberRequestViaNCBModel.cs" />
+    <Compile Include="Models\FACenter\SendEmailToConsultModel.cs" />
+    <Compile Include="Models\FACenter\UIDMapDeptModel.cs" />
+    <Compile Include="Models\FACenter\UIDMapDIPROMModel.cs" />
+    <Compile Include="Models\ID\ConfirmModel.cs" />
+    <Compile Include="Models\ID\ConsentModel.cs" />
+    <Compile Include="Models\ID\EnrolmentPersonalModel.cs" />
+    <Compile Include="Models\ID\EnrolmentPersonalReportModel.cs" />
+    <Compile Include="Models\ID\ProfileModel.cs" />
+    <Compile Include="Models\ID\VerifyPersonalModel.cs" />
+    <Compile Include="Models\LG\LGModel_Partial.cs" />
+    <Compile Include="Models\CustomerHealthModel\PreRequest\UIDMapNDIDPreRequest.cs" />
+    <Compile Include="Models\CustomerHealthModel\PreRequest\UIDMapNDIDPreRequestHistory.cs" />
+    <Compile Include="Models\Line\DailyReportModel.cs" />
+    <Compile Include="Models\Line\UIDModel.cs" />
+    <Compile Include="Models\LOG\LogActivity.cs" />
+    <Compile Include="Models\MasterData\PostCodeModel.cs" />
+    <Compile Include="Models\NCB\NCBCommercialProfile.cs" />
+    <Compile Include="Models\NCB\NCBConsumerConsentSlipModel.cs" />
+    <Compile Include="Models\NCB\NCBConsumerProfile.cs" />
+    <Compile Include="Models\NCB\NCBTransactionDataModel.cs" />
+    <Compile Include="Models\NDIDConnext\CallbackCheckLaserDopaResult.cs" />
+    <Compile Include="Models\NDIDConnext\CallbackRawCheckLaserDopaResult.cs" />
+    <Compile Include="Models\NDIDConnext\CallbackRawDopaResult.cs" />
+    <Compile Include="Models\NDIDConnext\RequestDopaModel.cs" />
+    <Compile Include="Models\NDIDConnext\ResponseDopaModel.cs" />
+    <Compile Include="Models\NDID\EFormv2\EFormV2PostModel.cs" />
+    <Compile Include="Models\Network\ClientLocationModel.cs" />
+    <Compile Include="Models\Network\ClientNetworkModel.cs" />
+    <Compile Include="Models\OTP\TCGCenterAPIOTPModel.cs" />
+    <Compile Include="Models\PDPA\BasePdpaApiModel.cs" />
+    <Compile Include="Models\PDPA\TcgPdpaApiAuthModel.cs" />
+    <Compile Include="Models\SetThailand\BaseTCGAPISetThailandModel.cs" />
+    <Compile Include="Models\SetThailand\SetThailandAPIAuthUserProfileModel.cs" />
+    <Compile Include="Models\SetThailand\SetThailandLogModel.cs" />
+    <Compile Include="Models\SMEClinic\UIDMapCustomerProfileModel.cs" />
+    <Compile Include="Models\TCCProject\AddMemberCorperateBYSModel.cs" />
+    <Compile Include="Models\TCCProject\AddMemberPeronalBYSModel.cs" />
+    <Compile Include="Models\TCCProject\InformationTCCModel.cs" />
+    <Compile Include="Models\TCCProject\InformationTCCModelPartial.cs" />
+    <Compile Include="Models\TCCProject\TCCProjectAPIModel.cs" />
+    <Compile Include="Models\TCCProject\UIDMapTCCModel.cs" />
+    <Compile Include="Models\TCGCenterAPI\BaseTCGAPIModel.cs" />
+    <Compile Include="Models\CustomerHealthAPI\APITokenModel.cs" />
+    <Compile Include="Models\CustomerHealthAPI\ResultAPIInfo.cs" />
+    <Compile Include="Models\CustomerHealthModel\AppModel\ActivityItem.cs" />
+    <Compile Include="Models\CustomerHealthModel\ApprochMapBankModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\CustomerProfileMapApprochModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\Dashboard\DashboardDailyAccess.cs" />
+    <Compile Include="Models\CustomerHealthModel\Dashboard\DashboardPersonalMonthly.cs" />
+    <Compile Include="Models\CustomerHealthModel\Dashboard\DashboardUIDMapRegister.cs" />
+    <Compile Include="Models\CustomerHealthModel\EventsModel\EventModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\EventsModel\FormEventRegisterDynamicInputModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\EventsModel\FormEventRegisterInputModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\EventsModel\FormEventRegisterOutputModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\EventsModel\PersonalInfoModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\EventsModel\QuestionaireAnswer.cs" />
+    <Compile Include="Models\Dashboard\DashboardRegisterInfoStatusPGS10Model.cs" />
+    <Compile Include="Models\Dashboard\DashboardEventModel.cs" />
+    <Compile Include="Models\FACenter\UIDMapFAEventModel.cs" />
+    <Compile Include="Models\LG\LGModel.cs" />
+    <Compile Include="Models\LG\MyRequestModel.cs" />
+    <Compile Include="Models\MasterData\IndustryModel.cs" />
+    <Compile Include="Models\NDID\Callback\NDIDEFormRawPersonalModel.cs" />
+    <Compile Include="Models\NDID\CustomerChooseIDPModel.cs" />
+    <Compile Include="Models\NDID\CustomerConsentNCBModel.cs" />
+    <Compile Include="Models\NDID\CustomerConsentNDIDModel.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackMasterResponseModel.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\CustomerAddressContact.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\CustomerAddressIdCard.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\CustomerBiometric.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\CustomerContact.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\CustomerInfoEn.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\CustomerInfoTh.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\CustomerOccupation.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\DataRequestList.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\Identifier.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\OfficeAddress.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\Request.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\RequestData.cs" />
+    <Compile Include="Models\NDID\EForm\EFormCallbackSubStructure\ResponseList.cs" />
+    <Compile Include="Models\NDID\EForm\NDIDEFormTransactionModel.cs" />
+    <Compile Include="Models\NDID\NCB\NDIDWrapNCBModel.cs" />
+    <Compile Include="Models\NDID\NDIDRequestModel.cs" />
+    <Compile Include="Models\NDID\Personal\NDIDWrapPersonalGroupModel.cs" />
+    <Compile Include="Models\NDID\Personal\NDIDWrapPersonalModel.cs" />
+    <Compile Include="Models\NDID\Callback\NDIDRawPersonalModel.cs" />
+    <Compile Include="Models\NDID\RP\RPRequestDataListModel.cs" />
+    <Compile Include="Models\NDID\RP\RPRequestModel.cs" />
+    <Compile Include="Models\NDID\RP\RPRequestNCBParamModel.cs" />
+    <Compile Include="Models\NDID\RP\RPResponseModel.cs" />
+    <Compile Include="Models\NDID\UIDMapNDIDStatusModel.cs" />
+    <Compile Include="Models\NDID\Utility\IDPModel.cs" />
+    <Compile Include="Models\NDID\Utility\NodeModel.cs" />
+    <Compile Include="Models\Dashboard\DashboardUIDMonthly.cs" />
+    <Compile Include="Models\CustomerHealthModel\Dashboard\DashboardPersonalType.cs" />
+    <Compile Include="Models\CustomerHealthModel\ProductConditionModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\RegisterInfo.cs" />
+    <Compile Include="Models\CustomerHealthModel\RegisterInfoModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\RegisterType.cs" />
+    <Compile Include="Models\CustomerHealthModel\ScoreInfo.cs" />
+    <Compile Include="Models\CustomerHealthModel\TCGScoreModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\TCGScoreResponseModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\UIDMapApprochModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\UIDMapCustomerProfileModel.cs" />
+    <Compile Include="Models\DCS\ExployeeDCSModel.cs" />
+    <Compile Include="Models\FACenter\CustomerProfileFAInfo.cs" />
+    <Compile Include="Models\FACenter\DashboardFARegisterInfo.cs" />
+    <Compile Include="Models\FACenter\FormRegisterFAInfo.cs" />
+    <Compile Include="Models\FACenter\MainTransectionInfo.cs" />
+    <Compile Include="Models\FACenter\UIDMapTransactionModel.cs" />
+    <Compile Include="Models\FACenter\UIDMapTransAndFormRegisModel.cs" />
+    <Compile Include="Models\Line\BaseLineModel.cs" />
+    <Compile Include="Models\Line\LineOAuthTokenModel.cs" />
+    <Compile Include="Models\Line\LineRawTokenModel.cs" />
+    <Compile Include="Models\LOG\LogAccessData.cs" />
+    <Compile Include="Models\LOG\LogAuthentication.cs" />
+    <Compile Include="Models\LOG\LogError.cs" />
+    <Compile Include="Models\LOG\LogReqRes.cs" />
+    <Compile Include="Models\LOG\LogRequestResponse.cs" />
+    <Compile Include="Models\MasterData\ProvinceModel.cs" />
+    <Compile Include="Models\MasterData\BankModel.cs" />
+    <Compile Include="Models\MasterData\ProductModel.cs" />
+    <Compile Include="Models\Middleware\APITokenModel.cs" />
+    <Compile Include="Models\Middleware\EmailInfo.cs" />
+    <Compile Include="Models\Middleware\ParamInfo.cs" />
+    <Compile Include="Models\Middleware\ResultAccountInfo.cs" />
+    <Compile Include="Models\Middleware\ResultInfo.cs" />
+    <Compile Include="Models\NDID\NDIDResponseModel.cs" />
+    <Compile Include="Models\NDID\Personal\NDIDPersonalModel.cs" />
+    <Compile Include="Models\CustomerHealthModel\UIDMapEnrollmentModel.cs" />
+    <Compile Include="Models\SignUp\EnrollmentProfileModel.cs" />
+    <Compile Include="Models\SignUp\EnrolmentModel.cs" />
+    <Compile Include="Models\SignUp\InputEnrollmentProfileModel.cs" />
+    <Compile Include="Models\SignUp\VerifyProfileModel.cs" />
+    <Compile Include="Models\SMEClinic\CustomerProfileHistoryModel.cs" />
+    <Compile Include="Models\SMEClinic\CustomerProfileModel.cs" />
+    <Compile Include="Models\SMEClinic\IdentifiedProfileModel.cs" />
+    <Compile Include="Models\SMEClinic\UIDConsentModel.cs" />
+    <Compile Include="Models\SMEClinic\UIDModel.cs" />
+    <Compile Include="Models\TCGCenterAPI\TCGCenterAPIAuthModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{9f3e3ece-c742-431f-860c-7aa07a76eaa2}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\BusinessCalculate\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

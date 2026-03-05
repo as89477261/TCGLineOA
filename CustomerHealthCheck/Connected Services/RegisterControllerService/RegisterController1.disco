@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://chatclinic.tcg.or.th/customerhealth_testprod/API/RegisterController.asmx?wsdl" docRef="https://chatclinic.tcg.or.th/customerhealth_testprod/API/RegisterController.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://chatclinic.tcg.or.th/customerhealth_testprod/API/RegisterController.asmx" xmlns:q1="http://microsoft.com/webservices/" binding="q1:RegisterControllerSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://chatclinic.tcg.or.th/customerhealth_testprod/API/RegisterController.asmx" xmlns:q2="http://microsoft.com/webservices/" binding="q2:RegisterControllerSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

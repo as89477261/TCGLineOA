@@ -1,0 +1,688 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>OIC-ISPS </title>
+
+    <!-- manifest meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="~/assets/manifest.json" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="~/assets/img/favicon180.png" sizes="180x180">
+    <link rel="icon" href="~/assets/img/favicon32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="~/assets/img/favicon16.png" sizes="16x16" type="image/png">
+
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- chosen css -->
+    <link rel="stylesheet" href="~/assets/vendor/chosen_v1.8.7/chosen.min.css">
+
+    <!-- date range picker -->
+    @*    <link rel="stylesheet" href="~/assets/vendor/daterangepicker/daterangepicker.css">*@
+
+    <!-- swiper carousel css -->
+    <link rel="stylesheet" href="~/assets/vendor/swiper-7.3.1/swiper-bundle.min.css">
+
+    <!-- simple lightbox css -->
+    <link rel="stylesheet" href="~/assets/vendor/simplelightbox/simple-lightbox.min.css">
+
+    <!-- app tour css -->
+    <link rel="stylesheet" href="~/assets/vendor/Product-Tour-Plugin-jQuery/lib.css">
+
+    <!-- Footable table master css -->
+    <link rel="stylesheet" href="~/assets/vendor/fooTable/css/footable.bootstrap.min.css">
+    <link href="~/assets/vendor/datepicker/css/datepicker.css" rel="stylesheet">
+
+    <!-- style css for this template -->
+    <link href="~/assets/scss/style.css" rel="stylesheet">
+
+</head>
+<body class="d-flex flex-column h-100 sidebar-pushcontent sidebar-filled " data-sidebarstyle="sidebar-pushcontent" style="background-image: radial-gradient(at 30% 20%, #ffffff 0%, #d4e5db 100%) !important">
+
+    @Html.AntiForgeryToken()
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">OIC_Portal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- page loader -->
+    <div class="container-fluid h-100 position-fixed loader-wrap bg-blur">
+        <div class="row justify-content-center h-100">
+            <div class="col-auto align-self-center text-center px-5 leaf">
+                <h2 class="mb-1">OIC <b class="fw-bold">Internal Service Of Parking System</b></h2>
+                <h6 class="mb-4 text-secondary">Admin Portal</h6>
+                <div class="logo-square animated mb-4">
+                    <div class="">
+                        <img src="~/assets/img/logo-icon.png" alt="" />
+                    </div>
+                </div>
+                @* <p class="text-secondary small">Petal of flower being ready to <span class="text-gradient">blossom</span></p>
+                *@
+                <div class="dotslaoder">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <!-- page loader ends -->
+    <!-- Header -->
+    <header class="header">
+        <!-- Fixed navbar -->
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="sidebar-width">
+                    <button class="btn btn-link btn-square menu-btn" type="button">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+                    <a class="navbar-brand ms-2" href="home.html">
+                        <div class="row">
+                            <div class="col-auto"><span class=""><img src="~/assets/img/logo-icon.png" class="mx-100" alt="" /></span></div>
+                            <div class="col ps-0 align-self-center d-none d-sm-block">
+                                <h5 class="fw-normal text-dark mb-0 ">OIC-ISPS</h5>
+                                <p class="small text-secondary">Admin Portal</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+               
+
+            
+                <div class="ms-auto">
+                    <div class="row">
+                    
+                        <div class="col-auto">
+                            <div class="dropdown">
+                                <a class="dd-arrow-none dropdown-toggle tempdata" id="userprofiledd" data-bs-toggle="dropdown" aria-expanded="false" role="button">
+                                    <div class="row">
+                                        <div class="col-auto align-self-center">
+                                            <figure class="avatar avatar-40 rounded-circle coverimg vm">
+                                                <img src="~/assets/img/user-1.jpg" alt="" id="userphotoonboarding2" />
+                                            </figure>
+                                        </div>
+                                        <div class="col ps-0 align-self-center d-none d-lg-block">
+                                            <p class="mb-0">
+                                                <span class="text-dark username"></span><br>
+                                                <small class="small"></small>
+                                            </p>
+                                        </div>
+                                        <div class="col ps-0 align-self-center d-none d-lg-block">
+                                            <i class="bi bi-chevron-down small vm"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end w-300" aria-labelledby="userprofiledd">
+                                    <div class="dropdown-info bg-radial-gradient-theme">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <figure class="avatar avatar-50 rounded-circle coverimg vm">
+                                                    <img src="~/assets/img/user-1.jpg" alt="" id="userphotoonboarding3" />
+                                                </figure>
+                                            </div>
+                                            <div class="col align-self-center ps-0">
+                                                <h6 class="mb-0"><span class="username"> </span></h6>
+                                                <p class="text-muted small"> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div><a class="dropdown-item" href="/isps/index">Logout</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header ends -->
+    <!-- Sidebar -->
+    <div class="sidebar-wrap">
+        <div class="sidebar">
+            <div class="container">
+
+                <div class="row mb-4">
+                    <div class="col align-self-center">
+                        <h6>Main navigation</h6>
+                    </div>
+                    <div class="col-auto">
+                        <a class="" data-bs-toggle="collapse" data-bs-target="#usersidebarprofile" aria-expanded="false" role="button" aria-controls="usersidebarprofile">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- user information -->
+                <div class="row text-center collapse " id="usersidebarprofile">
+                    <div class="col-12">
+                        <div class="avatar avatar-100 rounded-circle shadow-sm mb-3 bg-white">
+                            <figure class="avatar avatar-90 rounded-circle coverimg">
+                                <img src="~/assets/img/user-1.jpg" alt="" id="userphotoonboarding">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <h6 class="mb-1" id="usernamedisplay">The Maxartkiller</h6>
+                        <p class="text-secondary small">United States</p>
+                    </div>
+                </div>
+
+                <!-- user menu navigation -->
+                <div class="row mb-4">
+                    <div class="col-12 px-0">
+                        <ul class="nav nav-pills">
+                            <!-- Home -->
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="~/dashboard">
+                                    <div class="avatar avatar-40 icon"><i class="bi bi-house-door"></i></div>
+                                    <div class="col">Home</div>
+                                    @*<div class="arrow"><i class="bi bi-chevron-right"></i></div>*@
+                                </a>
+                            </li>
+                            @*  <!-- Finance -->
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="false" data-bs-display="static" href="#" role="button" aria-expanded="false">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-coin"></i></div>
+                            <div class="col">Finance</div>
+                            <div class="arrow"><i class="bi bi-chevron-down plus"></i> <i class="bi bi-chevron-up minus"></i>
+                            </div>
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li>
+                            <a class="dropdown-item nav-link" href="finance-dashboard.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-speedometer2"></i>
+                            </div>
+                            <div class="col align-self-center">Finance Dashboard</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="finance-crypto.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-currency-bitcoin"></i>
+                            </div>
+                            <div class="col align-self-center">Crypto</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="finance-banks.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-bank"></i>
+                            </div>
+                            <div class="col align-self-center">Banks</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="finance-wallet.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-wallet2"></i>
+                            </div>
+                            <div class="col align-self-center">Wallet</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="finance-rewards.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-award"></i>
+                            </div>
+                            <div class="col align-self-center">Rewards</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            </ul>
+                            </li>*@
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="false" data-bs-display="static" href="~/dashboard" role="button" aria-expanded="false">
+                                    <div class="avatar avatar-40 icon"><i class="bi bi-file-post"></i></div>
+                                    <div class="col">Dashboard</div>
+                                    <div class="arrow">
+
+                                        <i class="bi bi-chevron-down plus"></i> <i class="bi bi-chevron-up minus"></i>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    @*  <li>
+                                    <a class="dropdown-item nav-link" href="network-performance.html">
+                                    <div class="avatar avatar-40 icon"><i class="bi bi-speedometer"></i>
+                                    </div>
+                                    <div class="col align-self-center">Overall Cars</div>
+                                    <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                                    </a>
+                                    </li>*@
+
+                                    @*                                    <li>
+                                    <a class="dropdown-item nav-link" href="~/dashboard/individualCar">
+                                    <div class="avatar avatar-40 icon">
+
+                                    <i class="bi bi-bar-chart"></i>
+                                    </div>
+                                    <div class="col align-self-center">Car In/Out</div>
+                                    <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                                    </a>
+                                    </li>*@
+                                    <li>
+                                        <a class="dropdown-item nav-link" href="~/dashboard/individualCarMobile">
+                                            <div class="avatar avatar-40 icon">
+
+                                                <i class="bi bi-bar-chart"></i>
+                                            </div>
+                                            <div class="col align-self-center">Car Peak Summary</div>
+                                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="false" data-bs-display="static" href="~/dashboard" role="button" aria-expanded="false">
+                                    <div class="avatar avatar-40 icon"><i class="bi bi-hdd-network"></i></div>
+                                    <div class="col">Config</div>
+                                    <div class="arrow">
+
+                                        <i class="bi bi-chevron-down plus"></i> <i class="bi bi-chevron-up minus"></i>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    @*  <li>
+                                    <a class="dropdown-item nav-link" href="network-performance.html">
+                                    <div class="avatar avatar-40 icon"><i class="bi bi-speedometer"></i>
+                                    </div>
+                                    <div class="col align-self-center">Overall Cars</div>
+                                    <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                                    </a>
+                                    </li>*@
+
+                                    <li>
+                                        <a class="dropdown-item nav-link" href="~/config/News">
+                                            <div class="avatar avatar-40 icon">
+
+                                                <i class="bi bi-list-nested"></i>
+                                            </div>
+                                            <div class="col align-self-center">News</div>
+                                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item nav-link" href="~/config/Contact">
+                                            <div class="avatar avatar-40 icon">
+
+                                                <i class="bi bi-list-nested"></i>
+                                            </div>
+                                            <div class="col align-self-center">Contact</div>
+                                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            @*  <!-- Inventory -->
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="false" data-bs-display="static" href="#" role="button" aria-expanded="false">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-boxes"></i></div>
+                            <div class="col">Inventory</div>
+                            <div class="arrow"><i class="bi bi-chevron-down plus"></i> <i class="bi bi-chevron-up minus"></i>
+                            </div>
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li>
+                            <a class="dropdown-item nav-link" href="inventory-dashboard.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-box"></i>
+                            </div>
+                            <div class="col align-self-center">Inventory Dash</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="inventory-stock.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-clipboard-check"></i>
+                            </div>
+                            <div class="col align-self-center">Stock Management</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="inventory-orders.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-bag-check"></i>
+                            </div>
+                            <div class="col align-self-center">Orders</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="false" data-bs-display="static" href="#" role="button" aria-expanded="false">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-people"></i></div>
+                            <div class="col">Social</div>
+                            <div class="arrow"><i class="bi bi-chevron-down plus"></i> <i class="bi bi-chevron-up minus"></i>
+                            </div>
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li>
+                            <a class="dropdown-item nav-link" href="social-dashboard.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-bullseye"></i>
+                            </div>
+                            <div class="col align-self-center">Social Dashboard</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="social-analytics.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-bar-chart"></i>
+                            </div>
+                            <div class="col align-self-center">Analytics</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="social-schedule.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-calendar-week"></i>
+                            </div>
+                            <div class="col align-self-center">Schedule</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="false" data-bs-display="static" href="#" role="button" aria-expanded="false">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-folder"></i></div>
+                            <div class="col">Project</div>
+                            <div class="arrow"><i class="bi bi-chevron-down plus"></i> <i class="bi bi-chevron-up minus"></i>
+                            </div>
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li>
+                            <a class="dropdown-item nav-link" href="project-dashboard.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-file-post"></i>
+                            </div>
+                            <div class="col align-self-center">Project Dashboard</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="project-projects.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-folder-check"></i>
+                            </div>
+                            <div class="col align-self-center">Projects</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="false" data-bs-display="static" href="#" role="button" aria-expanded="false">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-book"></i></div>
+                            <div class="col">Learning</div>
+                            <div class="arrow"><i class="bi bi-chevron-down plus"></i> <i class="bi bi-chevron-up minus"></i>
+                            </div>
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li>
+                            <a class="dropdown-item nav-link" href="learning-dashboard.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-box"></i>
+                            </div>
+                            <div class="col align-self-center">Learning Dashboard</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="learning-courses.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-award"></i>
+                            </div>
+                            <div class="col align-self-center">Courses</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item nav-link" href="learning-institutes.html">
+                            <div class="avatar avatar-40 icon"><i class="bi bi-building"></i>
+                            </div>
+                            <div class="col align-self-center">Institutions</div>
+                            <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                            </a>
+                            </li>
+                            </ul>
+                            </li>*@
+                        </ul>
+                    </div>
+                </div>
+
+                @*  <!-- applications -->
+                <div class="row mb-3">
+                <div class="col align-self-center">
+                <h6>Applications</h6>
+                </div>
+                <div class="col-auto">
+                <div class="dropdown">
+                <a class="text-theme dd-arrow-none dropdown-toggle" id="sidebaredits" data-bs-display="display" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="bi bi-sliders"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-dontclose mt-2 w-200" aria-labelledby="sidebaredits">
+                <ul class="list-group list-group-flush bg-none">
+                <li class="list-group-item">
+                <div class="row">
+                <div class="col">Email</div>
+                <div class="col-auto pe-0">
+                <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="sidebaredits1" checked>
+                <label class="form-check-label" for="sidebaredits1"></label>
+                </div>
+                </div>
+                </div>
+                </li>
+                <li class="list-group-item">
+                <div class="row">
+                <div class="col">Explorer</div>
+                <div class="col-auto pe-0">
+                <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="sidebaredits2" checked>
+                <label class="form-check-label" for="sidebaredits2"></label>
+                </div>
+                </div>
+                </div>
+                </li>
+                <li class="list-group-item">
+                <div class="row">
+                <div class="col">Calendar</div>
+                <div class="col-auto pe-0">
+                <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="sidebaredits3" checked>
+                <label class="form-check-label" for="sidebaredits3"></label>
+                </div>
+                </div>
+                </div>
+                </li>
+                <li class="list-group-item">
+                <div class="row">
+                <div class="col">Chat</div>
+                <div class="col-auto pe-0">
+                <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="sidebaredits4" checked>
+                <label class="form-check-label" for="sidebaredits4"></label>
+                </div>
+                </div>
+                </div>
+                </li>
+                <li class="list-group-item">
+                <div class="row">
+                <div class="col">Support</div>
+                <div class="col-auto pe-0">
+                <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="sidebaredits5">
+                <label class="form-check-label" for="sidebaredits5"></label>
+                </div>
+                </div>
+                </div>
+                </li>
+                </ul>
+                </div>
+                </div>
+                </div>
+                </div>
+
+                <div class="row mb-4">
+                <div class="col-12 px-0">
+                <ul class="nav nav-pills nav-iconic">
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="app-email.html">
+                <div class="avatar avatar-36 icon"><i class="bi bi-envelope"></i></div>
+                <div class="col">Email</div>
+                <div class="col-auto align-self-center">
+                <figure class="avatar avatar-24 coverimg rounded-circle">
+                <img src="~/assets/img/user-2.jpg" alt="" />
+                </figure>
+                <figure class="avatar avatar-24 coverimg rounded-circle">
+                <img src="~/assets/img/user-3.jpg" alt="" />
+                </figure>
+                <figure class="avatar avatar-24 bg-light-theme rounded-circle">
+                <small class="fs-10 vm">9+</small>
+                </figure>
+                </div>
+                <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="app-explorer.html">
+                <div class="avatar avatar-36 icon">
+                <span class="bi bi-folder position-relative">
+                <span class="position-absolute top-0 start-100 p-1 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+                </span>
+                </span>
+                </div>
+                <div class="col">Explorer</div>
+                <div class="arrow">
+                <i class="bi bi-chevron-right"></i>
+                </div>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="app-calendar.html">
+                <div class="avatar avatar-36 icon"><i class="bi bi-calendar-event"></i></div>
+                <div class="col">Calendar</div>
+                <div class="col-auto">
+                <figure class="avatar avatar-24 rounded-circle bg-theme ">
+                <i class="bi bi-calendar-event fs-10 vm"></i>
+                </figure>
+                </div>
+                <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                </a>
+                </li>
+                </ul>
+                </div>
+                </div>*@
+
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar ends -->
+    @RenderBody()
+
+
+    <!-- footer -->
+    <footer class="footer text-white mt-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md col-lg py-2">
+                    <span class="text-secondary small">Copyright 2022, Creatively designed by OIC Support Team</span>
+                </div>
+                <div class="col-12 col-md-auto col-lg-auto align-self-center">
+                    <ul class="nav small">
+                        <li class="nav-item"><a class="nav-link" href="www.oic.or.th">OIC Website</a></li>
+                        <li class="nav-item">|</li>
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer ends -->
+    <!-- Required jquery and libraries -->
+    <script src="~/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/assets/js/popper.min.js"></script>
+    <script src="~/assets/vendor/bootstrap-5/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Customized jquery file  -->
+    <script src="~/assets/js/main.js"></script>
+    <script src="~/assets/js/color-scheme.js"></script>
+
+    <!-- PWA app service registration and works -->
+    <script src="~/assets/js/pwa-services.js"></script>
+
+    <!-- date range picker -->
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    @* <script src="~/assets/vendor/daterangepicker/daterangepicker.js"></script>*@
+
+    <!-- chosen script -->
+    <script src="~/assets/vendor/chosen_v1.8.7/chosen.jquery.min.js"></script>
+
+    <!-- Chart js script -->
+    <script src="~/assets/vendor/chart-js-3.3.1/chart.min.js"></script>
+
+    <!-- Progress circle js script -->
+    <script src="~/assets/vendor/progressbar-js/progressbar.min.js"></script>
+
+    <!-- swiper js script -->
+    <script src="~/assets/vendor/swiper-7.3.1/swiper-bundle.min.js"></script>
+
+    <!-- Simple lightbox script -->
+    <script src="~/assets/vendor/simplelightbox/simple-lightbox.jquery.min.js"></script>
+
+    <!-- app tour script-->
+    <script src="~/assets/vendor/Product-Tour-Plugin-jQuery/lib.js"></script>
+
+    <!-- Footable table master script-->
+    <script src="~/assets/vendor/fooTable/js/footable.min.js"></script>
+
+    <script src="~/assets/vendor/jqvMap/jquery.vmap.min.js"></script>
+    <script src="~/assets/vendor/jqvMap/maps/jquery.vmap.world.js"></script>
+
+    <script src="~/assets/vendor/datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="~/assets/vendor/datepicker/js/bootstrap-datepicker-thai.js"></script>
+     <script src="~/assets/vendor/datepicker/js/locales/bootstrap-datepicker.th.js"></script>
+    <!-- page level script here -->
+    <script src="~/assets/js/header-title.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

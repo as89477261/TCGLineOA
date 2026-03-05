@@ -1,0 +1,351 @@
+﻿@page
+@model CC_CustomerPortal.Pages.Dashboard.IndividualCarModel
+@{
+}
+<!-- Begin page content -->
+<main class="main mainheight">
+    <!-- title bar -->
+    <div class="container-fluid">
+        <div class="row align-items-center page-title">
+            <div class="col-12 col-md mb-2 mb-sm-0">
+                <h5 class="mb-0">Individual Monitoring</h5>
+                <p class="text-secondary">ภาพรวมการขนส่งรายบุคคล/รายคัน</p>
+            </div>
+
+        </div>
+        <nav aria-label="breadcrumb" class="breadcrumb-theme">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">OIC-ISPS </a></li>
+                <li class="breadcrumb-item"><a href="network-dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Car In/Out</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- content -->
+    <div class="container">
+
+        <div class="row mt-4">
+            <div class="row">
+                <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+                    <div class="card border-0 text-center mb-4">
+                        <div class="card-body">
+                            <div class="row align-items-center mb-3">
+                                <div class="col-12 ">
+                                    <figure class="avatar avatar-100 mb-0 coverimg rounded-circle mx-auto mb-3">
+                                        <img src="~/assets/img/user-2.jpg" alt="" />
+                                    </figure>
+                                </div>
+                                <div class="col-12">
+                                    <h4>John Johnson</h4>
+                                    <p class="text-secondary mb-1"><a href="mailto:john@gmailtestid.com">john@gmailtestid.com</a></p>
+                                    <p class="text-secondary">085-999-5156</p>
+                                    <h6><i class="bi bi-star text-yellow"></i> 1250 points</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0 mb-4">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <div class="avatar avatar-40 rounded bg-light-theme">
+                                        <i class="bi bi-geo-alt h5"></i>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h6 class="fw-medium mb-0">ที่หมาย</h6>
+                                    <p class="small text-secondary">โรงงานที่ 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-2"><b>จุดเริ่มต้น :</b></p>
+                            <p class="mb-4 text-secondary">โรงงานที่ 1 : 202 ถ.พระราม 9 ห้วยขวาง กรุงเทพ 10310</p>
+
+                            <p class="mb-2"><b>ที่หมาย 1 :</b></p>
+                            <p class="mb-4 text-secondary">โรงงานที่ 2 : 207 ถ.พระราม 9 ห้วยขวาง กรุงเทพ 10310</p>
+
+                            <p class="mb-2"><b>ที่หมาย 2 :</b></p>
+                            <p class="mb-4 text-secondary">โรงงานที่ 3 : 209 ถ.พระราม 9 ห้วยขวาง กรุงเทพ 10310</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 mb-4">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <div class="avatar avatar-40 rounded bg-light-theme">
+                                        <i class="bi bi-coin h5"></i>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h6 class="fw-medium mb-0">ประเภทการขนส่งและรายละเอียดสินค้า</h6>
+                                    <p class="small text-secondary">เนื้อสัตว์และพืช</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-2"><b>ตู้คอนเทนเนอร์ทั้งหมด : 1 ตู้่</b></p>
+                            <p>ประเภทตู้ทำความเย็นพร้อม Sensors</p>
+                            <p class="text-secondary mb-1">เนื้อหมู : 100 กิโลกรัม</p>
+                            <p class="text-secondary mb-4 ">ข้าวโพด : 100 กิโลกรัม</p>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-7 col-lg-8 col-xl-9">
+                    <div class="card border-0">
+                        <!-- Big chart  -->
+                        <div class="card-body px-0">
+                            <div class="bigchart250 cut-5 mb-4">
+                                <iframe style="border:0;width:100%;padding:10px;min-height:250px;"
+                                        loading="lazy"
+                                        allowfullscreen
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCiVGIzq61sx9hUMMerQL5vpexUreSHrqA&q=Space+Needle,Seattle+WA">
+                                </iframe>
+                            </div>
+                        </div>
+                        <!-- data user -->
+                        <div class="card-body border-top">
+                            <!-- circular chart statistic user  -->
+                            <div class="row border-bottom mb-3">
+                                <!-- Ordered -->
+                                <div class="col-12 col-md-6 col-lg-6 col-xxl-3 mb-3">
+                                    <div class="row align-items-center mb-3">
+                                        <div class="col-auto">
+                                            <div class="avatar avatar-40 rounded bg-light-yellow">
+                                                <i class="bi bi-bag-check h5"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="fw-medium mb-0">Sensor 01</h6>
+                                            <p class="small text-secondary">ส่วนหน้ารถ</p>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-auto mx-auto mb-3">
+                                            <div class="circle-medium">
+                                                <div id="circleprogressblue1"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <h4 class="fw-medium text-center">5 <small>องศา</small></h4>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="text-secondary">ก่อนหน้า 5 นาที  <small> </small></p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <p class="text-secondary"> 3 องศา <span class="text-green"><i class="bi bi-arrow-up fs-10"></i>50%</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Delivered  -->
+                                <div class="col-12 col-md-6 col-lg-6 col-xxl-3 border-left-dashed mb-3">
+                                    <div class="row align-items-center mb-3">
+                                        <div class="col-auto">
+                                            <div class="avatar avatar-40 rounded bg-light-purple">
+                                                <i class="bi bi-truck h5"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="fw-medium mb-0">Sensor 02</h6>
+                                            <p class="small text-secondary">ข้างรถด้านซ้าย</p>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-auto mx-auto mb-3">
+                                            <div class="circle-medium ">
+                                                <div id="circleprogressgreen1"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <h4 class="fw-medium text-center">4 <small>องศา</small></h4>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="text-secondary">ก่อนหน้า 5 นาที  <small> </small></p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <p class="text-secondary"> 3 องศา <span class="text-green"><i class="bi bi-arrow-up fs-10"></i>50%</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Rejected  -->
+                                <div class="col-12 col-md-6 col-lg-6 col-xxl-3 border-left-dashed mb-3">
+                                    <div class="row align-items-center mb-3">
+                                        <div class="col-auto">
+                                            <div class="avatar avatar-40 rounded bg-light-pink">
+                                                <i class="bi bi-star h5"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="fw-medium mb-0">Sensor 03</h6>
+                                            <p class="small text-secondary">ตู้เก็บข้างโพด</p>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-auto mx-auto mb-3">
+                                            <div class="circle-medium">
+                                                <div id="circleprogressyellow1"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <h4 class="fw-medium text-center">7 <small>องศา</small></h4>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="text-secondary">ก่อนหน้า 5 นาที  <small> </small></p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <p class="text-secondary"> 2 องศา <span class="text-green"><i class="bi bi-arrow-up fs-10"></i>90%</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Cashback  -->
+                                <div class="col-12 col-md-6 col-lg-6 col-xxl-3 border-left-dashed mb-3">
+                                    <div class="row align-items-center mb-3">
+                                        <div class="col-auto">
+                                            <div class="avatar avatar-40 rounded bg-light-red">
+                                                <i class="bi bi-cart-x h5"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <h6 class="fw-medium mb-0">Sensor 04</h6>
+                                            <p class="small text-secondary">ท้ายรถตรงประตู</p>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-auto mx-auto mb-3">
+                                            <div class="circle-medium">
+                                                <div id="circleprogressred1"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <h4 class="fw-medium text-center">11 <small>องศา</small></h4>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="text-secondary">ก่อนหน้า 5 นาที  <small> </small></p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <p class="text-secondary"> 9 องศา <span class="text-red"><i class="bi bi-arrow-down fs-10"></i>20%</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- title products -->
+                            <div class="row align-items-center mb-4">
+                                <div class="col-auto">
+                                    <div class="avatar avatar-40 rounded bg-light-green">
+                                        <i class="bi bi-cart h5"></i>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h6 class="fw-medium mb-0">ลำดับการส่งของ</h6>
+                                    <p class="small text-secondary">1 Order 2 items</p>
+                                </div>
+                            </div>
+                            <!-- Product timeline-->
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <figure class="avatar avatar-40 border mb-0 coverimg rounded">
+                                                <img src="~/assets/img/product-1.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="col ps-0">
+                                            <p class="mb-0">เนื้อหมู</p>
+                                            <p class="text-secondary small">100 กิโลกรัม </p>
+                                        </div>
+                                        <div class="col ps-0">
+                                            <p class="mb-0">xxxx</p>
+                                            <p class="text-secondary small">บาท</p>
+                                        </div>
+                                        <div class="col ps-0">
+                                            <p class="mb-0">Status</p>
+                                            <p class="text-secondary small">กำลังนำส่ง</p>
+                                        </div>
+                                        <div class="col ps-0">
+                                            <p class="mb-0">Payment</p>
+                                            <p class="text-green small">จ่ายแล้ว</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="card-footer border-top">
+                                    <ul class="progress-stepbar">
+                                        <li class="completed"><span>จุดเริ่มต้น</span></li>
+                                        <li class="completed"><span>ที่หมาย 1</span></li>
+                                        <li class="stop"><span>ที่หมาย 3</span></li>
+                                        <li><span>จุดจอดรถ</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <figure class="avatar avatar-40 border mb-0 coverimg rounded">
+                                                <img src="~/assets/img/product-2.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="col ps-0">
+                                            <p class="mb-0">ข้าวโพด</p>
+                                            <p class="text-secondary small">100 กิโลกรัม</p>
+                                        </div>
+                                        <div class="col ps-0">
+                                            <p class="mb-0">xxxx</p>
+                                            <p class="text-secondary small">บาท</p>
+                                        </div>
+                                        <div class="col ps-0">
+                                            <p class="mb-0">Status</p>
+                                            <p class="text-secondary small">กำลังนำส่ง</p>
+                                        </div>
+                                        <div class="col ps-0">
+                                            <p class="mb-0">Payment</p>
+                                            <p class="text-green small">จ่ายแล้ว</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer border-top">
+                                    <ul class="progress-stepbar">
+                                        <li class="completed"><span>จุดเริ่มต้น</span></li>
+                                        <li class="completed"><span>ที่หมาย 1</span></li>
+                                        <li class="stop"><span>ที่หมาย 3</span></li>
+                                        <li><span>จุดจอดรถ</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</main>
+@section Scripts {
+
+<script src="~/assets/js/inventory-orders.js"></script>
+}
