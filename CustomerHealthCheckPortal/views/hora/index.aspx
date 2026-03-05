@@ -28,7 +28,7 @@
             font-size: 16px; cursor: pointer; text-decoration: none;
         }
         .hora-header-back:hover { color: #fff; text-decoration: none; }
-        .hora-header-icon { font-size: 44px; display: block; margin-bottom: 8px;  }
+        .hora-header-icon { font-size: 65px; display: block; margin-bottom: 8px;  }
         .hora-title { font-size: 22px; font-weight: 800; margin: 0; }
         .hora-subtitle { font-size: 13px;  margin-top: 4px; }
         .hora-date-badge {
