@@ -4,6 +4,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>TCG OneStopService - Main Menu</title>
     <style>
+        /* === SME ดูดวง Floating Button === */
+        @keyframes hora-glow {
+            0%, 100% { box-shadow: -4px 0 18px rgba(180,120,255,0.6), 0 0 8px rgba(255,215,0,0.3); }
+            50%       { box-shadow: -4px 0 28px rgba(220,160,255,0.9), 0 0 16px rgba(255,215,0,0.6); }
+        }
+        @keyframes hora-star-spin {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
         .sme-floating-btn {
             position: fixed;
             right: 0;
@@ -14,33 +23,54 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(to bottom, #4e8cff, #2563eb);
-            color: #fff;
+            background: linear-gradient(160deg, #2d1b69 0%, #6b21a8 40%, #9333ea 70%, #c026d3 100%);
+            color: #fde68a;
             text-decoration: none;
-            padding: 14px 10px;
-            border-radius: 16px 0 0 16px;
-            box-shadow: -3px 0 12px rgba(37,99,235,0.45);
+            padding: 16px 10px;
+            border-radius: 20px 0 0 20px;
             gap: 6px;
-            min-width: 52px;
-            transition: padding 0.2s;
+            min-width: 50px;
+            animation: hora-glow 2.5s ease-in-out infinite;
+            border: 1px solid rgba(255,215,0,0.25);
+            border-right: none;
+            transition: transform 0.2s, padding 0.2s;
         }
         .sme-floating-btn:hover,
         .sme-floating-btn:active {
-            color: #fff;
+            color: #fde68a;
             text-decoration: none;
-            padding-right: 14px;
+            transform: translateY(-50%) translateX(-4px);
         }
-        .sme-floating-btn i {
-            font-size: 26px;
+        .sme-floating-btn .hora-icon {
+            font-size: 22px;
             display: block;
+            filter: drop-shadow(0 0 4px rgba(255,215,0,0.8));
+        }
+        .sme-floating-btn .hora-star {
+            font-size: 12px;
+            display: block;
+            animation: hora-star-spin 4s linear infinite;
+            opacity: 0.8;
         }
         .sme-floating-btn .sme-label {
             writing-mode: vertical-rl;
             text-orientation: mixed;
             transform: rotate(180deg);
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
-            line-height: 1.3;
+            line-height: 1.4;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            color: #fde68a;
+            text-shadow: 0 0 6px rgba(255,215,0,0.7);
+        }
+        .sme-floating-btn .hora-badge {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #1e1b4b;
+            font-size: 8px;
+            font-weight: 800;
+            padding: 2px 5px;
+            border-radius: 8px;
             letter-spacing: 0.5px;
             white-space: nowrap;
         }
@@ -576,9 +606,11 @@
     </div>
 
     <!-- SME มีดวง Floating Button -->
-    <a href="page-activity.html" class="sme-floating-btn">
-        <i class="bi bi-check-circle"></i>
-        <span class="sme-label">SME มีดวง</span>
+    <a href="<%= ResolveClientUrl("~/views/hora/index.aspx") %>" class="sme-floating-btn">
+        <i class="bi bi-moon-stars-fill hora-icon"></i>
+        <i class="bi bi-stars hora-star"></i>
+        <span class="sme-label">SME มีดวง ✦ ดูดวงฟรี</span>
+        <span class="hora-badge">FREE</span>
     </a>
 
 </asp:Content>
