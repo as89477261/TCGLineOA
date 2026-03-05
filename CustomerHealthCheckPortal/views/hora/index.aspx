@@ -241,7 +241,7 @@
                    placeholder="กรอกเบอร์โทรศัพท์ของคุณ" maxlength="10"
                    oninput="this.value=this.value.replace(/[^0-9]/g,'')" />
         </div>
-        <button class="hora-btn" onclick="readPhoneFortune()">
+        <button type="button" class="hora-btn" onclick="readPhoneFortune()">
             <i class="bi bi-search"></i> เปิดดวงชะตา
         </button>
         <div class="phone-result" id="phoneResult" style="margin-top:16px; padding-top:14px; border-top:1px solid #e8f0fe;">
@@ -276,7 +276,7 @@
         <div class="hora-result-card-name" id="resultCardName"></div>
         <div class="hora-result-divider">- - -</div>
         <p class="hora-result-text" id="resultText"></p>
-        <button class="hora-result-close" onclick="closeResult()">
+        <button type="button" class="hora-result-close" onclick="closeResult()">
             <i class="bi bi-check2-circle"></i> รับพลังงาน
         </button>
     </div>
