@@ -305,7 +305,7 @@ namespace CustomerHealthCheck
             ClickAction = "RedirectToPage('myrequest')",
             IsNew = true, // This item has the "New" badge
             // This is the logic from your 'if' block
-            IsVisible = isUserEnrolled && showCheckRequest
+            IsVisible = false //isUserEnrolled && showCheckRequest
         },
         new MainMenuAction {
             Title = "My LG",
@@ -339,7 +339,7 @@ namespace CustomerHealthCheck
             Description = "(เข้าร่วมคำขอพักชำระหนี้ กับบสย.)",
             IconCssClass = "has-bg1 gradient-teal shadow-bg shadow-bg-xs color-white rounded-s bi bi-virus p-0",
             ClickAction = "redirectToEventBanner2()",
-            IsVisible = true,
+            IsVisible = false,
             IsNew = false
 
         }

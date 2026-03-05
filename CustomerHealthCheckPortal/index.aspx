@@ -578,7 +578,7 @@
     <!-- SME มีดวง Floating Button -->
     <a href="page-activity.html" class="sme-floating-btn">
         <i class="bi bi-check-circle"></i>
-        <span class="sme-label">SME มีดวง เช็คดวงธุรกิจฟรี</span>
+        <span class="sme-label">SME มีดวง</span>
     </a>
 
 </asp:Content>
