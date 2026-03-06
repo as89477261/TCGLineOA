@@ -190,6 +190,14 @@
             transition: opacity 0.2s;
         }
         .hora-result-close:active { opacity: 0.85; }
+        /* Reset button */
+        .hora-btn-reset {
+            width: 100%; margin-top: 10px; border: 2px solid #d97706; cursor: pointer;
+            background: #fff; color: #b45309; font-size: 14px; font-weight: 700;
+            padding: 10px; border-radius: 12px; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; gap: 6px;
+        }
+        .hora-btn-reset:active { background: #fef3c7; }
     </style>
 </asp:Content>
 
@@ -272,6 +280,9 @@
                 </div>
                 <span class="phone-fortune-stars" id="phoneStars"></span>
                 <p class="phone-fortune-text" id="phoneFortuneText"></p>
+                <button type="button" class="hora-btn-reset" onclick="resetPhone()" style="margin-top:14px;">
+                    <i class="bi bi-arrow-counterclockwise"></i> ดูดวงเบอร์อื่น
+                </button>
             </div>
         </div>
 
@@ -298,9 +309,14 @@
         <div class="hora-result-card-name" id="resultCardName"></div>
         <div class="hora-result-divider">- - -</div>
         <p class="hora-result-text" id="resultText"></p>
-        <button type="button" class="hora-result-close" onclick="closeResult()">
-            <i class="bi bi-check2-circle"></i> รับพลังงาน
-        </button>
+        <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+            <button type="button" class="hora-result-close" onclick="closeResult()">
+                <i class="bi bi-check2-circle"></i> รับพลังงาน
+            </button>
+            <button type="button" class="hora-btn-reset" onclick="resetTarot()" style="width:auto; padding:10px 20px;">
+                <i class="bi bi-arrow-counterclockwise"></i> เปิดไพ่ใหม่
+            </button>
+        </div>
     </div>
 </div>
 
@@ -482,6 +498,18 @@ function showTarotResult(idx) {
 
 function closeResult() {
     document.getElementById("tarotResultOverlay").classList.remove("show");
+}
+
+function resetPhone() {
+    document.getElementById("phoneInput").value = "";
+    document.getElementById("phoneResult").style.display = "none";
+    document.getElementById("phoneInput").focus();
+}
+
+function resetTarot() {
+    document.getElementById("tarotResultOverlay").classList.remove("show");
+    tarotPicked = false;
+    renderTarotGrid();
 }
 
 function readPhoneFortune() {
