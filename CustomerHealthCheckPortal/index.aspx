@@ -4,75 +4,81 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>TCG OneStopService - Main Menu</title>
     <style>
-        /* === SME ดูดวง Floating Button === */
-        @keyframes hora-glow {
-            0%, 100% { box-shadow: -4px 0 18px rgba(180,120,255,0.6), 0 0 8px rgba(255,215,0,0.3); }
-            50%       { box-shadow: -4px 0 28px rgba(220,160,255,0.9), 0 0 16px rgba(255,215,0,0.6); }
+        /* === SME ดูดวง Floating Circle Button === */
+        @keyframes fab-pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(251,191,36,0.5),
+                            0 4px 20px rgba(245,158,11,0.35);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(251,191,36,0.12),
+                            0 4px 28px rgba(245,158,11,0.55);
+            }
         }
-        @keyframes hora-star-spin {
-            from { transform: rotate(0deg); }
-            to   { transform: rotate(360deg); }
+        @keyframes fab-twinkle {
+            0%, 100% { opacity: 0.15; transform: scale(0.6) rotate(0deg); }
+            50%       { opacity: 1;    transform: scale(1.3) rotate(20deg); }
+        }
+        @keyframes fab-float {
+            0%, 100% { transform: translateY(-50%) translateY(0px); }
+            50%       { transform: translateY(-50%) translateY(-5px); }
         }
         .sme-floating-btn {
             position: fixed;
-            right: 0;
+            right: 14px;
             top: 50%;
             transform: translateY(-50%);
             z-index: 9999;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(160deg, #2d1b69 0%, #6b21a8 40%, #9333ea 70%, #c026d3 100%);
-            color: #fde68a;
+            background: radial-gradient(circle at 38% 32%,
+                #fffbeb 0%, #fef3c7 40%, #fde68a 100%);
+            border: 2.5px solid rgba(245,158,11,0.55);
             text-decoration: none;
-            padding: 16px 10px;
-            border-radius: 20px 0 0 20px;
-            gap: 6px;
-            min-width: 50px;
-            animation: hora-glow 2.5s ease-in-out infinite;
-            border: 1px solid rgba(255,215,0,0.25);
-            border-right: none;
-            transition: transform 0.2s, padding 0.2s;
+            gap: 1px;
+            animation: fab-pulse 2.8s ease-in-out infinite,
+                       fab-float 3.5s ease-in-out infinite;
+            transition: transform 0.2s;
         }
         .sme-floating-btn:hover,
         .sme-floating-btn:active {
-            color: #fde68a;
             text-decoration: none;
-            transform: translateY(-50%) translateX(-4px);
+            transform: translateY(-50%) scale(1.1);
         }
+        /* ดาววิบวับรอบปุ่ม */
+        .sme-floating-btn .fab-star {
+            position: absolute;
+            font-size: 9px;
+            color: #f59e0b;
+            animation: fab-twinkle var(--d,2s) ease-in-out infinite;
+            animation-delay: var(--dl,0s);
+            pointer-events: none;
+        }
+        .sme-floating-btn .fab-star.s1 { top: -5px;  left: 14px;  --d:2.0s; --dl:0.0s; }
+        .sme-floating-btn .fab-star.s2 { top:  8px;  right: -6px; --d:1.7s; --dl:0.5s; }
+        .sme-floating-btn .fab-star.s3 { bottom: -4px; left: 20px; --d:2.3s; --dl:0.9s; }
+        .sme-floating-btn .fab-star.s4 { bottom: 10px; right: -5px; --d:1.9s; --dl:1.3s; }
+        .sme-floating-btn .fab-star.s5 { top: -4px;  right: 14px; --d:2.1s; --dl:0.3s; }
+        .sme-floating-btn .fab-star.s6 { bottom: -3px; left:  8px; --d:2.5s; --dl:0.7s; }
+        /* icon หลัก */
         .sme-floating-btn .hora-icon {
             font-size: 22px;
-            display: block;
-            filter: drop-shadow(0 0 4px rgba(255,215,0,0.8));
+            color: #b45309;
+            filter: drop-shadow(0 1px 3px rgba(180,83,9,0.3));
+            line-height: 1;
         }
-        .sme-floating-btn .hora-star {
-            font-size: 12px;
-            display: block;
-            animation: hora-star-spin 4s linear infinite;
-            opacity: 0.8;
-        }
+        /* ข้อความ "ดูดวง" */
         .sme-floating-btn .sme-label {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            transform: rotate(180deg);
-            font-size: 11px;
-            font-weight: 700;
-            line-height: 1.4;
-            letter-spacing: 1px;
-            white-space: nowrap;
-            color: #fde68a;
-            text-shadow: 0 0 6px rgba(255,215,0,0.7);
-        }
-        .sme-floating-btn .hora-badge {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: #1e1b4b;
-            font-size: 8px;
+            font-size: 9px;
             font-weight: 800;
-            padding: 2px 5px;
-            border-radius: 8px;
+            color: #92400e;
             letter-spacing: 0.5px;
-            white-space: nowrap;
+            line-height: 1;
         }
     </style>
 </asp:Content>
@@ -605,12 +611,16 @@
         </div>
     </div>
 
-    <!-- SME มีดวง Floating Button -->
+    <!-- SME มีดวง Floating Circle Button -->
     <a href="<%= ResolveClientUrl("~/views/hora/index.aspx") %>" class="sme-floating-btn">
-        <i class="bi bi-moon-stars-fill hora-icon"></i>
-        <i class="bi bi-stars hora-star"></i>
-        <span class="sme-label">SME มีดวง ✦ ดูดวงฟรี</span>
-        <span class="hora-badge">FREE</span>
+        <span class="fab-star s1">&#10022;</span>
+        <span class="fab-star s2">&#9733;</span>
+        <span class="fab-star s3">&#10022;</span>
+        <span class="fab-star s4">&#9733;</span>
+        <span class="fab-star s5">&#10022;</span>
+        <span class="fab-star s6">&#9733;</span>
+        <i class="bi bi-suit-diamond-fill hora-icon"></i>
+        <span class="sme-label">ดูดวง</span>
     </a>
 
 </asp:Content>
