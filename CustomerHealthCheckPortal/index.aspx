@@ -14,8 +14,16 @@
         /* --- Header blue gradient area --- */
         .idx-header {
             background: linear-gradient(145deg,#0a2463 0%,#1344a0 45%,#3b82f6 100%);
-            padding: 12px 20px 0;
+            border-radius: 0 0 36px 36px;
+            padding: 12px 20px 52px;
             position: relative;
+            overflow: hidden;
+        }
+        .idx-header::after {
+            content: "";
+            position: absolute; bottom: 0; left: 0; right: 0; height: 36px;
+            background: #f0f6ff;
+            border-radius: 36px 36px 0 0;
         }
         /* subtle aurora shimmer */
         .idx-header::before {
@@ -24,17 +32,6 @@
             width: 220px; height: 220px; border-radius: 50%;
             background: radial-gradient(circle,rgba(147,197,253,0.35) 0%,transparent 70%);
             pointer-events: none;
-        }
-        /* SVG wave at bottom of header */
-        .idx-header-wave { display:block; width:100%; height:40px; margin-top:12px; }
-
-        /* --- Service icons card --- */
-        .idx-services-card {
-            background: #fff;
-            border-radius: 20px;
-            margin: 0 16px 16px;
-            padding: 16px 8px 12px;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
         }
 
         /* --- Section title --- */
@@ -54,12 +51,11 @@
             gap: 4px !important;
             flex-wrap: wrap !important;
         }
-        #double-slider-2 .splide__slide {
+        #double-slider-2 .splide__slide,
+        #double-slider-2 .splide__slide--clone {
             width: auto !important;
             margin: 0 !important;
         }
-        /* hide splide JS-generated clones so real items appear only once */
-        #double-slider-2 .splide__slide--clone { display: none !important; }
         #double-slider-2 .splide__pagination { display: none !important; }
         /* squircle icon tile */
         #double-slider-2 .splide__slide > div[data-card-height] {
@@ -197,10 +193,6 @@
                     </div>
                 </div>
                 <asp:Label ID="lblUID1" Text="" runat="server" Visible="false" />
-                <!-- Wave bottom of header -->
-                <svg class="idx-header-wave" viewBox="0 0 375 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0,40 C80,10 295,10 375,40 L375,40 L0,40 Z" fill="#dbeafe"/>
-                </svg>
             </div>
 
             <div class="card card-style" style="text-align: center;" runat="server" id="pnlTestCommand" visible="false">
@@ -229,17 +221,17 @@
                 </div>
             </div>
 
-            <div class="idx-services-card">
-                <h3 class="idx-section-title" style="margin:0 8px 12px;">บริการ บสย.</h3>
-                <div>
+            <h3 class="idx-section-title mt-3">บริการ บสย.</h3>
+
+            <div class="px-2 mb-3">
                 <div class="splide quad-slider slider-no-dots slider-no-arrows slider-visible text-center  splide--ltr splide--draggable is-active mt-2 me-1"
                     id="double-slider-2" style="visibility: visible;">
                     <div class="splide__track" id="double-slider-2-track">
-                        <div class="splide__list ms-2" id="double-slider-2-list">
+                        <div class="splide__list ms-2" id="double-slider-2-list" style="transform: translateX(-670px);">
 
                             <asp:Repeater ID="rptServiceMenu" runat="server">
                                 <ItemTemplate>
-                                    <div class="splide__slide cursor-pointer"
+                                    <div class="splide__slide splide__slide--clone cursor-pointer"
                                         style="width: 68px;"
                                         onclick="<%# Eval("ClickAction") %>"
                                         visible="<%# Eval("IsVisible") %>">
@@ -266,10 +258,11 @@
                         </li>
                     </ul>
                 </div>
-                </div><%-- close inner div --%>
-            </div><%-- close idx-services-card --%>
+            </div>
 
-            <h3 class="idx-section-title mt-2">บริการของฉัน</h3>
+
+
+            <h3 class="idx-section-title">บริการของฉัน</h3>
             <asp:Repeater ID="rptMainMenu" runat="server">
                 <ItemTemplate>
                     <div class="idx-menu-card" onclick="<%# Eval("ClickAction") %>">
@@ -656,8 +649,7 @@
         <span class="fab-star s5">&#10022;</span>
         <span class="fab-star s6">&#9733;</span>
         <i class="bi bi-suit-diamond-fill hora-icon"></i>
-        <span class="sme-label">พร้อม</span>
-        <span class="sme-label">มู</span>
+        <span class="sme-label">ดูดวง</span>
     </a>
 
 </asp:Content>
