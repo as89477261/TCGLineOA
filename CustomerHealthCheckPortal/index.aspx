@@ -4,155 +4,82 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>TCG OneStopService - Main Menu</title>
     <style>
-        /* =====================================================
-           INDEX PAGE REDESIGN — blue/white theme
-        ===================================================== */
-
-        /* --- Page background --- */
-        #page { background: linear-gradient(180deg,#dbeafe 0%,#eff6ff 28%,#f8faff 60%) !important; }
-
-        /* --- Header blue gradient area --- */
-        .idx-header {
-            background: linear-gradient(145deg,#0a2463 0%,#1344a0 45%,#3b82f6 100%);
-            border-radius: 0 0 36px 36px;
-            padding: 12px 20px 52px;
-            position: relative;
-            overflow: hidden;
-        }
-        .idx-header::after {
-            content: "";
-            position: absolute; bottom: 0; left: 0; right: 0; height: 36px;
-            background: #f0f6ff;
-            border-radius: 36px 36px 0 0;
-        }
-        /* subtle aurora shimmer */
-        .idx-header::before {
-            content: "";
-            position: absolute; top: -40px; right: -60px;
-            width: 220px; height: 220px; border-radius: 50%;
-            background: radial-gradient(circle,rgba(147,197,253,0.35) 0%,transparent 70%);
-            pointer-events: none;
-        }
-
-        /* --- Section title --- */
-        .idx-section-title {
-            font-size: 18px; font-weight: 800;
-            color: #0f172a; margin: 0 16px 10px;
-            letter-spacing: -0.2px;
-        }
-
-        /* ---- Service icon grid (override splide) ---- */
-        #double-slider-2 { visibility: visible !important; }
-        #double-slider-2 .splide__track { overflow: visible !important; }
-        #double-slider-2 .splide__list {
-            display: grid !important;
-            grid-template-columns: repeat(4,1fr) !important;
-            transform: none !important;
-            gap: 4px !important;
-            flex-wrap: wrap !important;
-        }
-        #double-slider-2 .splide__slide,
-        #double-slider-2 .splide__slide--clone {
-            width: auto !important;
-            margin: 0 !important;
-        }
-        #double-slider-2 .splide__pagination { display: none !important; }
-        /* squircle icon tile */
-        #double-slider-2 .splide__slide > div[data-card-height] {
-            height: 60px !important;
-            width: 60px !important;
-            font-size: 26px !important;
-            border-radius: 16px !important;
-            margin: 0 auto;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
-        #double-slider-2 .splide__slide .font-10 {
-            font-size: 11px !important;
-            color: #334155;
-            font-weight: 600;
-            margin-top: 6px;
-        }
-
-        /* ---- "บริการของฉัน" individual menu cards ---- */
-        .idx-menu-card {
-            background: #fff;
-            border-radius: 18px;
-            margin: 0 16px 12px;
-            padding: 14px 16px;
-            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-            color: inherit;
-            cursor: pointer;
-        }
-        .idx-menu-card:hover { text-decoration: none; color: inherit; }
-        .idx-menu-card .menu-icon-wrap {
-            width: 48px; height: 48px; border-radius: 14px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 22px; color: #fff; flex-shrink: 0;
-        }
-        .idx-menu-card .menu-text { flex: 1; min-width: 0; }
-        .idx-menu-card .menu-title { font-size: 15px; font-weight: 700; color: #0f172a; }
-        .idx-menu-card .menu-desc  { font-size: 12px; color: #64748b; margin-top: 1px; }
-        .idx-menu-card .menu-arrow { color: #cbd5e1; font-size: 20px; flex-shrink: 0; }
-        .idx-menu-card .badge-new  {
-            background: #ef4444; color: #fff;
-            font-size: 9px; font-weight: 700; padding: 2px 7px;
-            border-radius: 20px; flex-shrink: 0;
-        }
-
-        /* hide old single-card list wrapper */
-        .idx-hide { display: none !important; }
-
-        /* ---- Banner cards ---- */
-        .idx-banner-card {
-            margin: 0 16px 12px;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 3px 16px rgba(0,0,0,0.10);
-        }
-        .idx-banner-card img { width:100%; display:block; height:130px; object-fit:cover; }
-
-        /* ---- SME Floating Circle Button (unchanged) ---- */
+        /* === SME ดูดวง Floating Circle Button === */
         @keyframes fab-pulse {
-            0%,100%{ box-shadow:0 0 0 0 rgba(251,191,36,0.5),0 4px 20px rgba(245,158,11,0.35); }
-            50%    { box-shadow:0 0 0 8px rgba(251,191,36,0.12),0 4px 28px rgba(245,158,11,0.55); }
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(251,191,36,0.5),
+                            0 4px 20px rgba(245,158,11,0.35);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(251,191,36,0.12),
+                            0 4px 28px rgba(245,158,11,0.55);
+            }
         }
         @keyframes fab-twinkle {
-            0%,100%{ opacity:0.15; transform:scale(0.6) rotate(0deg); }
-            50%    { opacity:1;    transform:scale(1.3)  rotate(20deg); }
+            0%, 100% { opacity: 0.15; transform: scale(0.6) rotate(0deg); }
+            50%       { opacity: 1;    transform: scale(1.3) rotate(20deg); }
         }
         @keyframes fab-float {
-            0%,100%{ transform:translateY(-50%) translateY(0px); }
-            50%    { transform:translateY(-50%) translateY(-5px); }
+            0%, 100% { transform: translateY(-50%) translateY(0px); }
+            50%       { transform: translateY(-50%) translateY(-5px); }
         }
         .sme-floating-btn {
-            position:fixed; right:14px; top:50%; transform:translateY(-50%);
-            z-index:9999; width:64px; height:64px; border-radius:50%;
-            display:flex; flex-direction:column; align-items:center; justify-content:center;
-            background:radial-gradient(circle at 38% 32%,#fffbeb 0%,#fef3c7 40%,#fde68a 100%);
-            border:2.5px solid rgba(245,158,11,0.55); text-decoration:none; gap:1px;
-            animation:fab-pulse 2.8s ease-in-out infinite, fab-float 3.5s ease-in-out infinite;
-            transition:transform 0.2s;
+            position: fixed;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at 38% 32%,
+                #fffbeb 0%, #fef3c7 40%, #fde68a 100%);
+            border: 2.5px solid rgba(245,158,11,0.55);
+            text-decoration: none;
+            gap: 1px;
+            animation: fab-pulse 2.8s ease-in-out infinite,
+                       fab-float 3.5s ease-in-out infinite;
+            transition: transform 0.2s;
         }
-        .sme-floating-btn:hover,.sme-floating-btn:active{ text-decoration:none; transform:translateY(-50%) scale(1.1); }
-        .sme-floating-btn .fab-star{
-            position:absolute; font-size:9px; color:#f59e0b;
-            animation:fab-twinkle var(--d,2s) ease-in-out infinite;
-            animation-delay:var(--dl,0s); pointer-events:none;
+        .sme-floating-btn:hover,
+        .sme-floating-btn:active {
+            text-decoration: none;
+            transform: translateY(-50%) scale(1.1);
         }
-        .sme-floating-btn .fab-star.s1{top:-5px;left:14px;--d:2.0s;--dl:0.0s}
-        .sme-floating-btn .fab-star.s2{top:8px;right:-6px;--d:1.7s;--dl:0.5s}
-        .sme-floating-btn .fab-star.s3{bottom:-4px;left:20px;--d:2.3s;--dl:0.9s}
-        .sme-floating-btn .fab-star.s4{bottom:10px;right:-5px;--d:1.9s;--dl:1.3s}
-        .sme-floating-btn .fab-star.s5{top:-4px;right:14px;--d:2.1s;--dl:0.3s}
-        .sme-floating-btn .fab-star.s6{bottom:-3px;left:8px;--d:2.5s;--dl:0.7s}
-        .sme-floating-btn .hora-icon{ font-size:22px; color:#b45309; filter:drop-shadow(0 1px 3px rgba(180,83,9,0.3)); line-height:1; }
-        .sme-floating-btn .sme-label{ font-size:9px; font-weight:800; color:#92400e; letter-spacing:0.5px; line-height:1; }
+        /* ดาววิบวับรอบปุ่ม */
+        .sme-floating-btn .fab-star {
+            position: absolute;
+            font-size: 9px;
+            color: #f59e0b;
+            animation: fab-twinkle var(--d,2s) ease-in-out infinite;
+            animation-delay: var(--dl,0s);
+            pointer-events: none;
+        }
+        .sme-floating-btn .fab-star.s1 { top: -5px;  left: 14px;  --d:2.0s; --dl:0.0s; }
+        .sme-floating-btn .fab-star.s2 { top:  8px;  right: -6px; --d:1.7s; --dl:0.5s; }
+        .sme-floating-btn .fab-star.s3 { bottom: -4px; left: 20px; --d:2.3s; --dl:0.9s; }
+        .sme-floating-btn .fab-star.s4 { bottom: 10px; right: -5px; --d:1.9s; --dl:1.3s; }
+        .sme-floating-btn .fab-star.s5 { top: -4px;  right: 14px; --d:2.1s; --dl:0.3s; }
+        .sme-floating-btn .fab-star.s6 { bottom: -3px; left:  8px; --d:2.5s; --dl:0.7s; }
+        /* icon หลัก */
+        .sme-floating-btn .hora-icon {
+            font-size: 22px;
+            color: #b45309;
+            filter: drop-shadow(0 1px 3px rgba(180,83,9,0.3));
+            line-height: 1;
+        }
+        /* ข้อความ "ดูดวง" */
+        .sme-floating-btn .sme-label {
+            font-size: 9px;
+            font-weight: 800;
+            color: #92400e;
+            letter-spacing: 0.5px;
+            line-height: 1;
+        }
     </style>
 </asp:Content>
 
@@ -184,16 +111,26 @@
         <!-- Page Content - Only Page Elements Here-->
         <div class="page-content footer-clear">
 
-            <!-- Page Header -->
-            <div class="idx-header">
+            <!-- Page Title-->
+            <div class="pt-3">
                 <div class="page-title d-flex">
                     <div class="align-self-center me-auto">
+                        <!--<p class="color-white opacity-80 header-date"></p>-->
                         <asp:Image ImageUrl="~/images/logos/Logo.png" runat="server" Style="height: 80px; float: left;" />
                         <asp:Image ImageUrl="~/images/logos/FF.png" runat="server" Style="height: 95px; padding: 10px; max-width: 300px; margin: 0 auto; position: absolute;" />
+                        <%-- <h1 class="color-white" style="position: absolute; top: 30px; left: 85px; color: #092d74 !important;">ยินดีต้อนรับ</h1>--%>
                     </div>
+
                 </div>
                 <asp:Label ID="lblUID1" Text="" runat="server" Visible="false" />
             </div>
+
+            <svg id="header-deco" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+                <path id="header-deco-1" d="M 0,600 C 0,600 0,120 0,120 C 92.36363636363635,133.79904306220095 184.7272727272727,147.59808612440193 287,148 C 389.2727272727273,148.40191387559807 501.4545454545455,135.40669856459328 592,129 C 682.5454545454545,122.5933014354067 751.4545454545455,122.77511961722489 848,115 C 944.5454545454545,107.22488038277511 1068.7272727272727,91.49282296650718 1172,91 C 1275.2727272727273,90.50717703349282 1357.6363636363635,105.25358851674642 1440,120 C 1440,120 1440,600 1440,600 Z"></path>
+                <path id="header-deco-2" d="M 0,600 C 0,600 0,240 0,240 C 98.97607655502392,258.2105263157895 197.95215311004785,276.4210526315789 278,282 C 358.04784688995215,287.5789473684211 419.16746411483257,280.5263157894737 524,265 C 628.8325358851674,249.4736842105263 777.377990430622,225.47368421052633 888,211 C 998.622009569378,196.52631578947367 1071.3205741626793,191.57894736842107 1157,198 C 1242.6794258373207,204.42105263157893 1341.3397129186603,222.21052631578948 1440,240 C 1440,240 1440,600 1440,600 Z"></path>
+                <path id="header-deco-3" d="M 0,600 C 0,600 0,360 0,360 C 65.43540669856458,339.55023923444975 130.87081339712915,319.1004784688995 245,321 C 359.12918660287085,322.8995215311005 521.9521531100479,347.1483253588517 616,352 C 710.0478468899521,356.8516746411483 735.3205741626795,342.3062200956938 822,333 C 908.6794258373205,323.6937799043062 1056.7655502392345,319.62679425837325 1170,325 C 1283.2344497607655,330.37320574162675 1361.6172248803828,345.1866028708134 1440,360 C 1440,360 1440,600 1440,600 Z"></path>
+                <path id="header-deco-4" d="M 0,600 C 0,600 0,480 0,480 C 70.90909090909093,494.91866028708137 141.81818181818187,509.8373205741627 239,499 C 336.18181818181813,488.1626794258373 459.6363636363636,451.5693779904306 567,446 C 674.3636363636364,440.4306220095694 765.6363636363636,465.88516746411483 862,465 C 958.3636363636364,464.11483253588517 1059.8181818181818,436.8899521531101 1157,435 C 1254.1818181818182,433.1100478468899 1347.090909090909,456.555023923445 1440,480 C 1440,480 1440,600 1440,600 Z"></path>
+            </svg>
 
             <div class="card card-style" style="text-align: center;" runat="server" id="pnlTestCommand" visible="false">
                 <asp:Button Text="Reset" ID="btnReset" CssClass="btn btn-primary" OnClick="btnReset_Click" runat="server" Visible="true" />
@@ -221,9 +158,16 @@
                 </div>
             </div>
 
-            <h3 class="idx-section-title mt-3">บริการ บสย.</h3>
+            <div class="content my-0 mt-n2 px-1">
+                <div class="d-flex">
+                    <div class="align-self-center">
+                        <h3 class="font-16 mb-2 color-black">บริการ บสย.</h3>
+                    </div>
+                </div>
+            </div>
 
-            <div class="px-2 mb-3">
+
+            <div class="card card-style" style="margin-bottom: 15px; display: block;">
                 <div class="splide quad-slider slider-no-dots slider-no-arrows slider-visible text-center  splide--ltr splide--draggable is-active mt-2 me-1"
                     id="double-slider-2" style="visibility: visible;">
                     <div class="splide__track" id="double-slider-2-track">
@@ -260,22 +204,41 @@
                 </div>
             </div>
 
+            <!-- SME มีดวง floating button (moved to fixed position) -->
 
 
-            <h3 class="idx-section-title">บริการของฉัน</h3>
-            <asp:Repeater ID="rptMainMenu" runat="server">
-                <ItemTemplate>
-                    <div class="idx-menu-card" onclick="<%# Eval("ClickAction") %>">
-                        <i class='<%# Eval("IconCssClass") %>' style="font-size:22px; width:44px; height:44px; display:flex; align-items:center; justify-content:center; border-radius:14px; flex-shrink:0;"></i>
-                        <div class="menu-text">
-                            <div class="menu-title"><%# Eval("Title") %></div>
-                            <div class="menu-desc"><%# Eval("Description") %></div>
-                        </div>
-                        <%# (bool)Eval("IsNew") ? "<span class='badge-new'>New</span>" : "" %>
-                        <i class="bi bi-chevron-right menu-arrow"></i>
+
+
+
+            <div class="card card-style" style="margin-bottom: 30px;">
+                <div class="content">
+
+                    <div class="list-group list-custom list-group-m list-group-flush rounded-xs overflow-visible">
+
+                        <asp:Repeater ID="rptMainMenu" runat="server">
+                            <ItemTemplate>
+                                <div class="list-group-item" visible='<%# Eval("IsVisible") %>'>
+                                    <a href="#" class="d-flex" style="border: none; color: black;" onclick="<%# Eval("ClickAction") %>">
+
+                                        <i class='<%# Eval("IconCssClass") %>'
+                                            style="margin-right: 10px; font-size: 24px;"></i>
+
+                                        <div>
+                                            <strong><%# Eval("Title") %></strong>
+                                            <span style="padding-right: 30px;"><%# Eval("Description") %></span>
+                                        </div>
+
+                                        <%-- This line will ONLY render the 'New' badge if the IsNew property is true --%>
+                                        <%# (bool)Eval("IsNew") ? "<a class='badge bg-red-dark line-height-xs font-9 rounded-xl position-absolute translate-end'>New</a>" : "" %>
+
+                                    </a>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
-                </ItemTemplate>
-            </asp:Repeater>
+
+                </div>
+            </div>
 
             <asp:Panel runat="server" ID="pnlSmallIconMenu" Visible="false">
 
@@ -321,10 +284,16 @@
             </asp:Panel>
 
 
-            <div class="d-flex align-items-center mt-3 mb-1">
-                <h3 class="idx-section-title mb-0">กิจกรรมโครงการ</h3>
-                <div class="ms-auto me-3">
-                    <asp:HyperLink ID="btnShowAllBanner" onclick="ShowAllBanner();" NavigateUrl="#" runat="server" class="font-12 text-primary">ดูทั้งหมด</asp:HyperLink>
+            <div class="content my-0 px-1 mt-3">
+                <div class="d-flex">
+                    <div class="align-self-center">
+                        <h3 class="font-16 mb-2 color-black">กิจกรรมโครงการ</h3>
+                    </div>
+                    <div class="align-self-center ms-auto">
+                        <div class="align-self-center ms-auto">
+                            <asp:HyperLink ID="btnShowAllBanner" onclick="ShowAllBanner();" NavigateUrl="#" runat="server" class="font-12 pt-1">ดูทั้งหมด</asp:HyperLink>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -334,10 +303,12 @@
 
             <asp:Repeater ID="rptBanners" runat="server">
                 <ItemTemplate>
-                    <div class="idx-banner-card" id='Div2' runat="server" visible='<%# Eval("IsVisible") %>'>
-                        <a href="<%#  Eval("RedirectUrl") %>" onclick="<%# Eval("TargetUrl") %>">
-                            <img src='<%# ResolveUrl(Eval("ImageUrl").ToString()) %>' />
-                        </a>
+                    <div class="card card-style" style="margin-bottom: 10px !important" id='Div2' runat="server" visible='<%# Eval("IsVisible") %>'>
+                        <div class="content" style="margin: 0px;">
+                            <a href="<%#  Eval("RedirectUrl") %>" onclick="<%# Eval("TargetUrl") %>" style="padding: 0px; margin: 0px;" class="list-group-item">
+                                <img src='<%# ResolveUrl(Eval("ImageUrl").ToString()) %>' style="height: 120px; width: 100%;" />
+                            </a>
+                        </div>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
@@ -649,7 +620,8 @@
         <span class="fab-star s5">&#10022;</span>
         <span class="fab-star s6">&#9733;</span>
         <i class="bi bi-suit-diamond-fill hora-icon"></i>
-        <span class="sme-label">ดูดวง</span>
+        <span class="sme-label">พร้อม</span>
+        <span class="sme-label">มู</span>
     </a>
 
 </asp:Content>
