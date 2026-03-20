@@ -9,7 +9,6 @@ function InsertCustomerProfileHistory(lstObj) {
     LocalLogHttp("HTTP Res :" + result);
     return result;
 }
-
 function GetUidData(uid) {
     var url = host + "/api/uid/" + uid;
     LocalLogHttp("HTTP Req : " + get + " : " + url);
@@ -18,7 +17,6 @@ function GetUidData(uid) {
     LocalLogHttp("HTTP Res :" + result);
     return result;
 }
-
 function GetUIDLineProfile(uid) {
     var url = host + "/api/uidlineprofile/" + uid;
     LocalLogHttp("HTTP Req : " + get + " : " + url);
@@ -112,7 +110,6 @@ function InsertCustomerProfile(obj) {
     LocalLogHttp("HTTP Res :" + result);
     return result;
 }
-
 function InsertFormFARegister(obj) {
     var url = host + "/api/registerinfo/fa";
     LocalLogHttp("HTTP Req : " + post + " : " + url);

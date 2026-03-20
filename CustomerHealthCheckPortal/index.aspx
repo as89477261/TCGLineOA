@@ -620,8 +620,8 @@
         <span class="fab-star s5">&#10022;</span>
         <span class="fab-star s6">&#9733;</span>
         <i class="bi bi-suit-diamond-fill hora-icon"></i>
-        <span class="sme-label">SME</span>
-        <span class="sme-label">มีดวง</span>
+        <span class="sme-label">พร้อม</span>
+        <span class="sme-label">มู</span>
     </a>
 
 </asp:Content>
