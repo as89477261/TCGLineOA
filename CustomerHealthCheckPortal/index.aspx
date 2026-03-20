@@ -51,11 +51,12 @@
             gap: 4px !important;
             flex-wrap: wrap !important;
         }
-        #double-slider-2 .splide__slide,
-        #double-slider-2 .splide__slide--clone {
+        #double-slider-2 .splide__slide {
             width: auto !important;
             margin: 0 !important;
         }
+        /* hide splide JS-generated clones so real items appear only once */
+        #double-slider-2 .splide__slide--clone { display: none !important; }
         #double-slider-2 .splide__pagination { display: none !important; }
         /* squircle icon tile */
         #double-slider-2 .splide__slide > div[data-card-height] {
@@ -227,11 +228,11 @@
                 <div class="splide quad-slider slider-no-dots slider-no-arrows slider-visible text-center  splide--ltr splide--draggable is-active mt-2 me-1"
                     id="double-slider-2" style="visibility: visible;">
                     <div class="splide__track" id="double-slider-2-track">
-                        <div class="splide__list ms-2" id="double-slider-2-list" style="transform: translateX(-670px);">
+                        <div class="splide__list ms-2" id="double-slider-2-list">
 
                             <asp:Repeater ID="rptServiceMenu" runat="server">
                                 <ItemTemplate>
-                                    <div class="splide__slide splide__slide--clone cursor-pointer"
+                                    <div class="splide__slide cursor-pointer"
                                         style="width: 68px;"
                                         onclick="<%# Eval("ClickAction") %>"
                                         visible="<%# Eval("IsVisible") %>">
