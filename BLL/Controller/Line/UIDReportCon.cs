@@ -321,5 +321,57 @@ namespace BLL.Controller
                 return result;
             }
         }
+
+        public BaseModel<string> GetSummaryUID5ColorReport(string startDate, string endDate)
+        {
+            var result = new BaseModel<string>();
+            try
+            {
+                var buffer = new DAL.LineDailyReportRepo();
+                var bufferResult = buffer.GetSummaryUID5ColorReport(startDate, endDate);
+                if (bufferResult != null)
+                {
+                    result.RESULT_OBJ = bufferResult.Rows[0][0].ToString();
+                    result.SetSuccess();
+
+                }
+                else
+                {
+                    result.SetNotfound();
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                result.SetException(ex);
+                return result;
+            }
+        }
+        public BaseModel<string> GetLastYearSummaryUID5ColorReport(string startDate, string endDate)
+        {
+            var result = new BaseModel<string>();
+            try
+            {
+                var buffer = new DAL.LineDailyReportRepo();
+                var bufferResult = buffer.GetLastYearSummaryUID5ColorReport(startDate, endDate);
+                if (bufferResult != null)
+                {
+                    result.RESULT_OBJ = bufferResult.Rows[0][0].ToString();
+                    result.SetSuccess();
+
+                }
+                else
+                {
+                    result.SetNotfound();
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                result.SetException(ex);
+                return result;
+            }
+        }
+
     }
 }
