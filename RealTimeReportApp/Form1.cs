@@ -35,7 +35,9 @@ namespace RealTimeReportApp
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
+            lblLastQuery.Text = "ระบบกำลังสืบค้นข้อมูล";
             GetInformation();
+            lblLastQuery.Text = "สืบค้นเสร็จสิ้น";
         }
 
         private void GetInformation()
@@ -43,7 +45,6 @@ namespace RealTimeReportApp
 
             var startDate = ConfigurationManager.AppSettings["StartDate"];
             var currentDate = DateTime.Parse(txtQueryDate.Text).AddYears(-543).ToString("MM/dd/yyyy");
-
 
 
             DailyReportModel obj = new DailyReportModel();
@@ -89,6 +90,5 @@ namespace RealTimeReportApp
 
 
         }
-
     }
 }

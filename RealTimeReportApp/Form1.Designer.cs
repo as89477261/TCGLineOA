@@ -233,12 +233,13 @@
             // 
             // lblLastQuery
             // 
+            this.lblLastQuery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLastQuery.AutoSize = true;
-            this.lblLastQuery.Location = new System.Drawing.Point(577, 32);
+            this.lblLastQuery.Location = new System.Drawing.Point(591, 21);
             this.lblLastQuery.Name = "lblLastQuery";
-            this.lblLastQuery.Size = new System.Drawing.Size(44, 16);
+            this.lblLastQuery.Size = new System.Drawing.Size(11, 16);
             this.lblLastQuery.TabIndex = 33;
-            this.lblLastQuery.Text = "label2";
+            this.lblLastQuery.Text = "-";
             // 
             // btnQuery
             // 
@@ -248,6 +249,7 @@
             this.btnQuery.TabIndex = 32;
             this.btnQuery.Text = "Query";
             this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
             // 
             // label1
             // 
