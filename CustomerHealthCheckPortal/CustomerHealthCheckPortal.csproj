@@ -1167,6 +1167,7 @@
     <Content Include="views\Reward_KM\merchant_Profile_KM.aspx" />
     <Content Include="views\Reward_KM\Register_KM.aspx" />
     <Content Include="views\Reward_KM\merchant_KM.aspx" />
+    <Content Include="views\SignUpThaiD\SubmitOptionalInfo.aspx" />
     <Content Include="views\SignUp\ConfirmOTP.aspx" />
     <Content Include="views\SignUp\Index.aspx" />
     <Content Include="views\SignUp\Notfound.aspx" />
@@ -2031,6 +2032,13 @@
     </Compile>
     <Compile Include="views\Reward_KM\merchant_KM.aspx.designer.cs">
       <DependentUpon>merchant_KM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\SignUpThaiD\SubmitOptionalInfo.aspx.cs">
+      <DependentUpon>SubmitOptionalInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\SignUpThaiD\SubmitOptionalInfo.aspx.designer.cs">
+      <DependentUpon>SubmitOptionalInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="views\SignUp\ConfirmOTP.aspx.cs">
       <DependentUpon>ConfirmOTP.aspx</DependentUpon>

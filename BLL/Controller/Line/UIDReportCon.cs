@@ -5,6 +5,7 @@ using DataModel.Models.DCS;
 using DataModel.Models.Line;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace BLL.Controller
@@ -357,6 +358,32 @@ namespace BLL.Controller
                 if (bufferResult != null)
                 {
                     result.RESULT_OBJ = bufferResult.Rows[0][0].ToString();
+                    result.SetSuccess();
+
+                }
+                else
+                {
+                    result.SetNotfound();
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                result.SetException(ex);
+                return result;
+            }
+        }
+
+        public BaseModel<DataTable> GetDataUID5ColorReport(string startDate, string endDate)
+        {
+            var result = new BaseModel<DataTable>();
+            try
+            {
+                var buffer = new DAL.LineDailyReportRepo();
+                var bufferResult = buffer.GetDataUID5ColorReport(startDate, endDate);
+                if (bufferResult != null)
+                {
+                    result.RESULT_OBJ = bufferResult;
                     result.SetSuccess();
 
                 }

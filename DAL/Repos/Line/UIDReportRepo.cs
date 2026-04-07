@@ -400,6 +400,34 @@ namespace DAL
             return dt;
         }
 
+        public DataTable GetDataUID5ColorReport(string startDate, string endDate)
+        {
+            DataTable dt = null;
+
+            string sql = @"SELECT b.[IdCard],b.[UserFirstName],b.[UserLastName],c.[CreateDate]
+                              FROM [DBFA_CENTER].[dbo].[TPT_UIDMapFATransaction] c
+                              left join [DBFA_CENTER].[dbo].[FA_Transections] a on c.TransactionID = a.Id
+                              left join [DBFA_CENTER].[dbo].[CustomerProfile] b on a.CustomerProfileId = b.id   
+                              where CAST(c.[CreateDate] AS DATE) >= '" + startDate + "' and CAST(c.[CreateDate] AS DATE) <= '" + endDate + "' order by c.[CreateDate] desc";
+
+            try
+            {
+                dt = DB_CustomerHealthCheck.ExecuteCommandTextReturnDataSet(sql).Tables[0];
+            }
+            catch (Exception ex)
+            {
+                LogUtility.writeLog("GetDataUID5ColorReport Error : " + ex, ref log4);
+            }
+
+            return dt;
+        }
+
+
+
+
+
+
+
         public DataTable GetActiveUserReport(string startDate, string endDate)
         {
             DataTable dt = null;

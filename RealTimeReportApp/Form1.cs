@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -49,27 +50,27 @@ namespace RealTimeReportApp
 
             DailyReportModel obj = new DailyReportModel();
             var dataSet1 = LineDailyReportRepo.Instance.GetSummaryUIDReport("", "");
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             var dataSet2 = LineDailyReportRepo.Instance.GetLastYearSummaryUIDReport(startDate, currentDate);
 
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             var dataSet3 = LineDailyReportRepo.Instance.GetSummaryUIDHaveLGReport("", "");
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             var dataSet4 = LineDailyReportRepo.Instance.GetLastYearSummaryUIDHaveLGReport(startDate, currentDate);
 
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             var dataSet5 = LineDailyReportRepo.Instance.GetSummaryUIDHaveDeptReport("", "");
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             var dataSet6 = LineDailyReportRepo.Instance.GetLastYearSummaryUIDHaveDeptReport(startDate, currentDate);
 
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             var dataSet9 = LineDailyReportRepo.Instance.GetSummaryUIDKYCReport("", "");
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             var dataSet10 = LineDailyReportRepo.Instance.GetLastYearSummaryUIDKYCReport(startDate, currentDate);
 
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             var dataSet11 = LineDailyReportRepo.Instance.GetSummaryUID5ColorReport("", "");
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             var dataSet12 = LineDailyReportRepo.Instance.GetLastYearSummaryUID5ColorReport(startDate, currentDate);
 
 
@@ -88,6 +89,20 @@ namespace RealTimeReportApp
             txtAllUID_Regis5Color.Text = dataSet11.RESULT_OBJ.StringToMoneyFormat(true);
             txtAnnualyUID_Regis5Color.Text = dataSet12.RESULT_OBJ.StringToMoneyFormat(true);
 
+
+        }
+
+        private void btnGet5Color_Click(object sender, EventArgs e)
+        {
+            var startDate = ConfigurationManager.AppSettings["StartDate"];
+            var currentDate = DateTime.Parse(txtQueryDate.Text).AddYears(-543).ToString("MM/dd/yyyy");
+
+            dgvRegis5Color.DataSource = LineDailyReportRepo.Instance.GetDataUID5ColorReport(startDate, currentDate).RESULT_OBJ;
+            
+        }
+
+        private void btAllDebt_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -54,6 +54,12 @@
             this.btnQuery = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvRegis5Color = new System.Windows.Forms.DataGridView();
+            this.btnGet5Color = new System.Windows.Forms.Button();
+            this.btAllDebt = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegis5Color)).BeginInit();
             this.SuspendLayout();
             // 
             // lblQueryDate
@@ -268,11 +274,58 @@
             this.label12.TabIndex = 30;
             this.label12.Text = "ดึงข้อมูลถึงวันที่";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btAllDebt);
+            this.panel1.Controls.Add(this.dgvRegis5Color);
+            this.panel1.Controls.Add(this.btnGet5Color);
+            this.panel1.Location = new System.Drawing.Point(21, 214);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(735, 377);
+            this.panel1.TabIndex = 55;
+            // 
+            // dgvRegis5Color
+            // 
+            this.dgvRegis5Color.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvRegis5Color.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegis5Color.Location = new System.Drawing.Point(3, 42);
+            this.dgvRegis5Color.Name = "dgvRegis5Color";
+            this.dgvRegis5Color.RowHeadersWidth = 51;
+            this.dgvRegis5Color.RowTemplate.Height = 24;
+            this.dgvRegis5Color.Size = new System.Drawing.Size(729, 332);
+            this.dgvRegis5Color.TabIndex = 1;
+            // 
+            // btnGet5Color
+            // 
+            this.btnGet5Color.Location = new System.Drawing.Point(6, 9);
+            this.btnGet5Color.Name = "btnGet5Color";
+            this.btnGet5Color.Size = new System.Drawing.Size(114, 23);
+            this.btnGet5Color.TabIndex = 0;
+            this.btnGet5Color.Text = "ดึงข้อมูลลง 5 สี";
+            this.btnGet5Color.UseVisualStyleBackColor = true;
+            this.btnGet5Color.Click += new System.EventHandler(this.btnGet5Color_Click);
+            // 
+            // btAllDebt
+            // 
+            this.btAllDebt.Location = new System.Drawing.Point(126, 9);
+            this.btAllDebt.Name = "btAllDebt";
+            this.btAllDebt.Size = new System.Drawing.Size(75, 23);
+            this.btAllDebt.TabIndex = 2;
+            this.btAllDebt.Text = "ดึงลูกหนี้ทั้งหมด";
+            this.btAllDebt.UseVisualStyleBackColor = true;
+            this.btAllDebt.Click += new System.EventHandler(this.btAllDebt_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 232);
+            this.ClientSize = new System.Drawing.Size(784, 603);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtQueryDate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
@@ -301,6 +354,8 @@
             this.Controls.Add(this.lblQueryDate);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegis5Color)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,6 +388,10 @@
         private System.Windows.Forms.Button btnQuery;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnGet5Color;
+        private System.Windows.Forms.DataGridView dgvRegis5Color;
+        private System.Windows.Forms.Button btAllDebt;
     }
 }
 

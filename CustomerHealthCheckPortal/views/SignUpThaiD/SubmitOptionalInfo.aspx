@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Step.Master" AutoEventWireup="true" CodeBehind="ConfirmOTP.aspx.cs"
-    Inherits="CustomerHealthCheck.views.SignUp.ConfirmOTP" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Step.Master" AutoEventWireup="true" CodeBehind="SubmitOptionalInfo.aspx.cs" 
+    Inherits="CustomerHealthCheck.views.SignUpThaiD.SubmitOptionalInfo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
