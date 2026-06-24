@@ -102,7 +102,7 @@
     <Compile Include="Repos\SMEClinic\DashboardUIDRepo.cs" />
     <Compile Include="Repos\SMEClinic\IdentifiedProfileRepo.cs" />
     <Compile Include="Repos\SMEClinic\UIDRepo.cs" />
-    <Compile Include="Repos\SQL\CommandRepo.cs" />
+
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataModel\DataModel.csproj">

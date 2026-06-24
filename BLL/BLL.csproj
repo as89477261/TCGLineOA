@@ -109,7 +109,7 @@
     <Compile Include="Controller\NDID\NDIDPersonalCon.cs" />
     <Compile Include="Controller\SignUp\UIDMapEnrollmentCon.cs" />
     <Compile Include="Controller\SMEClinic\UIDMapCustomerProfileCon.cs" />
-    <Compile Include="Controller\SQL\CommandCom.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
