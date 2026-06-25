@@ -62,7 +62,7 @@
         }
 
         .day-quality-badge {
-            display: none; margin: 0 auto 10px; padding: 5px 16px;
+            display: none; margin: 8px auto 0; padding: 5px 16px;
             border-radius: 20px; font-size: 12px; font-weight: 700;
             justify-content: center; align-items: center; gap: 5px; width: fit-content;
             animation: badge-pulse 2s ease-in-out infinite;
@@ -361,10 +361,10 @@
                 <div class="hora-sparkle"></div>
             </div>
         </div>
-        <div class="day-quality-badge" id="dayQualityBadge"></div>
         <h1 class="hora-title">SME ดูดวง</h1>
         <p class="hora-subtitle">ดูดวงธุรกิจ &bull; การเงิน &bull; โชคชะตา</p>
         <span class="hora-date-badge" id="todayLabel">กำลังโหลด...</span>
+        <div class="day-quality-badge" id="dayQualityBadge"></div>
     </div>
 
     <!-- Section 1: สีมงคล + ปฏิทินดวง (Tabs) -->
