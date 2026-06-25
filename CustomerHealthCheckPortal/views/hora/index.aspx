@@ -804,12 +804,51 @@
             caution:["ทบทวนแผนธุรกิจ","หลีกเลี่ยงการลงนามสัญญา","ระวังการใช้จ่าย","ปรึกษาผู้เชี่ยวชาญก่อนตัดสินใจ"]
         };
         var starCount = score>=5?5:score>=3?4:score>=1?3:2;
+
+        var dowScores = [0, 2, -1, 1, 2, 1, 0];
+        var dowScore = dowScores[date.getDay()];
+        var dowNames = ["อาทิตย์ — วันกลาง","จันทร์ — วันมงคล เริ่มต้นสัปดาห์ดี","อังคาร — วันแรง ควรระวัง","พุธ — วันพุธเหมาะค้าขาย","พฤหัสบดี — วันครู มงคลยิ่ง","ศุกร์ — วันศุกร์สิริมงคล","เสาร์ — วันวางแผน"];
+        var moonScore = 0;
+        var moonText = "";
+        if (isWaxing) {
+            if (moonAge >= 13) { moonScore = 3; moonText = "ใกล้เพ็ญ พลังเต็ม"; }
+            else if (moonAge >= 7) { moonScore = 2; moonText = "ข้างขึ้นกลาง กำลังดี"; }
+            else { moonScore = 1; moonText = "จันทร์เริ่มขึ้น"; }
+        } else {
+            if (moonAge >= 28) { moonScore = 1; moonText = "ใกล้เดือนใหม่ เริ่มต้นได้"; }
+            else { moonScore = 0; moonText = "ข้างแรม พลังลดลง"; }
+        }
+        var dn = date.getDate(), ds = dn;
+        while (ds > 9) { var s=0; while(ds>0){s+=ds%10;ds=Math.floor(ds/10);} ds=s; }
+        var numScore = ([1,3,6,8,9].indexOf(ds)>=0) ? 1 : ([4,7].indexOf(ds)>=0) ? -1 : 0;
+        var numText = "ผลรวมเลขวันที่ = "+ds;
+        if (numScore > 0) numText += " (เลขมงคล)";
+        else if (numScore < 0) numText += " (เลขควรระวัง)";
+        else numText += " (เลขกลาง)";
+        var rawLunarDay = Math.floor(moonAge);
+        var isWanPhra = (rawLunarDay===7||rawLunarDay===14||rawLunarDay===22||rawLunarDay===29);
+        var wpScore = isWanPhra ? 1 : 0;
+
+        function factorTag(pts) {
+            if (pts > 0) return '<span style="color:#16a34a;font-weight:700;">+'+pts+'</span>';
+            if (pts < 0) return '<span style="color:#dc2626;font-weight:700;">'+pts+'</span>';
+            return '<span style="color:#94a3b8;font-weight:700;">0</span>';
+        }
+
         var html = '<div style="text-align:center; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #e8f0fe;">';
         html += '<div style="font-size:14px; font-weight:700; color:#0a2463;">วัน'+days[date.getDay()]+'ที่ '+d+' '+THAI_MONTHS[m]+' '+(y+543)+'</div>';
-        html += '<div style="font-size:12px; font-weight:600; color:'+levelColors[level]+'; margin-top:4px;"><i class="bi '+(level==="caution"?"bi-exclamation-triangle-fill":"bi-star-fill")+'"></i> '+levelNames[level]+'</div>';
+        html += '<div style="font-size:12px; font-weight:600; color:'+levelColors[level]+'; margin-top:4px;"><i class="bi '+(level==="caution"?"bi-exclamation-triangle-fill":"bi-star-fill")+'"></i> '+levelNames[level]+' (คะแนนรวม '+score+')</div>';
         html += '<div style="margin-top:4px;">'+buildStars(starCount)+'</div>';
         html += '</div>';
-        html += '<div style="font-size:11px; color:#64748b; margin-bottom:8px;"><i class="bi bi-moon"></i> '+(isWaxing?'ข้างขึ้น':'ข้างแรม')+' '+lunarDay+' ค่ำ</div>';
+
+        html += '<div style="font-size:12px; font-weight:700; color:#0a2463; margin-bottom:8px; display:flex; align-items:center; gap:5px;"><i class="bi bi-clipboard-data" style="color:#1344a0;"></i> ปัจจัยที่ประเมิน</div>';
+        html += '<div style="background:#f0f6ff; border-radius:8px; padding:8px 10px; margin-bottom:10px; font-size:11px; line-height:1.8;">';
+        html += '<div style="display:flex; justify-content:space-between; align-items:center;"><span><i class="bi bi-calendar-day" style="color:#1344a0;margin-right:4px;"></i> วัน'+dowNames[date.getDay()]+'</span> '+factorTag(dowScore)+'</div>';
+        html += '<div style="display:flex; justify-content:space-between; align-items:center;"><span><i class="bi bi-moon-stars" style="color:#7c3aed;margin-right:4px;"></i> '+(isWaxing?'ข้างขึ้น':'ข้างแรม')+' '+lunarDay+' ค่ำ — '+moonText+'</span> '+factorTag(moonScore)+'</div>';
+        html += '<div style="display:flex; justify-content:space-between; align-items:center;"><span><i class="bi bi-hash" style="color:#d97706;margin-right:4px;"></i> '+numText+'</span> '+factorTag(numScore)+'</div>';
+        html += '<div style="display:flex; justify-content:space-between; align-items:center;"><span><i class="bi bi-flower1" style="color:#ec4899;margin-right:4px;"></i> วันพระ</span> '+(isWanPhra?factorTag(1):'<span style="color:#94a3b8;font-size:10px;">ไม่ใช่วันพระ</span>')+'</div>';
+        html += '</div>';
+
         html += '<div style="font-size:12px; font-weight:600; color:#0a2463; margin-bottom:6px;">'+(level==="caution"?"สิ่งที่ควรระวัง":"กิจกรรมที่แนะนำ")+'</div>';
         var acts = activities[level];
         var actIcon = level==="caution"?"bi-exclamation-circle":"bi-check-circle-fill";
