@@ -48,23 +48,23 @@
         .hora-sparkle:nth-child(4) { left:25%; top:70%; animation: sparkle-float 2.4s 1.2s infinite; }
         .hora-sparkle:nth-child(5) { left:75%; top:65%; animation: sparkle-float 2.0s 0.6s infinite; }
 
-        .hora-icon-area { position: relative; display: inline-block; padding: 10px 16px; }
+        .hora-icon-area { position: relative; display: inline-block; padding: 18px 28px; }
         .hora-mini-star {
             position: absolute; pointer-events: none; color: #fbbf24; opacity: 0;
         }
         @keyframes mini-star-good {
-            0%, 100% { opacity: 0.3; transform: scale(0.7); }
-            50% { opacity: 0.9; transform: scale(1.1); }
+            0%, 100% { opacity: 0.25; transform: scale(0.6); }
+            50% { opacity: 0.85; transform: scale(1.15); }
         }
         @keyframes mini-star-great {
-            0%, 100% { opacity: 0.4; transform: scale(0.6) rotate(0deg); }
-            50% { opacity: 1; transform: scale(1.3) rotate(20deg); }
+            0%, 100% { opacity: 0.3; transform: scale(0.5) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.35) rotate(25deg); }
         }
 
         .day-quality-badge {
-            display: none; margin: 2px auto 8px; padding: 5px 16px;
+            display: none; margin: 0 auto 10px; padding: 5px 16px;
             border-radius: 20px; font-size: 12px; font-weight: 700;
-            align-items: center; gap: 5px; width: fit-content;
+            justify-content: center; align-items: center; gap: 5px; width: fit-content;
             animation: badge-pulse 2s ease-in-out infinite;
         }
         @keyframes badge-pulse {
@@ -703,31 +703,33 @@
         var badge = document.getElementById("dayQualityBadge");
         var sparkles = document.getElementById("headerSparkles");
         var miniStars = document.getElementById("headerMiniStars");
-        var starPositions = [
-            {x:-20,y:8,sz:10},{x:78,y:12,sz:12},{x:90,y:50,sz:9},
-            {x:-14,y:55,sz:11},{x:50,y:-8,sz:10},{x:20,y:75,sz:8},
-            {x:70,y:72,sz:11},{x:-8,y:35,sz:9},{x:95,y:30,sz:10},
-            {x:40,y:82,sz:12}
+        var goodStars = [
+            {x:-30,y:10,sz:18},{x:95,y:15,sz:20},{x:-22,y:60,sz:16},{x:100,y:55,sz:17},{x:40,y:-12,sz:15}
+        ];
+        var greatStars = [
+            {x:-38,y:5,sz:22},{x:105,y:10,sz:24},{x:-30,y:58,sz:18},{x:110,y:52,sz:20},
+            {x:40,y:-18,sz:19},{x:-15,y:85,sz:16},{x:85,y:82,sz:18},{x:55,y:90,sz:15},
+            {x:-35,y:35,sz:14},{x:112,y:35,sz:16}
         ];
         miniStars.innerHTML = "";
         if (level === "great") {
             icon.style.animation = "icon-twinkle-great 1.8s ease-in-out infinite";
             badge.className = "day-quality-badge great";
             badge.innerHTML = '<i class="bi bi-star-fill"></i> วันนี้วันดีมาก!';
-            badge.style.display = "inline-flex";
+            badge.style.display = "flex";
             sparkles.style.display = "block";
-            for (var i=0; i<8; i++) {
-                var p = starPositions[i];
+            for (var i=0; i<greatStars.length; i++) {
+                var p = greatStars[i];
                 miniStars.innerHTML += '<i class="bi bi-star-fill hora-mini-star" style="left:'+p.x+'px;top:'+p.y+'px;font-size:'+p.sz+'px;animation:mini-star-great '+(1.6+i*0.25)+'s '+(i*0.2)+'s ease-in-out infinite;"></i>';
             }
         } else if (level === "good") {
             icon.style.animation = "icon-twinkle-good 2s ease-in-out infinite";
             badge.className = "day-quality-badge good";
             badge.innerHTML = '<i class="bi bi-star-fill"></i> วันนี้เป็นวันดี';
-            badge.style.display = "inline-flex";
+            badge.style.display = "flex";
             sparkles.style.display = "none";
-            for (var j=0; j<4; j++) {
-                var q = starPositions[j*2];
+            for (var j=0; j<goodStars.length; j++) {
+                var q = goodStars[j];
                 miniStars.innerHTML += '<i class="bi bi-star-fill hora-mini-star" style="left:'+q.x+'px;top:'+q.y+'px;font-size:'+q.sz+'px;animation:mini-star-good '+(2+j*0.3)+'s '+(j*0.3)+'s ease-in-out infinite;"></i>';
             }
         } else {
