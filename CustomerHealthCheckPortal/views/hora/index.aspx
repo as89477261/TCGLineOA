@@ -48,8 +48,21 @@
         .hora-sparkle:nth-child(4) { left:25%; top:70%; animation: sparkle-float 2.4s 1.2s infinite; }
         .hora-sparkle:nth-child(5) { left:75%; top:65%; animation: sparkle-float 2.0s 0.6s infinite; }
 
+        .hora-icon-area { position: relative; display: inline-block; padding: 10px 16px; }
+        .hora-mini-star {
+            position: absolute; pointer-events: none; color: #fbbf24; opacity: 0;
+        }
+        @keyframes mini-star-good {
+            0%, 100% { opacity: 0.3; transform: scale(0.7); }
+            50% { opacity: 0.9; transform: scale(1.1); }
+        }
+        @keyframes mini-star-great {
+            0%, 100% { opacity: 0.4; transform: scale(0.6) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.3) rotate(20deg); }
+        }
+
         .day-quality-badge {
-            display: none; margin: 6px auto 4px; padding: 5px 16px;
+            display: none; margin: 2px auto 8px; padding: 5px 16px;
             border-radius: 20px; font-size: 12px; font-weight: 700;
             align-items: center; gap: 5px; width: fit-content;
             animation: badge-pulse 2s ease-in-out infinite;
@@ -339,7 +352,8 @@
 
     <!-- Header -->
     <div class="hora-header">
-        <div style="position:relative; display:inline-block;">
+        <div class="hora-icon-area" id="headerIconArea">
+            <div id="headerMiniStars"></div>
             <i class="bi bi-stars hora-header-icon" id="headerIcon"></i>
             <div class="hora-sparkles" id="headerSparkles">
                 <div class="hora-sparkle"></div><div class="hora-sparkle"></div>
@@ -429,7 +443,7 @@
                 <p class="phone-fortune-text" id="phoneFortuneText"></p>
                 <div class="temple-recommend" id="phoneTemples" style="display:none; margin-top:12px; text-align:left;">
                     <div style="font-size:13px; font-weight:700; color:#0a2463; margin-bottom:8px; display:flex; align-items:center; gap:5px;">
-                        <i class="bi bi-geo-alt-fill" style="color:#d97706;"></i> สถานที่เสริมดวงการเงิน
+                        <i class="bi bi-geo-alt-fill" style="color:#d97706;"></i> สถานที่เสริมดวงที่เหมาะกับคุณ
                     </div>
                     <div id="phoneTempleList"></div>
                 </div>
@@ -470,7 +484,7 @@
         </div>
         <div class="temple-recommend" id="resultTemples" style="display:none; margin-top:12px; text-align:left;">
             <div style="font-size:13px; font-weight:700; color:#0a2463; margin-bottom:8px; display:flex; align-items:center; gap:5px;">
-                <i class="bi bi-geo-alt-fill" style="color:#d97706;"></i> สถานที่เสริมดวงการเงิน
+                <i class="bi bi-geo-alt-fill" style="color:#d97706;"></i> สถานที่เสริมดวงที่เหมาะกับคุณ
             </div>
             <div id="templeList"></div>
         </div>
@@ -688,18 +702,34 @@
         var icon = document.getElementById("headerIcon");
         var badge = document.getElementById("dayQualityBadge");
         var sparkles = document.getElementById("headerSparkles");
+        var miniStars = document.getElementById("headerMiniStars");
+        var starPositions = [
+            {x:-20,y:8,sz:10},{x:78,y:12,sz:12},{x:90,y:50,sz:9},
+            {x:-14,y:55,sz:11},{x:50,y:-8,sz:10},{x:20,y:75,sz:8},
+            {x:70,y:72,sz:11},{x:-8,y:35,sz:9},{x:95,y:30,sz:10},
+            {x:40,y:82,sz:12}
+        ];
+        miniStars.innerHTML = "";
         if (level === "great") {
             icon.style.animation = "icon-twinkle-great 1.8s ease-in-out infinite";
             badge.className = "day-quality-badge great";
             badge.innerHTML = '<i class="bi bi-star-fill"></i> วันนี้วันดีมาก!';
             badge.style.display = "inline-flex";
             sparkles.style.display = "block";
+            for (var i=0; i<8; i++) {
+                var p = starPositions[i];
+                miniStars.innerHTML += '<i class="bi bi-star-fill hora-mini-star" style="left:'+p.x+'px;top:'+p.y+'px;font-size:'+p.sz+'px;animation:mini-star-great '+(1.6+i*0.25)+'s '+(i*0.2)+'s ease-in-out infinite;"></i>';
+            }
         } else if (level === "good") {
             icon.style.animation = "icon-twinkle-good 2s ease-in-out infinite";
             badge.className = "day-quality-badge good";
             badge.innerHTML = '<i class="bi bi-star-fill"></i> วันนี้เป็นวันดี';
             badge.style.display = "inline-flex";
             sparkles.style.display = "none";
+            for (var j=0; j<4; j++) {
+                var q = starPositions[j*2];
+                miniStars.innerHTML += '<i class="bi bi-star-fill hora-mini-star" style="left:'+q.x+'px;top:'+q.y+'px;font-size:'+q.sz+'px;animation:mini-star-good '+(2+j*0.3)+'s '+(j*0.3)+'s ease-in-out infinite;"></i>';
+            }
         } else {
             icon.style.animation = "icon-twinkle 2.2s ease-in-out infinite";
             badge.style.display = "none";
@@ -805,10 +835,16 @@
     }
 
     /* ========== TEMPLES ========== */
-    function getRandomTemples(type, count) {
+    function getFixedTemples(seed, type, count) {
         var filtered = TEMPLES.filter(function(t) { return t.type === type; });
-        var shuffled = filtered.sort(function() { return Math.random() - 0.5; });
-        return shuffled.slice(0, count);
+        var indices = [];
+        var h = Math.abs(seed) % filtered.length;
+        for (var i = 0; i < count; i++) {
+            while (indices.indexOf(h) !== -1) h = (h + 1) % filtered.length;
+            indices.push(h);
+            h = (h * 7 + 3) % filtered.length;
+        }
+        return indices.map(function(idx) { return filtered[idx]; });
     }
 
     function renderTemples(temples) {
@@ -875,7 +911,8 @@
             document.getElementById("resultWarningText").textContent = card.warning;
             warnEl.style.display = "block";
         } else { warnEl.style.display = "none"; }
-        var temples = getRandomTemples(card.isWarning ? "warn" : "good", 3);
+        var cardSeed = TAROT_CARDS.indexOf(card);
+        var temples = getFixedTemples(cardSeed, card.isWarning ? "warn" : "good", 2);
         document.getElementById("templeList").innerHTML = renderTemples(temples);
         document.getElementById("resultTemples").style.display = "block";
         document.getElementById("tarotResultOverlay").classList.add("show");
@@ -907,7 +944,7 @@
         document.getElementById("phoneNumResult").textContent = sum;
         document.getElementById("phoneStars").innerHTML = buildStars(data.stars);
         document.getElementById("phoneFortuneText").textContent = data.text;
-        var temples = getRandomTemples(data.stars >= 4 ? "good" : "warn", 3);
+        var temples = getFixedTemples(sum, data.stars >= 4 ? "good" : "warn", 2);
         document.getElementById("phoneTempleList").innerHTML = renderTemples(temples);
         document.getElementById("phoneTemples").style.display = "block";
         var result = document.getElementById("phoneResult");
