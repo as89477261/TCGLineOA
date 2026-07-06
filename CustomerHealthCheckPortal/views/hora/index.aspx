@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Site.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CustomerHealthCheck.views.hora.index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Site.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CustomerHealthCheck.views.hora.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta charset="utf-8" />
@@ -6,6 +6,7 @@
     <style>
         /* ========== HORA PAGE ========== */
         .hora-page { background-color: whitesmoke; min-height: 100vh; padding-bottom: 80px; }
+        .hora-page > div:first-child { margin-top: 0 !important; }
 
         /* --- Header Animations (3 levels) --- */
         @keyframes icon-twinkle {
@@ -326,22 +327,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="hora-page">
 
-    <!-- Back button -->
-    <div class="pt-3">
-        <div class="page-title d-flex">
-            <div class="align-self-center">
-                <a href="#" onclick="redirectToMain()"
-                   class="me-3 ms-0 icon icon-xxs bg-theme rounded-s shadow-m">
-                    <i class="bi bi-chevron-left color-theme font-14"></i>
-                </a>
-            </div>
-            <div class="align-self-center me-auto">
-                <h1 class="color-theme mb-0 font-18">ย้อนกลับ</h1>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header + Wave wrapper -->
+    <!-- Header + Wave wrapper (back button inside so wave starts flush to top) -->
     <div style="position:relative; overflow:hidden;">
         <svg id="header-deco" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
             <path id="header-deco-1" d="M 0,600 C 0,600 0,120 0,120 C 92.36363636363635,133.79904306220095 184.7272727272727,147.59808612440193 287,148 C 389.2727272727273,148.40191387559807 501.4545454545455,135.40669856459328 592,129 C 682.5454545454545,122.5933014354067 751.4545454545455,122.77511961722489 848,115 C 944.5454545454545,107.22488038277511 1068.7272727272727,91.49282296650718 1172,91 C 1275.2727272727273,90.50717703349282 1357.6363636363635,105.25358851674642 1440,120 C 1440,120 1440,600 1440,600 Z"></path>
@@ -349,6 +335,21 @@
             <path id="header-deco-3" d="M 0,600 C 0,600 0,360 0,360 C 65.43540669856458,339.55023923444975 130.87081339712915,319.1004784688995 245,321 C 359.12918660287085,322.8995215311005 521.9521531100479,347.1483253588517 616,352 C 710.0478468899521,356.8516746411483 735.3205741626795,342.3062200956938 822,333 C 908.6794258373205,323.6937799043062 1056.7655502392345,319.62679425837325 1170,325 C 1283.2344497607655,330.37320574162675 1361.6172248803828,345.1866028708134 1440,360 C 1440,360 1440,600 1440,600 Z"></path>
             <path id="header-deco-4" d="M 0,600 C 0,600 0,480 0,480 C 70.90909090909093,494.91866028708137 141.81818181818187,509.8373205741627 239,499 C 336.18181818181813,488.1626794258373 459.6363636363636,451.5693779904306 567,446 C 674.3636363636364,440.4306220095694 765.6363636363636,465.88516746411483 862,465 C 958.3636363636364,464.11483253588517 1059.8181818181818,436.8899521531101 1157,435 C 1254.1818181818182,433.1100478468899 1347.090909090909,456.555023923445 1440,480 C 1440,480 1440,600 1440,600 Z"></path>
         </svg>
+
+        <!-- Back button (inside wrapper so wave goes behind it) -->
+        <div class="pt-3" style="position:relative;z-index:1;">
+            <div class="page-title d-flex">
+                <div class="align-self-center">
+                    <a href="#" onclick="redirectToMain()"
+                       class="me-3 ms-0 icon icon-xxs bg-theme rounded-s shadow-m">
+                        <i class="bi bi-chevron-left color-theme font-14"></i>
+                    </a>
+                </div>
+                <div class="align-self-center me-auto">
+                    <h1 class="color-theme mb-0 font-18">ย้อนกลับ</h1>
+                </div>
+            </div>
+        </div>
 
         <!-- Header -->
         <div class="hora-header" style="position:relative;z-index:1;">
