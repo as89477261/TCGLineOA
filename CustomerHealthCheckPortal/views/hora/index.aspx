@@ -363,7 +363,7 @@
                 </div>
             </div>
             <h1 class="hora-title">SME ดูดวง</h1>
-            <p class="hora-subtitle">ดูดวงธุรกิจ &bull; การเงิน &bull; โชคชะตา</p>
+            <h5 class="hora-subtitle">ดูดวงธุรกิจ &bull; การเงิน &bull; โชคชะตา</h5>
             <span class="hora-date-badge" id="todayLabel">กำลังโหลด...</span>
             <div class="day-quality-badge" id="dayQualityBadge"></div>
         </div>
