@@ -76,7 +76,7 @@
         .day-quality-badge.great { background: linear-gradient(135deg, #fef3c7, #fde68a); color: #92400e; border: 1px solid #fbbf24; }
 
         .hora-title    { font-size: 22px; font-weight: 800; color: darkblue; margin: 0; }
-        .hora-subtitle { font-size: 13px; color: darkblue; margin-top: 4px; }
+        .hora-subtitle { font-size: 11px; color: darkblue; margin-top: 1px; }
         .hora-date-badge {
             display: inline-block; margin-top: 10px;
             background: #e8f0fe; border: 1px solid #1344a0;
