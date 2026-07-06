@@ -341,30 +341,41 @@
         </div>
     </div>
 
-    <!-- Header SVG wave -->
-    <svg id="header-deco" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg"
-         class="transition duration-300 ease-in-out delay-150">
-        <path d="M 0,600 C 0,600 0,120 0,120 C 92,134 185,148 287,148 C 389,148 501,135 592,129 C 683,123 751,123 848,115 C 945,107 1069,92 1153,97 C 1237,102 1280,127 1346,133 C 1412,139 1440,120 1440,120 L 1440,600 L 0,600 Z" stroke="none" fill="url(#sw-gradient-0-0)" opacity="1"></path>
-        <path d="M 0,600 C 0,600 0,240 0,240 C 99,258 198,276 278,282 C 358,288 419,281 524,265 C 629,249 777,225 888,211 C 999,197 1073,194 1156,206 C 1239,218 1331,245 1385,258 C 1440,271 1440,240 1440,240 L 1440,600 L 0,600 Z" stroke="none" fill="url(#sw-gradient-0-1)" opacity="0.4"></path>
-        <path d="M 0,600 C 0,600 0,360 0,360 C 65,340 131,319 245,321 C 359,323 522,347 616,352 C 710,357 735,342 822,333 C 909,324 1059,322 1153,323 C 1247,324 1285,329 1345,342 C 1405,355 1440,360 1440,360 L 1440,600 L 0,600 Z" stroke="none" fill="url(#sw-gradient-0-2)" opacity="0.4"></path>
-        <path d="M 0,600 C 0,600 0,480 0,480 C 71,495 142,510 239,499 C 336,488 460,452 567,446 C 674,440 766,466 862,465 C 958,464 1058,437 1152,434 C 1246,431 1334,453 1388,463 C 1443,473 1440,480 1440,480 L 1440,600 L 0,600 Z" stroke="none" fill="url(#sw-gradient-0-3)" opacity="0.4"></path>
-    </svg>
+    <!-- Header + Wave wrapper -->
+    <div style="position:relative; overflow:hidden;">
+        <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"
+             style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="wave-g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#0a2463;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#1a6fdd;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="wave-g2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#1344a0;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <rect width="1440" height="320" fill="url(#wave-g1)" />
+            <path d="M0,160 C240,220 480,100 720,140 C960,180 1200,80 1440,120 L1440,320 L0,320 Z" fill="url(#wave-g2)" opacity="0.5" />
+            <path d="M0,220 C300,170 600,260 900,210 C1100,175 1300,230 1440,200 L1440,320 L0,320 Z" fill="#60a5fa" opacity="0.25" />
+        </svg>
 
-    <!-- Header -->
-    <div class="hora-header">
-        <div class="hora-icon-area" id="headerIconArea">
-            <div id="headerMiniStars"></div>
-            <i class="bi bi-stars hora-header-icon" id="headerIcon"></i>
-            <div class="hora-sparkles" id="headerSparkles">
-                <div class="hora-sparkle"></div><div class="hora-sparkle"></div>
-                <div class="hora-sparkle"></div><div class="hora-sparkle"></div>
-                <div class="hora-sparkle"></div>
+        <!-- Header -->
+        <div class="hora-header" style="position:relative;z-index:1;">
+            <div class="hora-icon-area" id="headerIconArea">
+                <div id="headerMiniStars"></div>
+                <i class="bi bi-stars hora-header-icon" id="headerIcon"></i>
+                <div class="hora-sparkles" id="headerSparkles">
+                    <div class="hora-sparkle"></div><div class="hora-sparkle"></div>
+                    <div class="hora-sparkle"></div><div class="hora-sparkle"></div>
+                    <div class="hora-sparkle"></div>
+                </div>
             </div>
+            <h1 class="hora-title" style="color:#fff;">SME ดูดวง</h1>
+            <p class="hora-subtitle" style="color:rgba(255,255,255,0.85);">ดูดวงธุรกิจ &bull; การเงิน &bull; โชคชะตา</p>
+            <span class="hora-date-badge" id="todayLabel" style="background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.5);color:#fff;">กำลังโหลด...</span>
+            <div class="day-quality-badge" id="dayQualityBadge"></div>
         </div>
-        <h1 class="hora-title">SME ดูดวง</h1>
-        <p class="hora-subtitle">ดูดวงธุรกิจ &bull; การเงิน &bull; โชคชะตา</p>
-        <span class="hora-date-badge" id="todayLabel">กำลังโหลด...</span>
-        <div class="day-quality-badge" id="dayQualityBadge"></div>
     </div>
 
     <!-- Section 1: สีมงคล + ปฏิทินดวง (Tabs) -->
