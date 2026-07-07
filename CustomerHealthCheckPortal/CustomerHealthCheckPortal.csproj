@@ -1096,6 +1096,7 @@
     <Content Include="views\Error\Index.aspx" />
     <Content Include="views\Event\index_Mock.aspx" />
     <Content Include="views\Gift\index.aspx" />
+    <Content Include="views\accounting\index.aspx" />
     <Content Include="views\hora\index.aspx" />
     <Content Include="views\LOA\Step0.aspx" />
     <Content Include="views\LOA\Step1.aspx" />
@@ -1541,6 +1542,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="views\Gift\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\accounting\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\accounting\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="views\hora\index.aspx.cs">

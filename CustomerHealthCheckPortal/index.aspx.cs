@@ -333,6 +333,14 @@ namespace CustomerHealthCheck
             IsVisible = true, // This item is always visible
             IsNew = false
         },
+        new MainMenuAction {
+            Title = "บัญชีรายรับรายจ่าย",
+            Description = "บันทึกรายวัน สรุปรายเดือน ปลูกต้นไม้",
+            IconCssClass = "has-bg1 gradient-green shadow-bg shadow-bg-xs color-white rounded-s bi bi-journal-bookmark-fill p-0",
+            ClickAction = "window.location.href='views/accounting/index.aspx'",
+            IsVisible = true,
+            IsNew = true
+        },
         new MainMenuAction
         {
             Title = "มาตรการพักชำระหนี้ตามนโยบายรัฐ Code 21",
