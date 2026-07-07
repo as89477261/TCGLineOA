@@ -336,6 +336,25 @@
 }
 .cat-chip.sel{ border-color:#1344a0; background:#eff6ff; color:#1e40af; }
 </style>
+<!-- Modal: Random Seed -->
+<div class="modal fade modal-acct" id="seedModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header" style="border:none;padding:18px 18px 8px;">
+                <span class="modal-title-txt">&#127922; สุ่มเมล็ดพันธุ์</span>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" style="padding:0 18px 28px;text-align:center;">
+                <div id="seedSpinner" style="font-size:64px;margin:20px 0 8px;min-height:80px;display:flex;align-items:center;justify-content:center;transition:all .12s;">&#127807;</div>
+                <div id="seedResultName" style="font-size:18px;font-weight:800;color:#1344a0;min-height:26px;margin-bottom:4px;"></div>
+                <div id="seedResultDesc" style="font-size:12px;color:#64748b;min-height:18px;margin-bottom:20px;"></div>
+                <button type="button" id="btnConfirmSeed" style="width:100%;padding:13px;background:#1344a0;color:#fff;border:none;border-radius:14px;font-size:14px;font-weight:800;cursor:pointer;display:none;">&#127807; ยืนยันปลูกต้นนี้!</button>
+                <button type="button" id="btnRollAgain" style="width:100%;padding:11px;background:#f1f5f9;color:#475569;border:none;border-radius:14px;font-size:13px;font-weight:700;cursor:pointer;margin-top:8px;display:none;">&#127922; สุ่มใหม่อีกครั้ง</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -503,22 +522,24 @@
         <div class="stage-dots" id="stageDots"></div>
         <div class="ti-action-row">
             <button type="button" class="ti-action-btn btn-ti-info" id="btnTreeInfo">&#8505;&#65039; ข้อมูลต้นไม้</button>
-            <button type="button" class="ti-action-btn btn-ti-change" id="btnChangeTree" style="display:none;">&#128260; เปลี่ยนพันธุ์</button>
+            <button type="button" class="ti-action-btn" id="btnUprootTree" style="background:#fee2e2;color:#dc2626;border:1px solid #fca5a5;">&#127804; ถอนปลูกใหม่</button>
         </div>
     </div>
 
-    <!-- Tree picker (first time or when changing) -->
+    <!-- Start planting button (shown when no tree planted) -->
     <div class="tree-pick-banner" id="treePickBanner">
-        <div class="tree-pick-title">เลือกพันธุ์ต้นไม้ของคุณ</div>
-        <div class="tree-pick-sub">เมื่อเลือกแล้วจะเปลี่ยนได้เฉพาะตอนที่ยังเป็นเมล็ด</div>
-        <div class="tree-pick-grid" id="treePickGrid"></div>
-        <button type="button" id="btnConfirmTree" style="width:100%;padding:12px;background:#1344a0;color:#fff;border:none;border-radius:14px;font-size:14px;font-weight:800;cursor:pointer;">
-            &#127807; เริ่มปลูกต้นนี้
+        <div style="text-align:center;padding:8px 0 4px;">
+            <div style="font-size:36px;margin-bottom:8px;">&#127807;</div>
+            <div style="font-size:15px;font-weight:800;color:#1344a0;margin-bottom:4px;">ยังไม่มีต้นไม้</div>
+            <div style="font-size:12px;color:#64748b;margin-bottom:16px;">กดปุ่มเพื่อสุ่มเมล็ดพันธุ์ของคุณ</div>
+        </div>
+        <button type="button" id="btnStartPlant" style="width:100%;padding:13px;background:linear-gradient(135deg,#1344a0,#2563eb);color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:800;cursor:pointer;letter-spacing:.3px;">
+            &#127922; สุ่มเมล็ดพันธุ์ต้นไม้
         </button>
     </div>
 
     <!-- Basket -->
-    <div class="basket-card">
+    <div class="basket-card" id="basketCard">
         <div class="basket-hdr">
             <span class="basket-hdr-title">&#129346; ตระกร้าของฉัน</span>
             <span style="font-size:11px;color:#94a3b8;">กดรดน้ำ &#8594; ต้นไม้โตขึ้น</span>
@@ -661,7 +682,7 @@ var pickedTreeType = 0;
 function loadTx() {
     try { return JSON.parse(localStorage.getItem('acct_tx') || '[]'); } catch(e){return [];}
 }
-function saveTx(arr) { localStorage.setItem('acct_tx', JSON.stringify(arr)); }
+function storeTxArr(arr) { localStorage.setItem('acct_tx', JSON.stringify(arr)); }
 function loadGame() {
     var g;
     try { g = JSON.parse(localStorage.getItem('acct_game')); } catch(e){}
@@ -868,7 +889,7 @@ function saveTx() {
         var idx = txs.findIndex(function(t){return t.id===id;});
         if (idx >= 0) txs[idx] = Object.assign(txs[idx], {type:type,amount:amount,cat:selectedCat,note:note,date:date});
     }
-    saveTx(txs);
+    storeTxArr(txs);
     if (isNew && date === todayStr()) { doCheckinReward(true); }
     updateEntryDays();
     bootstrap.Modal.getOrCreateInstance(document.getElementById('txModal')).hide();
@@ -878,7 +899,7 @@ function saveTx() {
 }
 function deleteTx(id) {
     if (!confirm('ลบรายการนี้?')) return;
-    saveTx(loadTx().filter(function(t){return t.id!==id;}));
+    storeTxArr(loadTx().filter(function(t){return t.id!==id;}));
     updateEntryDays();
     if (curTab === 'today') renderToday();
     if (curTab === 'month') renderMonth();
@@ -935,7 +956,6 @@ function renderGarden() {
             '<div style="text-align:center;padding:30px;color:#94a3b8;font-size:13px;">เลือกพันธุ์ต้นไม้เพื่อเริ่มปลูก &#127807;</div>';
         document.getElementById('treeInfoCard').style.display = 'none';
         document.getElementById('treePickBanner').style.display = '';
-        renderTreePickCards();
         return;
     }
     document.getElementById('treePickBanner').style.display = 'none';
@@ -965,7 +985,6 @@ function renderGarden() {
     });
     document.getElementById('stageDots').innerHTML = dotsHtml;
     // Change button only at stage 0
-    document.getElementById('btnChangeTree').style.display = g.stage === 0 ? '' : 'none';
 }
 function updateBasket(g) {
     ['cup','can','bucket'].forEach(function(k){
@@ -988,8 +1007,7 @@ function waterTree(item) {
     var g = loadGame();
     if (g.treeType < 0) { alert('เลือกต้นไม้ก่อนนะ 🌱'); return; }
     if (g.stage >= 4) {
-        alert('ต้นไม้ของคุณเติบโตเต็มที่แล้ว!
-' + TREES[g.treeType].emoji + ' ' + STAGES[4]); return;
+        alert('ต้นไม้โตเต็มที่แล้ว! ' + TREES[g.treeType].emoji + ' ' + STAGES[4]); return;
     }
     if (!g.basket[item] || g.basket[item] <= 0) {
         alert('ไม่มี' + ITEM_NAME[item] + 'ในตระกร้า'); return;
@@ -1187,6 +1205,54 @@ function getTreeSVG(type, stage) {
     return p.join('');
 }
 
+// ========= SEED MODAL =========
+var rolledTreeType = -1;
+function openSeedModal() {
+    rolledTreeType = -1;
+    document.getElementById('seedResultName').textContent = '';
+    document.getElementById('seedResultDesc').textContent = '';
+    document.getElementById('btnConfirmSeed').style.display = 'none';
+    document.getElementById('btnRollAgain').style.display = 'none';
+    document.getElementById('seedSpinner').textContent = String.fromCodePoint(127807);
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('seedModal')).show();
+    setTimeout(rollSeed, 400);
+}
+function rollSeed() {
+    var spinner = document.getElementById('seedSpinner');
+    document.getElementById('btnConfirmSeed').style.display = 'none';
+    document.getElementById('btnRollAgain').style.display = 'none';
+    var idx = 0, count = 0, total = 24;
+    var interval = setInterval(function() {
+        spinner.textContent = TREES[idx % TREES.length].emoji;
+        idx++;
+        count++;
+        if (count >= total) {
+            clearInterval(interval);
+            rolledTreeType = Math.floor(Math.random() * TREES.length);
+            spinner.textContent = TREES[rolledTreeType].emoji;
+            document.getElementById('seedResultName').textContent = '✨ ได้รับ: ' + TREES[rolledTreeType].name;
+            document.getElementById('seedResultDesc').textContent = TREES[rolledTreeType].desc;
+            document.getElementById('btnConfirmSeed').style.display = '';
+            document.getElementById('btnRollAgain').style.display = '';
+        }
+    }, 100);
+}
+function confirmSeed() {
+    if (rolledTreeType < 0) return;
+    var g = loadGame();
+    g.treeType = rolledTreeType; g.stage = 0; g.xp = 0;
+    saveGame(g);
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('seedModal')).hide();
+    renderGarden();
+}
+function uprootTree() {
+    if (!confirm('ถอนต้นไม้ออก?\n\nต้นไม้และความก้าวหน้าทั้งหมดจะหายไป (\nตระกร้าน้ำจะยังอยู่ครบ)\n\nยืนยันหรือไม่?')) return;
+    var g = loadGame();
+    g.treeType = -1; g.stage = 0; g.xp = 0; g.totalWatered = 0;
+    saveGame(g);
+    renderGarden();
+}
+
 // ========= EVENT DELEGATION =========
 document.addEventListener('click', function(e) {
     var el = e.target;
@@ -1269,12 +1335,10 @@ function init() {
     document.getElementById('btnSaveTx').addEventListener('click', saveTx);
     document.getElementById('btnCheckin').addEventListener('click', doCheckin);
     document.getElementById('btnTreeInfo').addEventListener('click', showTreeDetailModal);
-    document.getElementById('btnChangeTree').addEventListener('click', function() {
-        document.getElementById('treeInfoCard').style.display = 'none';
-        document.getElementById('treePickBanner').style.display = '';
-        renderTreePickCards();
-    });
-    document.getElementById('btnConfirmTree').addEventListener('click', confirmTree);
+    document.getElementById('btnStartPlant').addEventListener('click', openSeedModal);
+    document.getElementById('btnConfirmSeed').addEventListener('click', confirmSeed);
+    document.getElementById('btnRollAgain').addEventListener('click', rollSeed);
+    document.getElementById('btnUprootTree').addEventListener('click', uprootTree);
     document.getElementById('btnMonthPrev').addEventListener('click', function(){ curMonth--; if(curMonth<0){curMonth=11;curYear--;} renderMonth(); });
     document.getElementById('btnMonthNext').addEventListener('click', function(){ curMonth++; if(curMonth>11){curMonth=0;curYear++;} renderMonth(); });
     document.getElementById('btnYearPrev').addEventListener('click',  function(){ curYear--; renderYear(); });
@@ -1287,4 +1351,23 @@ function init() {
 }
 document.addEventListener('DOMContentLoaded', init);
 </script>
+<!-- Modal: Random Seed -->
+<div class="modal fade modal-acct" id="seedModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header" style="border:none;padding:18px 18px 8px;">
+                <span class="modal-title-txt">&#127922; สุ่มเมล็ดพันธุ์</span>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" style="padding:0 18px 28px;text-align:center;">
+                <div id="seedSpinner" style="font-size:64px;margin:20px 0 8px;min-height:80px;display:flex;align-items:center;justify-content:center;transition:all .12s;">&#127807;</div>
+                <div id="seedResultName" style="font-size:18px;font-weight:800;color:#1344a0;min-height:26px;margin-bottom:4px;"></div>
+                <div id="seedResultDesc" style="font-size:12px;color:#64748b;min-height:18px;margin-bottom:20px;"></div>
+                <button type="button" id="btnConfirmSeed" style="width:100%;padding:13px;background:#1344a0;color:#fff;border:none;border-radius:14px;font-size:14px;font-weight:800;cursor:pointer;display:none;">&#127807; ยืนยันปลูกต้นนี้!</button>
+                <button type="button" id="btnRollAgain" style="width:100%;padding:11px;background:#f1f5f9;color:#475569;border:none;border-radius:14px;font-size:13px;font-weight:700;cursor:pointer;margin-top:8px;display:none;">&#127922; สุ่มใหม่อีกครั้ง</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </asp:Content>
