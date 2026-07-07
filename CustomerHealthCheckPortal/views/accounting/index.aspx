@@ -322,15 +322,16 @@
 /* Toast */
 .reward-toast {
     position:fixed; top:70px; left:50%;
-    transform:translateX(-50%) translateY(-120px);
+    transform:translateX(-50%) translateY(-160px);
+    opacity:0;
     background:#fff; border-radius:16px; padding:12px 18px;
     box-shadow:0 8px 28px rgba(0,0,0,.18); z-index:9999;
     display:flex; align-items:center; gap:10px;
-    transition:transform .4s cubic-bezier(0.34,1.56,0.64,1);
+    transition:transform .4s cubic-bezier(0.34,1.56,0.64,1), opacity .3s ease;
     pointer-events:none; border:1.5px solid #bbf7d0;
     white-space:nowrap;
 }
-.reward-toast.show{ transform:translateX(-50%) translateY(0); }
+.reward-toast.show{ transform:translateX(-50%) translateY(0); opacity:1; }
 .r-toast-icon { font-size:28px; }
 .r-toast-text strong { display:block; font-size:13px; color:#0c1b3a; }
 .r-toast-text span   { font-size:11px; color:#64748b; }
